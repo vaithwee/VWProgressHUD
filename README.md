@@ -2,3 +2,4 @@
 ![](http://github.com/vaithwee/SMProgressHUD/raw/master/Image/alertview.png)
 ![](http://github.com/vaithwee/SMProgressHUD/raw/master/Image/alertviewinput.png)
 ![](http://github.com/vaithwee/SMProgressHUD/raw/master/Image/tip.png)
+![ABC](http://www.baidu.com/img/bdlogo.gif) 
