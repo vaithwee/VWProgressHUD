@@ -15,7 +15,7 @@
 #define kSMProgressWindowWidth [UIScreen mainScreen].bounds.size.width
 #define kSMProgressWindowHeight [UIScreen mainScreen].bounds.size.height
 
-static const NSTimeInterval kSMProgressHUDLoadingDelay = 30.f;
+static const NSTimeInterval kSMProgressHUDLoadingDelay = 5.f;
 static const NSTimeInterval kSMProgressHUDAnimationDuration = 0.3f;
 
 static const CGFloat kSMProgressHUDCornerRadius = 5.f;

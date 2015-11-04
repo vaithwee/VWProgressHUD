@@ -29,5 +29,6 @@
 
 
 - (void)dismiss;
-- (void)alertViewDismiss;
+- (void)dismissLoadingView;
+- (void)dismissAlertView;
 @end

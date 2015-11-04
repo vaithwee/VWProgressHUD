@@ -17,7 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor greenColor]];
 }
 
 - (IBAction)showLoading:(id)sender
@@ -66,7 +65,7 @@
 
 - (void)dismiss
 {
-    [[SMProgressHUD shareInstancetype] dismiss];
+    [[SMProgressHUD shareInstancetype] dismissLoadingView];
 }
 
 

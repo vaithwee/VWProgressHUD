@@ -22,12 +22,14 @@ typedef enum : NSUInteger {
 } SMProgressHUDState;
 
 @interface SMProgressHUD()
-@property (assign, nonatomic) NSInteger loadingCount;
-@property (assign, nonatomic) SMProgressHUDState state;
-@property (strong, nonatomic) UIWindow *window;
+{
+ NSInteger loadingCount;
+ SMProgressHUDState state;
+ UIWindow *window;
+NSTimer *timer;
+UIView *maskLayer;
+}
 @property (strong, nonatomic) SMProgressHUDLoadingView *loadingView;
-@property (strong, nonatomic) NSTimer *timer;
-@property (strong, nonatomic) UIView *maskLayer;
 @property (strong, nonatomic) SMProgressHUDAlertView *alertView;
 @property (strong, nonatomic) SMProgressHUDTipView *tipView;
 @end
@@ -54,18 +56,18 @@ typedef enum : NSUInteger {
 {
     if (self = [super init])
     {
-        _state = SMProgressHUDStateStatic;
+        state = SMProgressHUDStateStatic;
         
-        _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-        [_window setBackgroundColor:[UIColor clearColor]];
-        [_window setWindowLevel:UIWindowLevelAlert];
-        [_window makeKeyAndVisible];
-        [_window setHidden:YES];
+        window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+        [window setBackgroundColor:[UIColor clearColor]];
+        [window setWindowLevel:UIWindowLevelAlert];
+        [window makeKeyAndVisible];
+        [window setHidden:YES];
         
-        _maskLayer = [[UIView alloc] initWithFrame:_window.bounds];
-        [_maskLayer setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3]];
-        [_maskLayer setAlpha:0];
-        [_window addSubview:_maskLayer];
+        maskLayer = [[UIView alloc] initWithFrame:window.bounds];
+        [maskLayer setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.3]];
+        [maskLayer setAlpha:0];
+        [window addSubview:maskLayer];
         
     }
     return self;
@@ -91,33 +93,33 @@ typedef enum : NSUInteger {
 
 - (void)showLoadingWithTip:(NSString *)tip
 {
-    if (SMProgressHUDStateLoading == _state)
+    if (SMProgressHUDStateLoading == state)
     {
-        _loadingCount += 1;
-        [_timer invalidate];
-        _timer = [NSTimer timerWithTimeInterval:kSMProgressHUDLoadingDelay target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
-        [[NSRunLoop mainRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+        loadingCount += 1;
+        [timer invalidate];
+        timer = [NSTimer timerWithTimeInterval:kSMProgressHUDLoadingDelay target:self selector:@selector(dismissLoadingView) userInfo:nil repeats:NO];
+        [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
         return;
     }
-    else if (SMProgressHUDStateAlert == _state)
+    else if (SMProgressHUDStateAlert == state)
     {
         [_alertView removeFromSuperview];
         _alertView = nil;
     }
     
-    [_window setHidden:NO];
-    [_window addSubview:self.loadingView];
-    _state = SMProgressHUDStateLoading;
-    _loadingCount += 1;
+    [window setHidden:NO];
+    [window addSubview:self.loadingView];
+    state = SMProgressHUDStateLoading;
+    loadingCount += 1;
     [_loadingView setTipText:tip];
     [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
-        [_maskLayer setAlpha:1];
+        [maskLayer setAlpha:1];
         [_loadingView setAlpha:1];
     } completion:^(BOOL finished) {
         if (finished)
         {
-            _timer = [NSTimer timerWithTimeInterval:kSMProgressHUDLoadingDelay target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
-            [[NSRunLoop currentRunLoop] addTimer:_timer forMode:NSRunLoopCommonModes];
+            timer = [NSTimer timerWithTimeInterval:kSMProgressHUDLoadingDelay target:self selector:@selector(dismissLoadingView) userInfo:nil repeats:NO];
+            [[NSRunLoop currentRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
         }
     }];
 }
@@ -125,24 +127,25 @@ typedef enum : NSUInteger {
 #pragma mark - AlertView
 -(void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate alertStyle:(SMProgressHUDAlertViewStyle)alertStyle cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles
 {
-    if (SMProgressHUDStateLoading == _state)
+    if (SMProgressHUDStateLoading == state)
     {
-        [_timer invalidate];
+        [timer invalidate];
         [_loadingView setAlpha:0];
         [_loadingView removeFromSuperview];
-        _loadingCount = 0;
+        loadingCount = 0;
     }
-    else if(SMProgressHUDStateAlert == _state)
+    else if(SMProgressHUDStateAlert == state)
     {
         [_alertView removeFromSuperview];
     }
     
-    _state = SMProgressHUDStateAlert;
+    state = SMProgressHUDStateAlert;
     _alertView = [[SMProgressHUDAlertView alloc] initWithTitle:title message:message delegate:delegate alertViewStyle:alertStyle cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles];
-    [_window addSubview:_alertView];
-    [_window setHidden:NO];
+    [window addSubview:_alertView];
+    [window setHidden:NO];
+    [window setUserInteractionEnabled:YES];
     [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
-        [_maskLayer setAlpha:1];
+        [maskLayer setAlpha:1];
         [_alertView setAlpha:1];
     }];
     
@@ -172,25 +175,29 @@ typedef enum : NSUInteger {
 
 - (void)showTip:(NSString *)tip type:(SMProgressHUDTipType)type completion:(void (^)(void))completion;
 {
-    if (SMProgressHUDStateLoading == _state)
+    if (SMProgressHUDStateLoading == state)
     {
-        [_timer invalidate];
+        [timer invalidate];
         [_loadingView setAlpha:0];
         [_loadingView removeFromSuperview];
-        _loadingCount = 0;
+        loadingCount = 0;
     }
-    else if(SMProgressHUDStateAlert == _state)
+    else if(SMProgressHUDStateAlert == state)
     {
         [_alertView removeFromSuperview];
     }
+    else if (SMProgressHUDStateTip == state)
+    {
+        return;
+    }
     
-    _state = SMProgressHUDStateTip;
-    [_maskLayer setAlpha:0];
+    state = SMProgressHUDStateTip;
+    [maskLayer setAlpha:0];
     
     _tipView = [[SMProgressHUDTipView alloc] initWithTip:tip tipType:type];
 
-    [_window addSubview:_tipView];
-    [_window setHidden:NO];
+    [window addSubview:_tipView];
+    [window setHidden:NO];
     [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
         [_tipView setAlpha:1];
     } completion:^(BOOL finished) {
@@ -199,8 +206,8 @@ typedef enum : NSUInteger {
         } completion:^(BOOL finished) {
             [_tipView removeFromSuperview];
             _tipView = nil;
-            [_window setHidden:YES];
-            _state = SMProgressHUDStateStatic;
+            [window setHidden:YES];
+            state = SMProgressHUDStateStatic;
             if (completion)
             {
                 completion();
@@ -209,74 +216,49 @@ typedef enum : NSUInteger {
     }];
 }
 
-#pragma mark 清理
-- (void)cleanAllView
+
+#pragma mark - 消失方法
+- (void)dismissLoadingView
 {
+    NSLog(@"SMProgress-LoadingCount: %d", loadingCount);
+    if (state != SMProgressHUDStateLoading || --loadingCount)
+    {
+        return;
+    }
+    
+    [timer invalidate];
+    loadingCount = 0;
+    state = SMProgressHUDStateStatic;
+    [window setHidden:YES];
+    [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
+        [maskLayer setAlpha:0];
+        [_loadingView setAlpha:0];
+    } completion:^(BOOL finished) {
+        [window setHidden:YES];
+        [_loadingView removeFromSuperview];
+    }];
     
 }
 
-- (void)alertViewDismiss
+- (void)dismissAlertView
 {
-    if (SMProgressHUDStateAlert == _state)
+    if (SMProgressHUDStateAlert == state)
     {
         [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
-            [_maskLayer setAlpha:0];
+            [maskLayer setAlpha:0];
             [_alertView setAlpha:0];
         } completion:^(BOOL finished) {
-            [_window setHidden:YES];
+            [window setHidden:YES];
             [_alertView removeFromSuperview];
             _alertView = nil;
         }];
-        _state = SMProgressHUDStateStatic;
+        state = SMProgressHUDStateStatic;
     }
 }
 
 #pragma mark 消失
 - (void)dismiss
 {
-    NSLog(@"Dismiss LoadingCount:%ld", (long)_loadingCount);
-    if (_state == SMProgressHUDStateStatic)
-    {
-        return;
-    }
-    else if (_state == SMProgressHUDStateLoading)
-    {
-        if (--_loadingCount)
-        {
-            return;
-        }
-    }
     
-    switch (_state)
-    {
-        case SMProgressHUDStateLoading:
-        {
-            [_timer invalidate];
-            _loadingCount = 0;
-            [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
-                [_maskLayer setAlpha:0];
-                [_loadingView setAlpha:0];
-            } completion:^(BOOL finished) {
-                [_window setHidden:YES];
-                [_loadingView removeFromSuperview];
-            }];
-            break;
-        }
-        case SMProgressHUDStateAlert:
-        {
-            [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
-                [_maskLayer setAlpha:0];
-                [_alertView setAlpha:0];
-            } completion:^(BOOL finished) {
-                [_window setHidden:YES];
-                [_alertView removeFromSuperview];
-                _alertView = nil;
-            }];
-            break;
-        }
-        default:
-            break;
-    }
-    _state = SMProgressHUDStateStatic;
 }
 @end

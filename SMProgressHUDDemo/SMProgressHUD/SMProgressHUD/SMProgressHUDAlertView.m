@@ -17,7 +17,12 @@ static const NSInteger CANCELINDEX = 0;
 @end
 
 @implementation SMProgressHUDAlertView
--(instancetype)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate alertViewStyle:(SMProgressHUDAlertViewStyle)alertStyle cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles
+-(instancetype)initWithTitle:(NSString *)title
+message:(NSString *)message
+delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate
+alertViewStyle:(SMProgressHUDAlertViewStyle)alertStyle
+cancelButtonTitle:(NSString *)cancelButtonTitle
+otherButtonTitles:(NSArray *)otherButtonTitles
 {
     CGRect frame = CGRectMake(0, 0, kSMProgressHUDAlertViewWidth, 20);
     if (self = [super initWithFrame:frame])
@@ -38,17 +43,18 @@ static const NSInteger CANCELINDEX = 0;
         UILabel *tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(x, y, width, height)];
         [tipLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:16]];
         [tipLabel setText:title];
-        [tipLabel setTextColor:[UIColor grayColor]];
+        [tipLabel setTextColor:[UIColor blackColor]];
         [tipLabel setTextAlignment:NSTextAlignmentCenter];
         [self addSubview:tipLabel];
         
         x = 20.f;
         y = CGRectGetMaxY(tipLabel.frame)+5;
-        UIView *line = [[UIView alloc] initWithFrame:CGRectMake(x, y,width-2*x, 1)];
-        [line setBackgroundColor:[UIColor lightGrayColor]];
-        [self addSubview:line];
+        CALayer *aLine = [[CALayer alloc] init];
+        [aLine setFrame:CGRectMake(x, y,width-2*x, 1)];
+        [aLine setBackgroundColor:[UIColor lightGrayColor].CGColor];
+        [self.layer addSublayer:aLine];
         
-        y = CGRectGetMaxY(line.frame)+10;
+        y = CGRectGetMaxY(aLine.frame)+10;
         UILabel *msgLabel = [[UILabel alloc] initWithFrame:CGRectMake(x, y, frame.size.width-2*x, MAXFLOAT)];
         [msgLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:13]];
         [msgLabel setNumberOfLines:0];
@@ -165,7 +171,7 @@ static const NSInteger CANCELINDEX = 0;
         [_delegate alertView:self clickedButtonAtIndex:senger.tag];
     }
     
-    [[SMProgressHUD shareInstancetype] alertViewDismiss];
+    [[SMProgressHUD shareInstancetype] dismissAlertView];
 }
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
