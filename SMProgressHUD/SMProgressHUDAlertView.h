@@ -10,8 +10,7 @@
 
 @class SMProgressHUDAlertView;
 
-typedef void (^AlertViewCompletion)(SMProgressHUDAlertView *alertView, NSInteger buttonIndex);
-
+#pragma mark Alert类型
 typedef NS_ENUM(NSInteger,SMProgressHUDAlertViewStyle)
 {
     SMProgressHUDAlertViewStyleDefault = 0,
@@ -20,11 +19,15 @@ typedef NS_ENUM(NSInteger,SMProgressHUDAlertViewStyle)
     SMProgressHUDAlertViewStyleLoginAndPasswordInput
 };
 
+#pragma mark 代理方法
 @protocol SMProgressHUDAlertViewDelegate <NSObject>
+@optional
 - (void)alertView:(SMProgressHUDAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex;
+- (void)alertView:(SMProgressHUDAlertView*)alertView clickedButtonAtIndex:(NSInteger)buttonIndex userInfo:(NSDictionary *)userInfo;
 @end
 
 @interface SMProgressHUDAlertView : UIView
+@property (strong, nonatomic) NSDictionary *userInfo;
 @property (nonatomic, strong, readonly) UITextField *plainTextInput;
 @property (nonatomic, strong, readonly) UITextField *secureTextInput;
 @property (weak, nonatomic) id<SMProgressHUDAlertViewDelegate> delegate;

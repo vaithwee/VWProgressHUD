@@ -18,7 +18,15 @@
 - (void)showLoadingWithTip:(NSString *)tip;
 
 
-- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate alertStyle:(SMProgressHUDAlertViewStyle)alertStyle cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles;
+- (void)showAlertWithTitle:(NSString *)title
+    message:(NSString *)message
+    delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate
+    alertStyle:(SMProgressHUDAlertViewStyle)alertStyle
+    cancelButtonTitle:(NSString *)cancelButtonTitle
+    otherButtonTitles:(NSArray *)otherButtonTitles;
+
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate alertStyle:(SMProgressHUDAlertViewStyle)alertStyle userInfo:(NSDictionary *)userInfo cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles;
+- (void)setAlertViewTag:(NSUInteger)tag;
 
 
 - (void)showTip:(NSString*)tip;

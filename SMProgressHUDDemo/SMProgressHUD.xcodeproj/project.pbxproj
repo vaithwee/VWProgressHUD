@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C549D4B11BC8B43C00FCD86B /* SMProgressHUDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C549D4B01BC8B43C00FCD86B /* SMProgressHUDLoadingView.m */; };
-		C5D3395F1BCB506F00080200 /* SMProgressHUDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D3395E1BCB506F00080200 /* SMProgressHUDAlertView.m */; };
-		C5D339621BCB65D800080200 /* SMProgressHUDTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D339611BCB65D800080200 /* SMProgressHUDTipView.m */; };
+		C597AA051C18136900427F12 /* progresshud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C597A9FB1C18136900427F12 /* progresshud.bundle */; };
+		C597AA061C18136900427F12 /* SMProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C597A9FD1C18136900427F12 /* SMProgressHUD.m */; };
+		C597AA071C18136900427F12 /* SMProgressHUDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C597A9FF1C18136900427F12 /* SMProgressHUDAlertView.m */; };
+		C597AA081C18136900427F12 /* SMProgressHUDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = C597AA021C18136900427F12 /* SMProgressHUDLoadingView.m */; };
+		C597AA091C18136900427F12 /* SMProgressHUDTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = C597AA041C18136900427F12 /* SMProgressHUDTipView.m */; };
 		C5D69C1A1BC7AD1900E3C2C5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D69C191BC7AD1900E3C2C5 /* main.m */; };
 		C5D69C1D1BC7AD1900E3C2C5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D69C1C1BC7AD1900E3C2C5 /* AppDelegate.m */; };
 		C5D69C201BC7AD1900E3C2C5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D69C1F1BC7AD1900E3C2C5 /* ViewController.m */; };
@@ -17,8 +19,7 @@
 		C5D69C251BC7AD1900E3C2C5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5D69C241BC7AD1900E3C2C5 /* Images.xcassets */; };
 		C5D69C281BC7AD1900E3C2C5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5D69C261BC7AD1900E3C2C5 /* LaunchScreen.xib */; };
 		C5D69C341BC7AD1900E3C2C5 /* SMProgressHUDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D69C331BC7AD1900E3C2C5 /* SMProgressHUDTests.m */; };
-		C5D69C401BC7AEDE00E3C2C5 /* SMProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C5D69C3F1BC7AEDE00E3C2C5 /* SMProgressHUD.m */; };
-		C5D69C431BC7B1E600E3C2C5 /* progresshud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C5D69C421BC7B1E600E3C2C5 /* progresshud.bundle */; };
+		CCB8916C1C18526B00EA02C1 /* UIView+SMAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CCB8916B1C18526B00EA02C1 /* UIView+SMAutolayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,13 +33,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C549D4AE1BC8B3CE00FCD86B /* SMProgressHUDConfigure.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMProgressHUDConfigure.h; sourceTree = "<group>"; };
-		C549D4AF1BC8B43C00FCD86B /* SMProgressHUDLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUDLoadingView.h; sourceTree = "<group>"; };
-		C549D4B01BC8B43C00FCD86B /* SMProgressHUDLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUDLoadingView.m; sourceTree = "<group>"; };
-		C5D3395D1BCB506F00080200 /* SMProgressHUDAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUDAlertView.h; sourceTree = "<group>"; };
-		C5D3395E1BCB506F00080200 /* SMProgressHUDAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUDAlertView.m; sourceTree = "<group>"; };
-		C5D339601BCB65D800080200 /* SMProgressHUDTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUDTipView.h; sourceTree = "<group>"; };
-		C5D339611BCB65D800080200 /* SMProgressHUDTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUDTipView.m; sourceTree = "<group>"; };
+		C597A9FB1C18136900427F12 /* progresshud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = progresshud.bundle; sourceTree = "<group>"; };
+		C597A9FC1C18136900427F12 /* SMProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUD.h; sourceTree = "<group>"; };
+		C597A9FD1C18136900427F12 /* SMProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUD.m; sourceTree = "<group>"; };
+		C597A9FE1C18136900427F12 /* SMProgressHUDAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUDAlertView.h; sourceTree = "<group>"; };
+		C597A9FF1C18136900427F12 /* SMProgressHUDAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUDAlertView.m; sourceTree = "<group>"; };
+		C597AA001C18136900427F12 /* SMProgressHUDConfigure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUDConfigure.h; sourceTree = "<group>"; };
+		C597AA011C18136900427F12 /* SMProgressHUDLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUDLoadingView.h; sourceTree = "<group>"; };
+		C597AA021C18136900427F12 /* SMProgressHUDLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUDLoadingView.m; sourceTree = "<group>"; };
+		C597AA031C18136900427F12 /* SMProgressHUDTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUDTipView.h; sourceTree = "<group>"; };
+		C597AA041C18136900427F12 /* SMProgressHUDTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUDTipView.m; sourceTree = "<group>"; };
 		C5D69C141BC7AD1900E3C2C5 /* SMProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SMProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D69C181BC7AD1900E3C2C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5D69C191BC7AD1900E3C2C5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -52,9 +56,8 @@
 		C5D69C2D1BC7AD1900E3C2C5 /* SMProgressHUDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SMProgressHUDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5D69C321BC7AD1900E3C2C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C5D69C331BC7AD1900E3C2C5 /* SMProgressHUDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUDTests.m; sourceTree = "<group>"; };
-		C5D69C3E1BC7AEDE00E3C2C5 /* SMProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUD.h; sourceTree = "<group>"; };
-		C5D69C3F1BC7AEDE00E3C2C5 /* SMProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUD.m; sourceTree = "<group>"; };
-		C5D69C421BC7B1E600E3C2C5 /* progresshud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = progresshud.bundle; sourceTree = "<group>"; };
+		CCB8916A1C18526B00EA02C1 /* UIView+SMAutolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SMAutolayout.h"; sourceTree = "<group>"; };
+		CCB8916B1C18526B00EA02C1 /* UIView+SMAutolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SMAutolayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +78,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C597A9FA1C18136900427F12 /* SMProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				C597A9FB1C18136900427F12 /* progresshud.bundle */,
+				C597A9FC1C18136900427F12 /* SMProgressHUD.h */,
+				C597A9FD1C18136900427F12 /* SMProgressHUD.m */,
+				C597A9FE1C18136900427F12 /* SMProgressHUDAlertView.h */,
+				C597A9FF1C18136900427F12 /* SMProgressHUDAlertView.m */,
+				C597AA001C18136900427F12 /* SMProgressHUDConfigure.h */,
+				C597AA011C18136900427F12 /* SMProgressHUDLoadingView.h */,
+				C597AA021C18136900427F12 /* SMProgressHUDLoadingView.m */,
+				C597AA031C18136900427F12 /* SMProgressHUDTipView.h */,
+				C597AA041C18136900427F12 /* SMProgressHUDTipView.m */,
+				CCB8916A1C18526B00EA02C1 /* UIView+SMAutolayout.h */,
+				CCB8916B1C18526B00EA02C1 /* UIView+SMAutolayout.m */,
+			);
+			name = SMProgressHUD;
+			path = ../../SMProgressHUD;
+			sourceTree = "<group>";
+		};
 		C5D69C0B1BC7AD1900E3C2C5 = {
 			isa = PBXGroup;
 			children = (
@@ -96,7 +119,7 @@
 		C5D69C161BC7AD1900E3C2C5 /* SMProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				C5D69C3D1BC7AEBE00E3C2C5 /* SMProgressHUD */,
+				C597A9FA1C18136900427F12 /* SMProgressHUD */,
 				C5D69C1B1BC7AD1900E3C2C5 /* AppDelegate.h */,
 				C5D69C1C1BC7AD1900E3C2C5 /* AppDelegate.m */,
 				C5D69C1E1BC7AD1900E3C2C5 /* ViewController.h */,
@@ -133,23 +156,6 @@
 				C5D69C321BC7AD1900E3C2C5 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C5D69C3D1BC7AEBE00E3C2C5 /* SMProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				C549D4AE1BC8B3CE00FCD86B /* SMProgressHUDConfigure.h */,
-				C5D69C421BC7B1E600E3C2C5 /* progresshud.bundle */,
-				C5D69C3E1BC7AEDE00E3C2C5 /* SMProgressHUD.h */,
-				C5D69C3F1BC7AEDE00E3C2C5 /* SMProgressHUD.m */,
-				C549D4AF1BC8B43C00FCD86B /* SMProgressHUDLoadingView.h */,
-				C549D4B01BC8B43C00FCD86B /* SMProgressHUDLoadingView.m */,
-				C5D3395D1BCB506F00080200 /* SMProgressHUDAlertView.h */,
-				C5D3395E1BCB506F00080200 /* SMProgressHUDAlertView.m */,
-				C5D339601BCB65D800080200 /* SMProgressHUDTipView.h */,
-				C5D339611BCB65D800080200 /* SMProgressHUDTipView.m */,
-			);
-			path = SMProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +207,7 @@
 				TargetAttributes = {
 					C5D69C131BC7AD1900E3C2C5 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 75NY53J2SN;
 					};
 					C5D69C2C1BC7AD1900E3C2C5 = {
 						CreatedOnToolsVersion = 6.4;
@@ -232,7 +239,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5D69C431BC7B1E600E3C2C5 /* progresshud.bundle in Resources */,
+				C597AA051C18136900427F12 /* progresshud.bundle in Resources */,
 				C5D69C231BC7AD1900E3C2C5 /* Main.storyboard in Resources */,
 				C5D69C281BC7AD1900E3C2C5 /* LaunchScreen.xib in Resources */,
 				C5D69C251BC7AD1900E3C2C5 /* Images.xcassets in Resources */,
@@ -253,12 +260,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5D339621BCB65D800080200 /* SMProgressHUDTipView.m in Sources */,
-				C5D3395F1BCB506F00080200 /* SMProgressHUDAlertView.m in Sources */,
-				C5D69C401BC7AEDE00E3C2C5 /* SMProgressHUD.m in Sources */,
+				C597AA091C18136900427F12 /* SMProgressHUDTipView.m in Sources */,
+				C597AA071C18136900427F12 /* SMProgressHUDAlertView.m in Sources */,
+				C597AA061C18136900427F12 /* SMProgressHUD.m in Sources */,
+				CCB8916C1C18526B00EA02C1 /* UIView+SMAutolayout.m in Sources */,
 				C5D69C201BC7AD1900E3C2C5 /* ViewController.m in Sources */,
-				C549D4B11BC8B43C00FCD86B /* SMProgressHUDLoadingView.m in Sources */,
 				C5D69C1D1BC7AD1900E3C2C5 /* AppDelegate.m in Sources */,
+				C597AA081C18136900427F12 /* SMProgressHUDLoadingView.m in Sources */,
 				C5D69C1A1BC7AD1900E3C2C5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -385,9 +393,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SMProgressHUD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -395,9 +406,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SMProgressHUD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

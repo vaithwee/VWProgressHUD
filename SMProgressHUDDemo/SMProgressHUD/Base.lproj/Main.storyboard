@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="06D-o3-uJH">
-                                <rect key="frame" x="31" y="96" width="64" height="30"/>
+                                <rect key="frame" x="31" y="96" width="86" height="30"/>
                                 <state key="normal" title="AlertView">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -36,7 +36,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8CC-Jm-FkG">
-                                <rect key="frame" x="31" y="66" width="130" height="30"/>
+                                <rect key="frame" x="31" y="66" width="145" height="30"/>
                                 <state key="normal" title="AlertViewWithInput">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -121,12 +121,20 @@
                                     <action selector="showWarning:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TzP-Ma-r47"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t6-oO-eaQ">
+                                <rect key="frame" x="121" y="96" width="104" height="30"/>
+                                <state key="normal" title="AlertViewBlock"/>
+                                <connections>
+                                    <action selector="alertViewWithBlock:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="j4q-Ol-nDt"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="423" y="275"/>
         </scene>
     </scenes>
 </document>

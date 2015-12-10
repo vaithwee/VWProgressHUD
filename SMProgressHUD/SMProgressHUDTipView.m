@@ -56,7 +56,6 @@
         CGFloat width = message.frame.size.width>60?message.frame.size.width+20:60.f+20;
         CGFloat height = message.frame.size.height + icon.frame.size.height + 25.f;
         [self setFrame:CGRectMake(0, 0, width, height)];
-        [self setCenter:CGPointMake(kSMProgressWindowWidth/2, kSMProgressWindowHeight/2)];
         [icon setCenter:CGPointMake(width/2, icon.frame.size.height/2+10)];
         [message setCenter:CGPointMake(width/2, CGRectGetMaxY(icon.frame)+5+message.frame.size.height/2)];
     }

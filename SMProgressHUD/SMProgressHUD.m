@@ -11,6 +11,7 @@
 #import "SMProgressHUDLoadingView.h"
 #import "SMProgressHUDConfigure.h"
 #import "SMProgressHUDTipView.h"
+#import "UIView+SMAutolayout.h"
 
 static SMProgressHUD *_indicatorInstance;
 
@@ -23,11 +24,12 @@ typedef enum : NSUInteger {
 
 @interface SMProgressHUD()
 {
- NSInteger loadingCount;
- SMProgressHUDState state;
- UIWindow *window;
-NSTimer *timer;
-UIView *maskLayer;
+    NSInteger loadingCount;
+    SMProgressHUDState state;
+    UIWindow *window;
+    NSTimer *timer;
+    UIView *maskLayer;
+    NSOperationQueue *queue;
 }
 @property (strong, nonatomic) SMProgressHUDLoadingView *loadingView;
 @property (strong, nonatomic) SMProgressHUDAlertView *alertView;
@@ -60,7 +62,7 @@ UIView *maskLayer;
         
         window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
         [window setBackgroundColor:[UIColor clearColor]];
-        [window setWindowLevel:UIWindowLevelAlert];
+        [window setWindowLevel:UIWindowLevelAlert+100];
         [window makeKeyAndVisible];
         [window setHidden:YES];
         
@@ -69,6 +71,7 @@ UIView *maskLayer;
         [maskLayer setAlpha:0];
         [window addSubview:maskLayer];
         
+        queue = [[NSOperationQueue alloc] init];
     }
     return self;
 }
@@ -106,9 +109,15 @@ UIView *maskLayer;
         [_alertView removeFromSuperview];
         _alertView = nil;
     }
+    else if (SMProgressHUDStateTip == state)
+    {
+        [_tipView removeFromSuperview];
+        _tipView = nil;
+    }
     
     [window setHidden:NO];
     [window addSubview:self.loadingView];
+    [window setFrame:CGRectMake(0, 0, kSMProgressWindowWidth, kSMProgressWindowHeight)];
     state = SMProgressHUDStateLoading;
     loadingCount += 1;
     [_loadingView setTipText:tip];
@@ -125,8 +134,18 @@ UIView *maskLayer;
 }
 
 #pragma mark - AlertView
+- (void)setAlertViewTag:(NSUInteger)tag
+{
+    [_alertView setTag:tag];
+}
 -(void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate alertStyle:(SMProgressHUDAlertViewStyle)alertStyle cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles
 {
+    return [self showAlertWithTitle:title message:message delegate:delegate alertStyle:alertStyle userInfo:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles];
+}
+
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate alertStyle:(SMProgressHUDAlertViewStyle)alertStyle userInfo:(NSDictionary *)userInfo cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles
+{
+    //清除状态
     if (SMProgressHUDStateLoading == state)
     {
         [timer invalidate];
@@ -138,20 +157,30 @@ UIView *maskLayer;
     {
         [_alertView removeFromSuperview];
     }
+    else if (SMProgressHUDStateTip == state)
+    {
+        [_tipView removeFromSuperview];
+        _tipView = nil;
+    }
     
+    //创建AlertView
     state = SMProgressHUDStateAlert;
     _alertView = [[SMProgressHUDAlertView alloc] initWithTitle:title message:message delegate:delegate alertViewStyle:alertStyle cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles];
-    [window addSubview:_alertView];
+    [_alertView setUserInfo:userInfo];
+    [maskLayer addSubview:_alertView];
+    [_alertView addConstraint:NSLayoutAttributeCenterX equalTo:maskLayer offset:0];
+    [_alertView addConstraint:NSLayoutAttributeCenterY equalTo:maskLayer offset:0];
     [window setHidden:NO];
-    [window setUserInteractionEnabled:YES];
+    [window setFrame:CGRectMake(0, 0, kSMProgressWindowWidth, kSMProgressWindowHeight)];
+    
+    //动画
     [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
         [maskLayer setAlpha:1];
         [_alertView setAlpha:1];
     }];
-    
 }
 
-#pragma mark -TipView
+#pragma mark - TipView
 #pragma mark 显示提示
 - (void)showTip:(NSString *)tip
 {
@@ -195,9 +224,11 @@ UIView *maskLayer;
     [maskLayer setAlpha:0];
     
     _tipView = [[SMProgressHUDTipView alloc] initWithTip:tip tipType:type];
-
+    
     [window addSubview:_tipView];
     [window setHidden:NO];
+    [window setFrame:_tipView.bounds];
+    [window setCenter:CGPointMake(kSMProgressWindowWidth/2, kSMProgressWindowHeight/2)];
     [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
         [_tipView setAlpha:1];
     } completion:^(BOOL finished) {
@@ -206,21 +237,51 @@ UIView *maskLayer;
         } completion:^(BOOL finished) {
             [_tipView removeFromSuperview];
             _tipView = nil;
-            [window setHidden:YES];
-            state = SMProgressHUDStateStatic;
-            if (completion)
+            if(SMProgressHUDStateTip == state)
             {
-                completion();
-            }
+                [window setHidden:YES];
+                state = SMProgressHUDStateStatic;
+                if (completion)
+                {
+                    completion();
+                }}
         }];
     }];
 }
 
 
-#pragma mark - 消失方法
+
+#pragma mark - 清除
+#pragma mark 重置状态
+- (void)resetState:(SMProgressHUDState)s
+{
+    if (s == state)
+    {
+        return;
+    }
+    else if (SMProgressHUDStateLoading == state)
+    {
+        loadingCount += 1;
+        [timer invalidate];
+        timer = [NSTimer timerWithTimeInterval:kSMProgressHUDLoadingDelay target:self selector:@selector(dismissLoadingView) userInfo:nil repeats:NO];
+        [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
+        return;
+    }
+    else if (SMProgressHUDStateAlert == state)
+    {
+        [_alertView removeFromSuperview];
+        _alertView = nil;
+    }
+    else if (SMProgressHUDStateTip == state)
+    {
+        [_tipView removeFromSuperview];
+        _tipView = nil;
+    }
+}
+
 - (void)dismissLoadingView
 {
-    NSLog(@"SMProgress-LoadingCount: %d", loadingCount);
+    NSLog(@"SMProgress-LoadingCount: %ld", (long)loadingCount);
     if (state != SMProgressHUDStateLoading || --loadingCount)
     {
         return;

@@ -17,6 +17,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
 }
 
 - (IBAction)showLoading:(id)sender
@@ -29,11 +30,14 @@
 }
 
 - (IBAction)showAlertView:(id)sender {
-    [[SMProgressHUD shareInstancetype] showAlertWithTitle:@"Title" message:@"The difference in winning and losing is most often…not quitting." delegate:nil alertStyle:SMProgressHUDAlertViewStyleDefault cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"Confrim",@"Go"] ];
+    [[SMProgressHUD shareInstancetype] showAlertWithTitle:@"标题" message:@"我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容" delegate:nil alertStyle:SMProgressHUDAlertViewStyleDefault cancelButtonTitle:@"取消" otherButtonTitles:@[@"确定"] ];
+}
+- (IBAction)alertViewWithBlock:(id)sender {
+
 }
 
 - (IBAction)showAlertViewWithInput:(id)sender {
-    [[SMProgressHUD shareInstancetype] showAlertWithTitle:@"Title" message:@"The difference in winning and losing is most often…not quitting." delegate:nil alertStyle:SMProgressHUDAlertViewStylePlainTextInput cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"Confrim",@"Go"] ];
+    [[SMProgressHUD shareInstancetype] showAlertWithTitle:@"Title" message:@"The difference in winning and losing is most often…not quitting." delegate:nil alertStyle:SMProgressHUDAlertViewStyleLoginAndPasswordInput cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"Confrim",@"Go"] ];
 }
 
 - (void)alertView:(SMProgressHUDAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
