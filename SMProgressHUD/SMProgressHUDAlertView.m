@@ -15,6 +15,8 @@
 static const NSInteger CANCELINDEX = 0;
 
 @interface SMProgressHUDAlertView() <UITextFieldDelegate>
+@property (strong, nonatomic) NSLayoutConstraint *centerY;
+
 @end
 
 @implementation SMProgressHUDAlertView
@@ -191,6 +193,7 @@ static const NSInteger CANCELINDEX = 0;
             [cancelButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
             [cancelButton.titleLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:16]];
             [cancelButton addTarget:self action:@selector(alertViewDidClickedButtonAtIndex:) forControlEvents:UIControlEventTouchUpInside];
+            [cancelButton setTag:0];
             [self addSubview:cancelButton];
             
             [cancelButton addConstraint:NSLayoutAttributeLeft equalTo:self offset:0];
@@ -204,6 +207,7 @@ static const NSInteger CANCELINDEX = 0;
             [otherButton setTranslatesAutoresizingMaskIntoConstraints:NO];
             [otherButton.titleLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:16]];
             [otherButton addTarget:self action:@selector(alertViewDidClickedButtonAtIndex:) forControlEvents:UIControlEventTouchUpInside];
+            [otherButton setTag:1];
             [self addSubview:otherButton];
             
             [otherButton addConstraint:NSLayoutAttributeRight equalTo:self offset:0];
@@ -284,11 +288,29 @@ static const NSInteger CANCELINDEX = 0;
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    
+    _centerY.constant = -kSMProgressWindowHeight/4;
+    [UIView animateWithDuration:0.25 animations:^{
+        [self layoutIfNeeded];
+    }];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
+    _centerY.constant = 0;
+    [UIView animateWithDuration:0.25 animations:^{
+        [self layoutIfNeeded];
+    }];
     
+}
+
+- (void)didMoveToSuperview
+{
+    NSLog(@"AlertView didMoveToSuperview");
+    if (self.superview)
+    {
+        _centerY = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.superview attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
+        [self.superview addConstraint:_centerY];
+        [self addConstraint:NSLayoutAttributeCenterX equalTo:self.superview offset:0];
+    }
 }
 @end

@@ -168,8 +168,8 @@ typedef enum : NSUInteger {
     _alertView = [[SMProgressHUDAlertView alloc] initWithTitle:title message:message delegate:delegate alertViewStyle:alertStyle cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles];
     [_alertView setUserInfo:userInfo];
     [maskLayer addSubview:_alertView];
-    [_alertView addConstraint:NSLayoutAttributeCenterX equalTo:maskLayer offset:0];
-    [_alertView addConstraint:NSLayoutAttributeCenterY equalTo:maskLayer offset:0];
+//    [_alertView addConstraint:NSLayoutAttributeCenterX equalTo:maskLayer offset:0];
+//    [_alertView addConstraint:NSLayoutAttributeCenterY equalTo:maskLayer offset:0];
     [window setHidden:NO];
     [window setFrame:CGRectMake(0, 0, kSMProgressWindowWidth, kSMProgressWindowHeight)];
     

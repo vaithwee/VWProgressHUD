@@ -32,4 +32,13 @@
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.superview addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:attribute relatedBy:NSLayoutRelationEqual toItem:to attribute:fromAttribute multiplier:1.0 constant:offset]];
 }
+
+- (void)removeAutoLayout:(NSLayoutConstraint *)constraint
+{
+    for (NSLayoutConstraint *con in self.superview.constraints) {
+        if ([con isEqual:constraint]) {
+            [self.superview removeConstraint:con];
+        }
+    }
+}
 @end
