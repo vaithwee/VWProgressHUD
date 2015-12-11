@@ -8,16 +8,17 @@
 
 #import "ViewController.h"
 #import "SMProgressHUD.h"
+#import "SMProgressHUDActionSheet.h"
 
-@interface ViewController ()<SMProgressHUDAlertViewDelegate>
+@interface ViewController ()<SMProgressHUDAlertViewDelegate, SMProgressHUDActionSheetDelegate>
 
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    
 }
 
 - (IBAction)showLoading:(id)sender
@@ -30,14 +31,33 @@
 }
 
 - (IBAction)showAlertView:(id)sender {
-    [[SMProgressHUD shareInstancetype] showAlertWithTitle:@"标题" message:@"我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容我是内容" delegate:nil alertStyle:SMProgressHUDAlertViewStyleDefault cancelButtonTitle:@"取消" otherButtonTitles:@[@"确定"] ];
+    [[SMProgressHUD shareInstancetype]
+     showAlertWithTitle:@"Title"
+     message:@"Life is too short to waste. Dreams are fulfilled only through action, not through endless planning to take action."
+     delegate:nil
+     alertStyle:SMProgressHUDAlertViewStyleDefault
+     cancelButtonTitle:@"Cancel"
+     otherButtonTitles:@[@"Sure"] ];
 }
-- (IBAction)alertViewWithBlock:(id)sender {
-
+- (IBAction)showActionSheet:(id)sender
+{
+    [[SMProgressHUD shareInstancetype]
+     showActionSheetWithTitle:@"Please choose the event you need? "
+     delegate:self
+     cancelButtonTitle:@"Cancel"
+     destructiveButtonTitle:@"Sure"
+     otherButtonTitles:@[@"Loading",@"Tip",@"Alert"]
+     userInfo:nil];
 }
 
 - (IBAction)showAlertViewWithInput:(id)sender {
-    [[SMProgressHUD shareInstancetype] showAlertWithTitle:@"Title" message:@"The difference in winning and losing is most often…not quitting." delegate:nil alertStyle:SMProgressHUDAlertViewStyleLoginAndPasswordInput cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"Confrim",@"Go"] ];
+    [[SMProgressHUD shareInstancetype]
+     showAlertWithTitle:@"Title"
+     message:@"Life is too short to waste. Dreams are fulfilled only through action, not through endless planning to take action."
+     delegate:nil
+     alertStyle:SMProgressHUDAlertViewStyleLoginAndPasswordInput
+     cancelButtonTitle:@"Cancel"
+     otherButtonTitles:@[@"Confrim",@"Go"] ];
 }
 
 - (void)alertView:(SMProgressHUDAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -47,7 +67,7 @@
 }
 
 - (IBAction)showTip:(id)sender {
-    [[SMProgressHUD shareInstancetype] showTip:@"The difference in winning and losing is most often…not quitting."];
+    [[SMProgressHUD shareInstancetype] showTip:@"Life is too short to waste. Dreams are fulfilled only through action, not through endless planning to take action."];
 }
 - (IBAction)showLoadingWithTip:(id)sender {
     [[SMProgressHUD shareInstancetype] showLoadingWithTip:nil];
@@ -55,7 +75,13 @@
 }
 
 - (IBAction)showAlertLoadingTip:(id)sender {
-    [[SMProgressHUD shareInstancetype] showAlertWithTitle:@"Title" message:@"The difference in winning and losing is most often…not quitting." delegate:self alertStyle:SMProgressHUDAlertViewStyleDefault cancelButtonTitle:@"Cancel" otherButtonTitles:@[@"Confrim",@"Go"] ];
+    [[SMProgressHUD shareInstancetype]
+     showAlertWithTitle:@"Title"
+     message:@"Life is too short to waste. Dreams are fulfilled only through action, not through endless planning to take action."
+     delegate:self
+     alertStyle:SMProgressHUDAlertViewStyleDefault
+     cancelButtonTitle:@"Cancel"
+     otherButtonTitles:@[@"Confrim",@"Go"] ];
 }
 
 - (IBAction)showThreeLoading:(id)sender {
@@ -82,6 +108,23 @@
 }
 - (IBAction)showWarning:(id)sender {
     [[SMProgressHUD shareInstancetype] showWarningTip:@"Warning"];
+}
+
+-(void)actionSheetView:(SMProgressHUDActionSheet*)actionSheetView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"actionsheet-buttonIndex:%d", buttonIndex);
+    if (buttonIndex == 2)
+    {
+        [self showLoading:nil];
+    }
+    else if(buttonIndex == 3)
+    {
+        [self showTip:nil];
+    }
+    else if(buttonIndex == 4)
+    {
+        [self showAlertView:nil];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

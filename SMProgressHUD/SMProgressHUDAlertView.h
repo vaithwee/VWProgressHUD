@@ -31,5 +31,5 @@ typedef NS_ENUM(NSInteger,SMProgressHUDAlertViewStyle)
 @property (nonatomic, strong, readonly) UITextField *plainTextInput;
 @property (nonatomic, strong, readonly) UITextField *secureTextInput;
 @property (weak, nonatomic) id<SMProgressHUDAlertViewDelegate> delegate;
--(instancetype)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate alertViewStyle:(SMProgressHUDAlertViewStyle)alertStyle cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles;
+-(instancetype)initWithTitle:(NSString *)title message:(NSString *)message delegate:(id<SMProgressHUDAlertViewDelegate>)delegate alertViewStyle:(SMProgressHUDAlertViewStyle)alertStyle cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles;
 @end

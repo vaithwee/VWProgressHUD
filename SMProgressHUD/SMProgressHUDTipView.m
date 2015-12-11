@@ -9,6 +9,7 @@
 #import "SMProgressHUDTipView.h"
 #import "SMProgressHUDConfigure.h"
 #import "SMProgressHUD.h"
+#import "UIView+SMAutolayout.h"
 
 @implementation SMProgressHUDTipView
 - (instancetype)initWithTip:(NSString *)tip tipType:(SMProgressHUDTipType)type
@@ -24,9 +25,12 @@
         [self.layer setBorderColor:[UIColor lightGrayColor].CGColor];
         
         UIImageView *icon = [[UIImageView alloc] init];
-        [icon setFrame:CGRectMake(0, 0, 30, 30)];
         [self addSubview:icon];
-        
+        [icon addConstraint:NSLayoutAttributeWidth value:35];
+        [icon addConstraint:NSLayoutAttributeHeight value:35];
+        [icon addConstraint:NSLayoutAttributeCenterX equalTo:self offset:0];
+        [icon addConstraint:NSLayoutAttributeTop equalTo:self offset:10];
+       
         switch (type)
         {
             case SMProgressHUDTipTypeSucceed:
@@ -43,22 +47,32 @@
                 break;
         }
         
-        UILabel *message = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetMaxY(icon.frame)+5, kSMProgressHUDContentWidth-20, MAXFLOAT)];
+        UILabel *message = [UILabel new];
         [message setTextColor:[UIColor grayColor]];
         [message setFont:[UIFont fontWithName:@"Helvetica-Bold" size:14]];
         [message setNumberOfLines:0];
         [message setLineBreakMode:NSLineBreakByCharWrapping];
         [message setTextAlignment:NSTextAlignmentLeft];
         [message setText:tip];
-        [message sizeToFit];
+        [message setPreferredMaxLayoutWidth:kSMProgressHUDContentWidth-20];
         [self addSubview:message];
         
+        [message addConstraint:NSLayoutAttributeTop equalTo:icon fromConstraint:NSLayoutAttributeBottom offset:10];
+        [message addConstraint:NSLayoutAttributeCenterX equalTo:self offset:0];
+        [message layoutIfNeeded];
+        
         CGFloat width = message.frame.size.width>60?message.frame.size.width+20:60.f+20;
-        CGFloat height = message.frame.size.height + icon.frame.size.height + 25.f;
-        [self setFrame:CGRectMake(0, 0, width, height)];
-        [icon setCenter:CGPointMake(width/2, icon.frame.size.height/2+10)];
-        [message setCenter:CGPointMake(width/2, CGRectGetMaxY(icon.frame)+5+message.frame.size.height/2)];
+        [self addConstraint:NSLayoutAttributeWidth value:width];
+        [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:message attribute:NSLayoutAttributeBottom multiplier:1.0 constant:10]];
     }
     return self;
+}
+
+- (void)didMoveToSuperview
+{
+    if (self.superview)
+    {
+        [self layoutIfNeeded];
+    }
 }
 @end

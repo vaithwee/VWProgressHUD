@@ -41,4 +41,12 @@
         }
     }
 }
+
+- (void)removeAllAutoLayout
+{
+    for (NSLayoutConstraint *con in self.constraints)
+    {
+            [self removeConstraint:con];
+    }
+}
 @end

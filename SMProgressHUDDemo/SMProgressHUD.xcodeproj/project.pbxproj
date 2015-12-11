@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C50831251C1938B200E6D5D8 /* SMProgressHUDActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = C50831241C1938B200E6D5D8 /* SMProgressHUDActionSheet.m */; };
 		C597AA051C18136900427F12 /* progresshud.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C597A9FB1C18136900427F12 /* progresshud.bundle */; };
 		C597AA061C18136900427F12 /* SMProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = C597A9FD1C18136900427F12 /* SMProgressHUD.m */; };
 		C597AA071C18136900427F12 /* SMProgressHUDAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = C597A9FF1C18136900427F12 /* SMProgressHUDAlertView.m */; };
@@ -33,6 +34,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C50831231C1938B200E6D5D8 /* SMProgressHUDActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUDActionSheet.h; sourceTree = "<group>"; };
+		C50831241C1938B200E6D5D8 /* SMProgressHUDActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUDActionSheet.m; sourceTree = "<group>"; };
 		C597A9FB1C18136900427F12 /* progresshud.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = progresshud.bundle; sourceTree = "<group>"; };
 		C597A9FC1C18136900427F12 /* SMProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMProgressHUD.h; sourceTree = "<group>"; };
 		C597A9FD1C18136900427F12 /* SMProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMProgressHUD.m; sourceTree = "<group>"; };
@@ -84,6 +87,8 @@
 				C597A9FB1C18136900427F12 /* progresshud.bundle */,
 				C597A9FC1C18136900427F12 /* SMProgressHUD.h */,
 				C597A9FD1C18136900427F12 /* SMProgressHUD.m */,
+				C50831231C1938B200E6D5D8 /* SMProgressHUDActionSheet.h */,
+				C50831241C1938B200E6D5D8 /* SMProgressHUDActionSheet.m */,
 				C597A9FE1C18136900427F12 /* SMProgressHUDAlertView.h */,
 				C597A9FF1C18136900427F12 /* SMProgressHUDAlertView.m */,
 				C597AA001C18136900427F12 /* SMProgressHUDConfigure.h */,
@@ -264,6 +269,7 @@
 				C597AA071C18136900427F12 /* SMProgressHUDAlertView.m in Sources */,
 				C597AA061C18136900427F12 /* SMProgressHUD.m in Sources */,
 				CCB8916C1C18526B00EA02C1 /* UIView+SMAutolayout.m in Sources */,
+				C50831251C1938B200E6D5D8 /* SMProgressHUDActionSheet.m in Sources */,
 				C5D69C201BC7AD1900E3C2C5 /* ViewController.m in Sources */,
 				C5D69C1D1BC7AD1900E3C2C5 /* AppDelegate.m in Sources */,
 				C597AA081C18136900427F12 /* SMProgressHUDLoadingView.m in Sources */,
@@ -396,6 +402,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SMProgressHUD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -409,6 +416,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SMProgressHUD/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

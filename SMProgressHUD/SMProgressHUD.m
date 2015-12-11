@@ -19,7 +19,8 @@ typedef enum : NSUInteger {
     SMProgressHUDStateStatic,
     SMProgressHUDStateLoading,
     SMProgressHUDStateAlert,
-    SMProgressHUDStateTip
+    SMProgressHUDStateTip,
+    SMProgressHUDStateActionSheet,
 } SMProgressHUDState;
 
 @interface SMProgressHUD()
@@ -34,6 +35,7 @@ typedef enum : NSUInteger {
 @property (strong, nonatomic) SMProgressHUDLoadingView *loadingView;
 @property (strong, nonatomic) SMProgressHUDAlertView *alertView;
 @property (strong, nonatomic) SMProgressHUDTipView *tipView;
+@property (strong, nonatomic) SMProgressHUDActionSheet *actionSheetView;
 @end
 
 @implementation SMProgressHUD
@@ -109,6 +111,11 @@ typedef enum : NSUInteger {
         [_alertView removeFromSuperview];
         _alertView = nil;
     }
+    else if (SMProgressHUDStateActionSheet == state)
+    {
+        [_actionSheetView remove];
+        _actionSheetView = nil;
+    }
     else if (SMProgressHUDStateTip == state)
     {
         [_tipView removeFromSuperview];
@@ -138,12 +145,12 @@ typedef enum : NSUInteger {
 {
     [_alertView setTag:tag];
 }
--(void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate alertStyle:(SMProgressHUDAlertViewStyle)alertStyle cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles
+-(void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id<SMProgressHUDAlertViewDelegate>)delegate alertStyle:(SMProgressHUDAlertViewStyle)alertStyle cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles
 {
     return [self showAlertWithTitle:title message:message delegate:delegate alertStyle:alertStyle userInfo:nil cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles];
 }
 
-- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id/*<SMProgressHUDAlertViewDelegate>*/)delegate alertStyle:(SMProgressHUDAlertViewStyle)alertStyle userInfo:(NSDictionary *)userInfo cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles
+- (void)showAlertWithTitle:(NSString *)title message:(NSString *)message delegate:(id<SMProgressHUDAlertViewDelegate>)delegate alertStyle:(SMProgressHUDAlertViewStyle)alertStyle userInfo:(NSDictionary *)userInfo cancelButtonTitle:(NSString *)cancelButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles
 {
     //清除状态
     if (SMProgressHUDStateLoading == state)
@@ -152,6 +159,11 @@ typedef enum : NSUInteger {
         [_loadingView setAlpha:0];
         [_loadingView removeFromSuperview];
         loadingCount = 0;
+    }
+    else if (SMProgressHUDStateActionSheet == state)
+    {
+        [_actionSheetView remove];
+        _actionSheetView = nil;
     }
     else if(SMProgressHUDStateAlert == state)
     {
@@ -168,8 +180,6 @@ typedef enum : NSUInteger {
     _alertView = [[SMProgressHUDAlertView alloc] initWithTitle:title message:message delegate:delegate alertViewStyle:alertStyle cancelButtonTitle:cancelButtonTitle otherButtonTitles:otherButtonTitles];
     [_alertView setUserInfo:userInfo];
     [maskLayer addSubview:_alertView];
-//    [_alertView addConstraint:NSLayoutAttributeCenterX equalTo:maskLayer offset:0];
-//    [_alertView addConstraint:NSLayoutAttributeCenterY equalTo:maskLayer offset:0];
     [window setHidden:NO];
     [window setFrame:CGRectMake(0, 0, kSMProgressWindowWidth, kSMProgressWindowHeight)];
     
@@ -178,6 +188,50 @@ typedef enum : NSUInteger {
         [maskLayer setAlpha:1];
         [_alertView setAlpha:1];
     }];
+}
+
+#pragma mark - ActionSheet
+- (void)setActionSheetTag:(NSInteger)tag
+{
+    [_actionSheetView setTag:tag];
+}
+
+- (void)showActionSheetWithTitle:(NSString *)title delegate:(id<SMProgressHUDActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles
+{
+    return [self showActionSheetWithTitle:title delegate:delegate cancelButtonTitle:cancelButtonTitle destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:otherButtonTitles userInfo:nil];
+}
+
+- (void)showActionSheetWithTitle:(NSString *)title delegate:(id<SMProgressHUDActionSheetDelegate>)delegate cancelButtonTitle:(NSString *)cancelButtonTitle destructiveButtonTitle:(NSString *)destructiveButtonTitle otherButtonTitles:(NSArray *)otherButtonTitles userInfo:(NSDictionary *)userInfo
+{
+    if (SMProgressHUDStateLoading == state)
+    {
+        [timer invalidate];
+        [_loadingView setAlpha:0];
+        [_loadingView removeFromSuperview];
+        loadingCount = 0;
+    }
+    else if(SMProgressHUDStateAlert == state)
+    {
+        [_alertView removeFromSuperview];
+    }
+    else if (SMProgressHUDStateTip == state)
+    {
+        [_tipView removeFromSuperview];
+        _tipView = nil;
+    }
+    else if(SMProgressHUDStateActionSheet == state)
+    {
+        return;
+    }
+    
+    state = SMProgressHUDStateActionSheet;
+    _actionSheetView = [[SMProgressHUDActionSheet alloc] initWithTitle:title delegate:delegate cancelButtonTitle:cancelButtonTitle destructiveButtonTitle:destructiveButtonTitle otherButtonTitles:otherButtonTitles userInfo:userInfo];
+    [window setHidden:NO];
+    [window setFrame:CGRectMake(0, 0, kSMProgressWindowWidth, kSMProgressWindowHeight)];
+    
+    [maskLayer setAlpha:1];
+    [window  addSubview:_actionSheetView];
+    [_actionSheetView show];
 }
 
 #pragma mark - TipView
@@ -210,6 +264,11 @@ typedef enum : NSUInteger {
         [_loadingView setAlpha:0];
         [_loadingView removeFromSuperview];
         loadingCount = 0;
+    }
+    else if (SMProgressHUDStateActionSheet == state)
+    {
+        [_actionSheetView remove];
+        _actionSheetView = nil;
     }
     else if(SMProgressHUDStateAlert == state)
     {
@@ -312,6 +371,24 @@ typedef enum : NSUInteger {
             [window setHidden:YES];
             [_alertView removeFromSuperview];
             _alertView = nil;
+        }];
+        state = SMProgressHUDStateStatic;
+    }
+}
+
+- (void)dismissActionSheet
+{
+    if (SMProgressHUDStateActionSheet == state)
+    {
+        [_actionSheetView hide];
+        [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
+            [maskLayer setAlpha:0];
+            [_alertView setAlpha:0];
+            [_actionSheetView layoutIfNeeded];
+        } completion:^(BOOL finished) {
+            [window setHidden:YES];
+            [_actionSheetView removeFromSuperview];
+            _actionSheetView = nil;
         }];
         state = SMProgressHUDStateStatic;
     }

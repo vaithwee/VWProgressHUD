@@ -9,14 +9,12 @@
 #import "SMProgressHUDAlertView.h"
 #import "SMProgressHUDConfigure.h"
 #import "SMProgressHUD.h"
-#import <objc/runtime.h>
 #import "UIView+SMAutolayout.h"
 
 static const NSInteger CANCELINDEX = 0;
 
 @interface SMProgressHUDAlertView() <UITextFieldDelegate>
 @property (strong, nonatomic) NSLayoutConstraint *centerY;
-
 @end
 
 @implementation SMProgressHUDAlertView
@@ -34,7 +32,6 @@ static const NSInteger CANCELINDEX = 0;
         [self setBackgroundColor:[UIColor whiteColor]];
         [self.layer  setShadowOffset:CGSizeMake(0, 2)];
         [self.layer setShadowOpacity:0.2];
-//        [self setClipsToBounds:YES];
         [self setAlpha:0];
         _delegate = delegate;
         
@@ -264,11 +261,11 @@ static const NSInteger CANCELINDEX = 0;
         }
         
         [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:lastButton attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0]];
-        
     }
     return self;
 }
 
+#pragma mark 点击事件
 - (void)alertViewDidClickedButtonAtIndex:(UIButton *)senger
 {
     if (_delegate)
@@ -286,26 +283,28 @@ static const NSInteger CANCELINDEX = 0;
     [[SMProgressHUD shareInstancetype] dismissAlertView];
 }
 
+#pragma mark 键盘开启
 - (void)textFieldDidBeginEditing:(UITextField *)textField
 {
     _centerY.constant = -kSMProgressWindowHeight/4;
-    [UIView animateWithDuration:0.25 animations:^{
+    [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
         [self layoutIfNeeded];
     }];
 }
 
+#pragma mark 键盘关闭
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     _centerY.constant = 0;
-    [UIView animateWithDuration:0.25 animations:^{
+    [UIView animateWithDuration:kSMProgressHUDAnimationDuration animations:^{
         [self layoutIfNeeded];
     }];
     
 }
 
+#pragma mark 设置位置
 - (void)didMoveToSuperview
 {
-    NSLog(@"AlertView didMoveToSuperview");
     if (self.superview)
     {
         _centerY = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeCenterY relatedBy:NSLayoutRelationEqual toItem:self.superview attribute:NSLayoutAttributeCenterY multiplier:1.0 constant:0];
