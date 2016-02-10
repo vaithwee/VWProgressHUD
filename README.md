@@ -22,8 +22,11 @@
 
 #版本更新
 Dev 1.2.0
+
 1、修改AlertView样式，添加userInfo
+
 2、TipView的window缩放为TipView大小
+
 3、使用自动布局
 
 
