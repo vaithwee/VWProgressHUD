@@ -134,6 +134,11 @@
 			isa = PBXProject;
 			attributes = {
 				ORGANIZATIONNAME = "Shenme Studio";
+				TargetAttributes = {
+					4E995E406C4EDDB9548DFB04 = {
+						DevelopmentTeam = 82TJ388EAF;
+					};
+				};
 			};
 			buildConfigurationList = 4E99549BD554C35F0774B8B1 /* Build configuration list for PBXProject "VWProgressHUDDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -252,10 +257,13 @@
 			baseConfigurationReference = AAA0458093CFE2B641E7C955 /* Pods-VWProgressHUDDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VWProgressHUDDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.vaith.VWProgressHUDDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -348,10 +356,13 @@
 			baseConfigurationReference = 0F772D9F050623FB5DCDDB96 /* Pods-VWProgressHUDDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VWProgressHUDDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = xyz.vaith.VWProgressHUDDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

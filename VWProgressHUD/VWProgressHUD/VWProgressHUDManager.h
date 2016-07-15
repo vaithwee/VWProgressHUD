@@ -10,4 +10,13 @@
 
 @interface VWProgressHUD : NSObject
 + (void)log;
+
+#pragma mark config
++ (void)configure;
+
+#pragma mark create instance
++ (instancetype)shareInstance;
+
+#pragma mark show loading;
+- (void)showLoading;
 @end

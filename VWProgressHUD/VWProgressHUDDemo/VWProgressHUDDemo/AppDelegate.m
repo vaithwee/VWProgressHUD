@@ -8,6 +8,7 @@
 
 
 #import "AppDelegate.h"
+#import <VWProgressHUD.h>
 
 
 @interface AppDelegate ()
@@ -21,6 +22,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [VWProgressHUD configure];
     return YES;
 }
 
