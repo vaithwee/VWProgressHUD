@@ -1,0 +1,6 @@
+framework module VWProgressHUD {
+  umbrella header "VWProgressHUD.h"
+
+  export *
+  module * { export * }
+}

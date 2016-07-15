@@ -1,0 +1,19 @@
+{
+  "name": "VMProgressHUD",
+  "version": "0.0.3",
+  "summary": "A esay progress hud to use",
+  "description": "A VMProgressHUD",
+  "homepage": "http://www.vaith.xyz",
+  "license": "MIT",
+  "authors": {
+    "vaithwee": "vaithwee@yeah.net"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "source": {
+    "git": "https://github.com/vaithwee"
+  },
+  "vendored_frameworks": "Products/*.framework",
+  "requires_arc": true
+}
