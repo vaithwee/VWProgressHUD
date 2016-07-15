@@ -7,13 +7,15 @@
 //
 
 #import "VWProgressHUDManager.h"
+#import "VWConfig.h"
 
 static VWProgressHUD *_shareInstance;
 
 @interface VWProgressHUD ()
-@property (strong, nonatomic) UIWindow *window;
-@property (weak, nonatomic) UIView *currentView;
-@property (weak, nonatomic) UIView *firstResponder;
+@property(strong, nonatomic) UIWindow *window;
+@property(weak, nonatomic) UIView *currentView;
+@property(weak, nonatomic) UIView *firstResponder;
+@property (assign, nonatomic) NSInteger loadingCount;
 @end
 
 @implementation VWProgressHUD
@@ -49,29 +51,23 @@ static VWProgressHUD *_shareInstance;
         [window setRootViewController:[UIViewController new]];
         self.window = window;
 
-        /*regist notification*/
+        /*regist screen change and keyboard notification*/
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarOrientationChange:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
-
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
-
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardWillHideNotification object:nil];
 
-        /*test code*/
-
-
-        NSLog(@"progress hud init cpx");
     }
     return self;
 }
 
 #pragma mark config
-+ (void)configure
-{
++ (void)configure {
     [self shareInstance];
 }
 
 #pragma mark - Notification Method
 #pragma mark screen change notification by status bar
+
 - (void)statusBarOrientationChange:(NSNotification *)notification {
     /*change current view center*/
     if (self.currentView) {
@@ -81,39 +77,39 @@ static VWProgressHUD *_shareInstance;
 }
 
 #pragma mark keyborard show
-- (void)keyboardWasShown:(NSNotification *)notification
-{
-    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
-    UIView   *firstResponder = [keyWindow performSelector:@selector(firstResponder)];
 
-    NSLog(@"%@",firstResponder);
+- (void)keyboardWasShown:(NSNotification *)notification {
+    UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
+    UIView *firstResponder = [keyWindow performSelector:@selector(firstResponder)];
+
+    NSLog(@"%@", firstResponder);
     self.firstResponder = firstResponder;
     NSLog(@"keyboard show");
 }
 
 #pragma mark keyboard hidden
-- (void)keyboardWasHidden:(NSNotification *)notification
-{
+
+- (void)keyboardWasHidden:(NSNotification *)notification {
     self.firstResponder = nil;
     NSLog(@"keyboard hidden");
 }
 
 #pragma mark - Commen Method
-- (void)initConfig
-{
+#pragma mark init and clean
+
+- (void)initConfig {
     /*clean keyboard*/
-   if ([self.firstResponder respondsToSelector:@selector(resignFirstResponder)])
-   {
-       [self.firstResponder performSelector:@selector(resignFirstResponder)];
-   }
+    if ([self.firstResponder respondsToSelector:@selector(resignFirstResponder)]) {
+        [self.firstResponder performSelector:@selector(resignFirstResponder)];
+    }
 }
 
-- (void)showLoading
-{
+#pragma mark show loading;
+
+- (void)showLoading {
     [self initConfig];
 
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
-    [view setBackgroundColor:[UIColor redColor]];
     [self.window addSubview:view];
     view.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 2);
     self.currentView = view;

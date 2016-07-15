@@ -5,31 +5,34 @@
       <sourceFolder url="file://$USER_HOME$/Library/Caches/AppCode2016.1/DerivedData/VWProgressHUDDemo-bbcpbpzuokaribhabycitfsgzajx/Build/Products/Debug-iphoneos/libPods-VWProgressHUDDemo.a" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/..">
-      <sourceFolder url="file://$MODULE_DIR$/../VWProgressHUD/VWProgressHUDManager.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../VWProgressHUD/VWConfig.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../VWProgressHUD/VWLoadingView.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../VWProgressHUD/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../VWProgressHUD/VWProgressHUDManager.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../VWProgressHUD/VWProgressHUD.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../VWProgressHUD/VWProgressHUDManager.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../VWProgressHUD/VWConfig.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../VWProgressHUD/VWProgressHUDManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../VWProgressHUD.podspec" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/Assets.xcassets" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/ViewController.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/AppDelegate.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/Info.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/Assets.xcassets" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/main.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/ViewController.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/AppDelegate.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/Base.lproj/LaunchScreen.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/VWProgressHUDDemo/Base.lproj/Main.storyboard" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Podfile" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-VWProgressHUDDemo/Pods-VWProgressHUDDemo-frameworks.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-VWProgressHUDDemo/Pods-VWProgressHUDDemo-acknowledgements.markdown" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-VWProgressHUDDemo/Pods-VWProgressHUDDemo-acknowledgements.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-VWProgressHUDDemo/Pods-VWProgressHUDDemo.release.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-VWProgressHUDDemo/Pods-VWProgressHUDDemo-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-VWProgressHUDDemo/Pods-VWProgressHUDDemo.debug.xcconfig" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-VWProgressHUDDemo/Pods-VWProgressHUDDemo.release.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-VWProgressHUDDemo/Pods-VWProgressHUDDemo-resources.sh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-VWProgressHUDDemo/Pods-VWProgressHUDDemo-frameworks.sh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/VWProgressHUD/VWProgressHUD.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/VWProgressHUD/VWProgressHUD-prefix.pch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/VWProgressHUD/VWProgressHUD-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/VWProgressHUD/VWProgressHUD-prefix.pch" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/VWProgressHUD/VWProgressHUD.xcconfig" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">

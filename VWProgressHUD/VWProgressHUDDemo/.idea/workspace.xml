@@ -20,36 +20,24 @@
     <favorites_list name="VWProgressHUDDemo" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="VWProgressHUDManager.m" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="VWProgressHUDManager.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWProgressHUDManager.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="611">
-              <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+            <state relative-caret-position="408">
+              <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
               <folding>
-                <element signature="e#495#654#0" expanded="false" />
-                <element signature="e#656#861#0" expanded="false" />
-                <element signature="e#863#1934#0" expanded="false" />
+                <element signature="e#138#170#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UIView.h" pinned="false" current-in-tab="false">
-        <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIView.h">
+      <file leaf-file-name="VWProgressHUD.podspec" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../VWProgressHUD.podspec">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="235" column="220" selection-start-line="235" selection-start-column="217" selection-end-line="235" selection-end-column="220" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppDelegate.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/AppDelegate.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="384">
+              <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -68,8 +56,8 @@
       <file leaf-file-name="ViewController.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/ViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+            <state relative-caret-position="960">
+              <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
               <folding>
                 <element signature="e#146#172#0" expanded="true" />
               </folding>
@@ -77,11 +65,31 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="VWConfig.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWConfig.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VWConfig.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWConfig.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="VWProgressHUDManager.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWProgressHUDManager.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+            <state relative-caret-position="456">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -90,7 +98,7 @@
       <file leaf-file-name="AppDelegate.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/AppDelegate.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
+            <state relative-caret-position="576">
               <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
               <folding>
                 <element signature="e#143#166#0" expanded="true" />
@@ -102,7 +110,7 @@
       <file leaf-file-name="main.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/main.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
+            <state relative-caret-position="432">
               <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
               <folding />
             </state>
@@ -117,7 +125,12 @@
         <option value="$PROJECT_DIR$/VWProgressHUDDemo/ViewController.m" />
         <option value="$PROJECT_DIR$/VWProgressHUDDemo/AppDelegate.m" />
         <option value="$PROJECT_DIR$/../VWProgressHUD/VWProgressHUDManager.h" />
+        <option value="$PROJECT_DIR$/../VWProgressHUD/VWLoadingView.h" />
+        <option value="$PROJECT_DIR$/../VWProgressHUD/VWLoadingView.m" />
+        <option value="$PROJECT_DIR$/../VWProgressHUD/VWConfig.m" />
+        <option value="$PROJECT_DIR$/../VWProgressHUD/VWConfig.h" />
         <option value="$PROJECT_DIR$/../VWProgressHUD/VWProgressHUDManager.m" />
+        <option value="$PROJECT_DIR$/../VWProgressHUD.podspec" />
       </list>
     </option>
   </component>
@@ -128,8 +141,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="-1854" />
     <option name="y" value="23" />
-    <option name="width" value="1920" />
+    <option name="width" value="1853" />
     <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -224,6 +238,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
+    <property name="OBJC.PRESERVED_TARGET_SELECTION" value="VWProgressHUD" />
   </component>
   <component name="RunManager" selected="Application.VWProgressHUDDemo">
     <configuration default="false" name="VWProgressHUDDemo" type="AppleRunConfiguration" factoryName="Application" temporary="true" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VWProgressHUDDemo" TARGET_NAME="VWProgressHUDDemo" CONFIG_NAME="Debug" SCHEME_NAME="VWProgressHUDDemo" RUN_TARGET_PROJECT_NAME="VWProgressHUDDemo" RUN_TARGET_NAME="VWProgressHUDDemo" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -238,6 +253,33 @@
       <EXTENSION ID="org.jetbrains.appcode.reveal.RevealRunConfigurationExtension">
         <REVEAL_SETTINGS autoInject="false" autoInstall="true" askToEnableAutoInstall="true" />
       </EXTENSION>
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VWProgressHUDDemo" TARGET_NAME="VWProgressHUDDemo" CONFIG_NAME="Debug" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS_2="true" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
       <method />
     </configuration>
     <configuration default="false" name="VMPrgoressHUDFramework" type="AppleRunConfiguration" factoryName="Application" WORKING_DIR="" PASS_PARENT_ENVS_2="true" PROJECT_NAME="VWProgressHUD" TARGET_NAME="VMPrgoressHUDFramework" CONFIG_NAME="Debug" SCHEME_NAME="VMPrgoressHUDFramework" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
@@ -262,10 +304,10 @@
       <method />
     </configuration>
     <list size="4">
-      <item index="0" class="java.lang.String" itemvalue="Application.VWProgressHUDDemo" />
-      <item index="1" class="java.lang.String" itemvalue="Application.VMPrgoressHUDFramework" />
-      <item index="2" class="java.lang.String" itemvalue="Application.VWProgressHUD" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Pods-VWProgressHUDDemo" />
+      <item index="0" class="java.lang.String" itemvalue="Application.VMPrgoressHUDFramework" />
+      <item index="1" class="java.lang.String" itemvalue="Application.VWProgressHUD" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Pods-VWProgressHUDDemo" />
+      <item index="3" class="java.lang.String" itemvalue="Application.VWProgressHUDDemo" />
     </list>
     <recent_temporary>
       <list size="1">
@@ -287,13 +329,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
+    <frame x="-1854" y="23" width="1853" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2590394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299595" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299595" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -321,27 +363,13 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIView.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="235" column="220" selection-start-line="235" selection-start-column="217" selection-end-line="235" selection-end-column="220" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/AppDelegate.h">
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWProgressHUDManager.m">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/main.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
+          <folding>
+            <element signature="e#138#170#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -355,17 +383,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/ViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+        <state relative-caret-position="960">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
             <element signature="e#146#172#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWLoadingView.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWLoadingView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+          <folding>
+            <element signature="e#89#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWConfig.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWConfig.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWProgressHUDManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/AppDelegate.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
+        <state relative-caret-position="576">
           <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
           <folding>
             <element signature="e#143#166#0" expanded="true" />
@@ -373,23 +443,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWProgressHUDManager.h">
+    <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/main.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="432">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file:///Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIView.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-254">
+          <caret line="235" column="220" selection-start-line="235" selection-start-column="217" selection-end-line="235" selection-end-column="220" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/AppDelegate.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/main.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/ViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/AppDelegate.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="24" column="28" selection-start-line="24" selection-start-column="28" selection-end-line="24" selection-end-column="28" />
+          <folding>
+            <element signature="e#143#166#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VWProgressHUDDemo/ViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <folding>
+            <element signature="e#146#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWConfig.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="9" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWConfig.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWProgressHUDManager.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWLoadingView.m" />
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWLoadingView.h" />
     <entry file="file://$PROJECT_DIR$/../VWProgressHUD/VWProgressHUDManager.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="611">
-          <caret line="107" column="4" selection-start-line="107" selection-start-column="4" selection-end-line="107" selection-end-column="4" />
+        <state relative-caret-position="408">
+          <caret line="100" column="22" selection-start-line="100" selection-start-column="22" selection-end-line="100" selection-end-column="22" />
           <folding>
-            <element signature="e#495#654#0" expanded="false" />
-            <element signature="e#656#861#0" expanded="false" />
-            <element signature="e#863#1934#0" expanded="false" />
+            <element signature="e#138#170#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../VWProgressHUD.podspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="16" column="3" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>

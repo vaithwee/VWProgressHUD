@@ -13,4 +13,5 @@ s.source       = { :git => "https://github.com/vaithwee" }
 #s.vendored_frameworks = "Products/*.framework"
 s.source_files  = "VWProgressHUD/**/*.{h,m}"
 s.requires_arc = true
+s.ios.frameworks = 'Foundation', 'UIKit'
 end
