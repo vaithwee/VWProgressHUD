@@ -24,7 +24,7 @@
 		CC42C6A21D38CC2E00D9B80F /* VWProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = CC42C6A11D38CC2E00D9B80F /* VWProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC42C6CE1D38CCD500D9B80F /* VWProgressHUDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CC42C6CC1D38CCD500D9B80F /* VWProgressHUDManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC42C6CF1D38CCD500D9B80F /* VWProgressHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC42C6CD1D38CCD500D9B80F /* VWProgressHUDManager.m */; };
-		CC42C6D11D38D05900D9B80F /* VMProgressHUD.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CC42C6D01D38D05900D9B80F /* VMProgressHUD.podspec */; };
+		CC42C6D81D38D7AA00D9B80F /* VWProgressHUD.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CC42C6D71D38D7AA00D9B80F /* VWProgressHUD.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +33,7 @@
 		CC42C6A31D38CC2E00D9B80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC42C6CC1D38CCD500D9B80F /* VWProgressHUDManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWProgressHUDManager.h; sourceTree = "<group>"; };
 		CC42C6CD1D38CCD500D9B80F /* VWProgressHUDManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWProgressHUDManager.m; sourceTree = "<group>"; };
-		CC42C6D01D38D05900D9B80F /* VMProgressHUD.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VMProgressHUD.podspec; sourceTree = SOURCE_ROOT; };
+		CC42C6D71D38D7AA00D9B80F /* VWProgressHUD.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VWProgressHUD.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +66,7 @@
 		CC42C6A01D38CC2E00D9B80F /* VWProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				CC42C6D01D38D05900D9B80F /* VMProgressHUD.podspec */,
+				CC42C6D71D38D7AA00D9B80F /* VWProgressHUD.podspec */,
 				CC42C6A11D38CC2E00D9B80F /* VWProgressHUD.h */,
 				CC42C6A31D38CC2E00D9B80F /* Info.plist */,
 				CC42C6CC1D38CCD500D9B80F /* VWProgressHUDManager.h */,
@@ -149,7 +149,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC42C6D11D38D05900D9B80F /* VMProgressHUD.podspec in Resources */,
+				CC42C6D81D38D7AA00D9B80F /* VWProgressHUD.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +362,7 @@
 				CC42C6D51D38D30B00D9B80F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
