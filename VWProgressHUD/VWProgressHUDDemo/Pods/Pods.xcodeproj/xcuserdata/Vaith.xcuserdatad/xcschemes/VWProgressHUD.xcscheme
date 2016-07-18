@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AFBA82DC037E3EE52D477745316ADEE5"
-               BlueprintName = "VWProgressHUD"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libVWProgressHUD.a">
+               BuildableIdentifier = 'primary'
+               BlueprintIdentifier = 'AFBA82DC037E3EE52D477745316ADEE5'
+               BlueprintName = 'VWProgressHUD'
+               ReferencedContainer = 'container:Pods.xcodeproj'
+               BuildableName = 'libVWProgressHUD.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

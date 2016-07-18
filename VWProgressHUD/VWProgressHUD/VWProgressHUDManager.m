@@ -8,14 +8,19 @@
 
 #import "VWProgressHUDManager.h"
 #import "VWConfig.h"
+#import "VWLoadingView.h"
+#import <UIKit/UIKit.h>
+#import <VWLoadingView.h>
 
 static VWProgressHUD *_shareInstance;
 
 @interface VWProgressHUD ()
-@property(strong, nonatomic) UIWindow *window;
-@property(weak, nonatomic) UIView *currentView;
-@property(weak, nonatomic) UIView *firstResponder;
+@property (strong, nonatomic) UIWindow *window;
+@property (weak, nonatomic) UIView *currentView;
+@property (weak, nonatomic) UIView *firstResponder;
 @property (assign, nonatomic) NSInteger loadingCount;
+@property (strong, nonatomic) NSTimer *timer;
+@property (weak, nonatomic) VWLoadingView *loadingView;
 @end
 
 @implementation VWProgressHUD
@@ -50,12 +55,12 @@ static VWProgressHUD *_shareInstance;
         [window setUserInteractionEnabled:NO];
         [window setRootViewController:[UIViewController new]];
         self.window = window;
-
+        
         /*regist screen change and keyboard notification*/
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarOrientationChange:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardWillHideNotification object:nil];
-
+        
     }
     return self;
 }
@@ -81,7 +86,7 @@ static VWProgressHUD *_shareInstance;
 - (void)keyboardWasShown:(NSNotification *)notification {
     UIWindow *keyWindow = [[UIApplication sharedApplication] keyWindow];
     UIView *firstResponder = [keyWindow performSelector:@selector(firstResponder)];
-
+    
     NSLog(@"%@", firstResponder);
     self.firstResponder = firstResponder;
     NSLog(@"keyboard show");
@@ -104,14 +109,37 @@ static VWProgressHUD *_shareInstance;
     }
 }
 
+#pragma mark dismiss
+- (void)dismiss
+{
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.loadingView setAlpha:0];
+    } completion:^(BOOL finished) {
+        [self.loadingView removeFromSuperview];
+        [self.timer invalidate];
+        self.timer = nil;
+    }];
+}
+
 #pragma mark show loading;
 
-- (void)showLoading {
-    [self initConfig];
+- (void)showLoading
+{
+    return [self showLoadingWithTip:nil sub:nil];
+}
 
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 200, 100)];
+- (void)showLoadingWithTip:(NSString *)tip
+{
+    return [self showLoadingWithTip:tip sub:nil];
+}
+
+- (void)showLoadingWithTip:(NSString *)tip sub:(NSString *)sub
+{
+    VWLoadingView  *view = [[VWLoadingView alloc] initWithTip:tip sub:sub];
     [self.window addSubview:view];
-    view.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 2);
-    self.currentView = view;
+    self.loadingView = view;
+    
+    self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 @end

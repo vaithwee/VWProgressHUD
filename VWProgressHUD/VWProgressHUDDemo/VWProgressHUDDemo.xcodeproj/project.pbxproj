@@ -15,6 +15,7 @@
 		4E995EE62F5099596AD0F03E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E995FDEC2E7005EEEA03186 /* LaunchScreen.storyboard */; };
 		4E995F6131B1413E5520DE52 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E995E16C8577E4DD8037F36 /* Info.plist */; };
 		8C0DD8B7810BFD752FA95E98 /* libPods-VWProgressHUDDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FC90E42472B5FB79EB53E88 /* libPods-VWProgressHUDDemo.a */; };
+		CC7F0C231D3CC18F0045FC0D /* ProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7F0C221D3CC18F0045FC0D /* ProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		4E995F7E8E0E89EB3E38A9E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7FC90E42472B5FB79EB53E88 /* libPods-VWProgressHUDDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VWProgressHUDDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAA0458093CFE2B641E7C955 /* Pods-VWProgressHUDDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VWProgressHUDDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VWProgressHUDDemo/Pods-VWProgressHUDDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		CC7F0C211D3CC18F0045FC0D /* ProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressHUD.h; sourceTree = "<group>"; };
+		CC7F0C221D3CC18F0045FC0D /* ProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				4E995C933FE670FF864935B6 /* Main.storyboard */,
 				4E99514F3136380AA6001AA8 /* ViewController.h */,
 				4E995E9E1678850E253B21C0 /* ViewController.m */,
+				CC7F0C211D3CC18F0045FC0D /* ProgressHUD.h */,
+				CC7F0C221D3CC18F0045FC0D /* ProgressHUD.m */,
 			);
 			path = VWProgressHUDDemo;
 			sourceTree = "<group>";
@@ -226,6 +231,7 @@
 			files = (
 				4E9952DE0CFE482CEF429FCE /* main.m in Sources */,
 				4E9957D33143403E8EF55611 /* AppDelegate.m in Sources */,
+				CC7F0C231D3CC18F0045FC0D /* ProgressHUD.m in Sources */,
 				4E995443C09CFE5401D2D689 /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

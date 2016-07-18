@@ -9,10 +9,11 @@
 
 #import "ViewController.h"
 #import <VWProgressHUD/VWProgressHUD.h>
+#import "ProgressHUD.h"
 
 
 @interface ViewController ()
-
+@property (strong, nonatomic) NSArray<NSArray<ProgressHUD *> *> *data;
 @end
 
 @implementation ViewController
@@ -21,30 +22,62 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    UITextField  *textField = [[UITextField alloc] initWithFrame:CGRectMake(0, 50, 320, 50)];
-    [textField setBackgroundColor:[UIColor yellowColor]];
-    [self.view addSubview:textField];
-
-    UIButton *show = [UIButton buttonWithType:UIButtonTypeCustom];
-    [show setBackgroundColor:[UIColor redColor]];
-    [show setFrame:CGRectMake(0,120,100,100)];
-    [show setTitle:@"show" forState:UIControlStateNormal];
-    [show addTarget:self action:@selector(show) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:show];
-
-
+    [self setTitle:@"VMProgressHUD Demo"];
+    NSArray *loading = @[
+                         [ProgressHUD progressHUDWithName:@"Simple Loading" sel:@selector(show)],
+                         [ProgressHUD progressHUDWithName:@"Loading With Tip" sel:@selector(showWithTip)],
+                         [ProgressHUD progressHUDWithName:@"Loading With Tip And Sub" sel:@selector(showLoadingWithTipAndSub)],
+                         ];
+    self.data = @[loading];
 }
 
+#pragma mark progress hud method
 - (void)show
 {
     [[VWProgressHUD shareInstance] showLoading];
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)showWithTip
+{
+    [[VWProgressHUD shareInstance] showLoadingWithTip:@"hello world"];
 }
 
+- (void)showLoadingWithTipAndSub
+{
+    [[VWProgressHUD shareInstance] showLoadingWithTip:@"Hello World" sub:@"This is a post method\n1/99"];
+}
+
+#pragma mark - TableView Data Source
+#pragma mark section number
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.data.count;
+}
+
+#pragma mark row number
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.data[section].count;
+}
+
+#pragma mark cell
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [UITableViewCell new];
+    [cell.textLabel setText:self.data[indexPath.section][indexPath.row].name];
+    return cell;
+}
+
+#pragma mark selected
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    SEL sel = self.data[indexPath.section][indexPath.row].sel;
+    if ([self respondsToSelector:sel])
+    {
+        #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+        [self performSelector:sel];
+    }
+}
 
 @end

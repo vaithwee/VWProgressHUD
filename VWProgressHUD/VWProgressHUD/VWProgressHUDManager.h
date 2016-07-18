@@ -17,6 +17,10 @@
 #pragma mark create instance
 + (instancetype)shareInstance;
 
+- (void)dismiss;
+
 #pragma mark show loading;
 - (void)showLoading;
+- (void)showLoadingWithTip:(NSString *)tip;
+- (void)showLoadingWithTip:(NSString *)tip sub:(NSString *)sub;
 @end

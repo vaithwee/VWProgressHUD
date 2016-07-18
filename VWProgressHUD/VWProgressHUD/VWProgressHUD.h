@@ -17,3 +17,5 @@ FOUNDATION_EXPORT const unsigned char VWProgressHUDVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <VWProgressHUD/PublicHeader.h>
 
 #import <VWProgressHUD/VWProgressHUDManager.h>
+#import <VWProgressHUD/VWConfig.h>
+#import <VWProgressHUD/VWLoadingView.h>
