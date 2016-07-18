@@ -45,12 +45,12 @@
         UILabel *mainLabel = [UILabel new];
         [mainLabel setTextAlignment:NSTextAlignmentCenter];
         [mainLabel setText:tip];
+        [mainLabel setLineBreakMode:NSLineBreakByCharWrapping];
         [mainLabel setTextColor:HEXCOLOR(TEXTCOLOR)];
         [mainLabel setFont:[UIFont systemFontOfSize:DEFAULTTIPFONT]];
         [self addSubview:mainLabel];
         [mainLabel setPreferredMaxLayoutWidth:MAXTEXTWIDTH];
         [mainLabel setNumberOfLines:0];
-        
         self.mainLabel = mainLabel;
         
         UILabel *subLabel = [UILabel new];
@@ -62,8 +62,6 @@
         [self addSubview:subLabel];
         [subLabel setPreferredMaxLayoutWidth:MAXTEXTWIDTH];
         [subLabel setNumberOfLines:0];
-        
-        
         self.subLabel = subLabel;
         
         [self setConstraint];

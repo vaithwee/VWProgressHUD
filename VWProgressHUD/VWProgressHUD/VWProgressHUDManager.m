@@ -140,6 +140,9 @@ static VWProgressHUD *_shareInstance;
     if (self.loadingView)
     {
         [self.loadingView setTip:tip sub:sub];
+        [self.timer invalidate];
+        self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
+        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
         return;
     }
     
