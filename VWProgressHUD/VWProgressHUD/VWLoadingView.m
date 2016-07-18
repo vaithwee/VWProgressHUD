@@ -14,6 +14,7 @@
 @property (weak, nonatomic) UIActivityIndicatorView *loadingView;
 @property (weak, nonatomic) UILabel *mainLabel;
 @property (weak, nonatomic) UILabel *subLabel;
+@property (assign, nonatomic) BOOL isNeedAni;
 @end
 
 @implementation VWLoadingView
@@ -33,60 +34,87 @@
         [loadingView setColor:HEXCOLOR(LOADINGCOLOR)];
         [loadingView setHidesWhenStopped:YES];
         [self addSubview:loadingView];
-        [loadingView addConstraint:NSLayoutAttributeWidth value:LOADINGWD*0.8];
-        [loadingView addConstraint:NSLayoutAttributeHeight value:LOADINGWD*0.8];
-        [loadingView addConstraint:NSLayoutAttributeCenterX equalTo:self offset:0];
-        [loadingView addConstraint:NSLayoutAttributeTop equalTo:self offset:LOADINGWD*0.1];
         [loadingView startAnimating];
         self.loadingView = loadingView;
-        
-        UIView *lastView = loadingView;
         
         if (ISSHOWDEFAULTTIP && (!tip || [tip isEqualToString:@""]))
         {
             tip = DEFAULTTIP;
         }
         
-        /*main label*/
-        if (tip && ![tip isEqualToString:@""])
-        {
-            UILabel *mainLabel = [UILabel new];
-            [mainLabel setTextAlignment:NSTextAlignmentCenter];
-            [mainLabel setText:tip];
-            [mainLabel setTextColor:HEXCOLOR(TEXTCOLOR)];
-            [mainLabel setFont:[UIFont systemFontOfSize:DEFAULTTIPFONT]];
-            [self addSubview:mainLabel];
-            [mainLabel setPreferredMaxLayoutWidth:MAXTEXTWIDTH];
-            [mainLabel setNumberOfLines:0];
-            [mainLabel addConstraint:NSLayoutAttributeTop equalTo:loadingView fromConstraint:NSLayoutAttributeBottom offset:-PADDING];
-            [mainLabel addConstraint:NSLayoutAttributeLeft equalTo:self offset:PADDING];
-            [mainLabel addConstraint:NSLayoutAttributeRight equalTo:self offset:-PADDING];
-            lastView = mainLabel;
-            
-            if (sub && ![sub isEqualToString:@""])
-            {
-                UILabel *subLabel = [UILabel new];
-                [subLabel setTextAlignment:NSTextAlignmentCenter];
-                [subLabel setText:sub];
-                [subLabel setTextColor:HEXCOLOR(TEXTCOLOR)];
-                [subLabel setFont:[UIFont systemFontOfSize:DEFAULTSUBFONT]];
-                [self addSubview:subLabel];
-                [subLabel setPreferredMaxLayoutWidth:MAXTEXTWIDTH];
-                [subLabel setNumberOfLines:0];
-                [subLabel addConstraint:NSLayoutAttributeTop equalTo:mainLabel fromConstraint:NSLayoutAttributeBottom offset:PADDING/2];
-                [subLabel addConstraint:NSLayoutAttributeLeft equalTo:self offset:PADDING];
-                [subLabel addConstraint:NSLayoutAttributeRight equalTo:self offset:-PADDING];
-                lastView = subLabel;
-                
-            }
-        }
-
+        UILabel *mainLabel = [UILabel new];
+        [mainLabel setTextAlignment:NSTextAlignmentCenter];
+        [mainLabel setText:tip];
+        [mainLabel setTextColor:HEXCOLOR(TEXTCOLOR)];
+        [mainLabel setFont:[UIFont systemFontOfSize:DEFAULTTIPFONT]];
+        [self addSubview:mainLabel];
+        [mainLabel setPreferredMaxLayoutWidth:MAXTEXTWIDTH];
+        [mainLabel setNumberOfLines:0];
         
-        [self addConstraint:NSLayoutAttributeWidth greatOrLess:NSLayoutRelationGreaterThanOrEqual value:LOADINGWD*(tip?1.2:1)];
-        [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:lastView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:LOADINGWD*0.1]];
+        self.mainLabel = mainLabel;
+        
+        UILabel *subLabel = [UILabel new];
+        [subLabel setLineBreakMode:NSLineBreakByCharWrapping];
+        [subLabel setTextAlignment:NSTextAlignmentCenter];
+        [subLabel setText:sub];
+        [subLabel setTextColor:HEXCOLOR(TEXTCOLOR)];
+        [subLabel setFont:[UIFont systemFontOfSize:DEFAULTSUBFONT]];
+        [self addSubview:subLabel];
+        [subLabel setPreferredMaxLayoutWidth:MAXTEXTWIDTH];
+        [subLabel setNumberOfLines:0];
+        
+        
+        self.subLabel = subLabel;
+        
+        [self setConstraint];
         
     }
     return self;
+}
+
+- (void)setTip:(NSString *)tip sub:(NSString *)sub;
+{
+    [self.mainLabel setText:tip];
+    [self.subLabel setText:sub];
+    [self setIsNeedAni:YES];
+    [self setConstraint];
+}
+
+- (void)setConstraint
+{
+    [self removeAllAutoLayout];
+    
+    [self.loadingView addConstraint:NSLayoutAttributeWidth value:LOADINGWD*0.8];
+    [self.loadingView addConstraint:NSLayoutAttributeHeight value:LOADINGWD*0.8];
+    [self.loadingView addConstraint:NSLayoutAttributeCenterX equalTo:self offset:0];
+    [self.loadingView addConstraint:NSLayoutAttributeTop equalTo:self offset:LOADINGWD*0.1];
+    
+    [self.mainLabel addConstraint:NSLayoutAttributeTop equalTo:self.loadingView fromConstraint:NSLayoutAttributeBottom offset:-PADDING];
+    [self.mainLabel addConstraint:NSLayoutAttributeLeft equalTo:self offset:PADDING];
+    [self.mainLabel addConstraint:NSLayoutAttributeRight equalTo:self offset:-PADDING];
+    
+    [self.subLabel addConstraint:NSLayoutAttributeTop equalTo:self.mainLabel fromConstraint:NSLayoutAttributeBottom offset:PADDING/2];
+    [self.subLabel addConstraint:NSLayoutAttributeLeft equalTo:self offset:PADDING];
+    [self.subLabel addConstraint:NSLayoutAttributeRight equalTo:self offset:-PADDING];
+    
+    UIView *lastView = self.loadingView;
+    lastView = self.mainLabel.text.length>0?self.mainLabel:lastView;
+    lastView = self.subLabel.text.length>0?self.subLabel:lastView;
+    [self addConstraint:NSLayoutAttributeWidth greatOrLess:NSLayoutRelationGreaterThanOrEqual value:LOADINGWD];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:lastView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:LOADINGWD*0.1]];
+    
+    if (self.isNeedAni)
+    {
+        self.isNeedAni = NO;
+        [UIView animateWithDuration:0.25 animations:^{
+            [self layoutIfNeeded];
+            [self.loadingView layoutIfNeeded];
+            [self.mainLabel layoutIfNeeded];
+            [self.subLabel layoutIfNeeded];
+        }];
+    }
+
+    
 }
 
 - (void)didMoveToSuperview

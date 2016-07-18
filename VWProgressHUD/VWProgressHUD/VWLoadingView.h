@@ -10,4 +10,5 @@
 
 @interface VWLoadingView : UIView
 - (instancetype)initWithTip:(NSString *)tip sub:(NSString *)sub;
+- (void)setTip:(NSString *)tip sub:(NSString *)sub;
 @end

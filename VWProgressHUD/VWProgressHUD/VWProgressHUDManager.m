@@ -115,6 +115,7 @@ static VWProgressHUD *_shareInstance;
     [UIView animateWithDuration:0.25 animations:^{
         [self.loadingView setAlpha:0];
     } completion:^(BOOL finished) {
+        [self.window setUserInteractionEnabled:NO];
         [self.loadingView removeFromSuperview];
         [self.timer invalidate];
         self.timer = nil;
@@ -135,6 +136,15 @@ static VWProgressHUD *_shareInstance;
 
 - (void)showLoadingWithTip:(NSString *)tip sub:(NSString *)sub
 {
+    
+    if (self.loadingView)
+    {
+        [self.loadingView setTip:tip sub:sub];
+        return;
+    }
+    
+    [self.window setUserInteractionEnabled:YES];
+    
     VWLoadingView  *view = [[VWLoadingView alloc] initWithTip:tip sub:sub];
     [self.window addSubview:view];
     self.loadingView = view;

@@ -35,16 +35,23 @@
 - (void)show
 {
     [[VWProgressHUD shareInstance] showLoading];
+    [self performSelector:@selector(showMore) withObject:nil afterDelay:5];
 }
 
 - (void)showWithTip
 {
-    [[VWProgressHUD shareInstance] showLoadingWithTip:@"hello world"];
+    [[VWProgressHUD shareInstance] showLoadingWithTip:@"Hello World"];
 }
 
 - (void)showLoadingWithTipAndSub
 {
     [[VWProgressHUD shareInstance] showLoadingWithTip:@"Hello World" sub:@"This is a post method\n1/99"];
+    [self performSelector:@selector(showMore) withObject:nil afterDelay:5];
+}
+
+- (void)showMore
+{
+    [[VWProgressHUD shareInstance] showLoadingWithTip:@"Hello World,Hello World,Hello World" sub:@"Life is too short to waste. Dreams are fulfilled only through action, not through endless planning to take action."];
 }
 
 #pragma mark - TableView Data Source
