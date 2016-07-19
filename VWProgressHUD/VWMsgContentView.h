@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VWBaseContentView.h"
 
 typedef NS_ENUM(NSInteger, VWMsgType)
 {
@@ -16,7 +17,7 @@ typedef NS_ENUM(NSInteger, VWMsgType)
     VWMsgTypeWarning,
 };
 
-@interface VWMsgContentView : UIView
+@interface VWMsgContentView : VWBaseContentView
 - (instancetype)initWithMsg:(NSString *)msg type:(VWMsgType)type;
 - (void)setMsg:(NSString *)msg type:(VWMsgType)type;
 @end

@@ -12,8 +12,7 @@
 #import "VWConfig.h"
 
 @interface VWMsgContentView()
-@property (weak, nonatomic) UIImageView *iconImageView;
-@property (weak, nonatomic) UILabel *msgLabel;
+@property (strong, nonatomic) NSTimer *timer;
 @end
 
 @implementation VWMsgContentView
@@ -22,13 +21,7 @@
 {
     if (self = [super init])
     {
-        /*default setting*/
-        [self setBackgroundColor:HEXCOLOR(DMINANTCOLOR)];
-        [self setAlpha:0];
-        [self.layer setCornerRadius:5.f];
-        [self.layer setShadowOffset:CGSizeMake(0, 0)];
-        [self.layer setShadowOpacity:0.2f];
-
+        [self setType:VWContentViewTypeMessage];
 
         NSString *pathString = @"";
         switch (type)
@@ -57,18 +50,9 @@
         UIImageView *iconImageView = [UIImageView new];
         [iconImageView setImage:[UIImage imageNamed:pathString]];
         [self addSubview:iconImageView];
-        self.iconImageView = iconImageView;
+        self.topView = iconImageView;
 
-        UILabel *msgLabel = [UILabel new];
-        [msgLabel setText:msg];
-        [msgLabel setFont:[UIFont systemFontOfSize:DEFAULTTIPFONT]];
-        [msgLabel setTextColor:HEXCOLOR(TEXTCOLOR)];
-        [msgLabel setLineBreakMode:NSLineBreakByCharWrapping];
-        [msgLabel setNumberOfLines:0];
-        [msgLabel setTextAlignment:NSTextAlignmentCenter];
-        [msgLabel setPreferredMaxLayoutWidth:kVWCONTENTMAXWIDTH-PADDING];
-        [self addSubview:msgLabel];
-        self.msgLabel = msgLabel;
+        [self.mainLabel setText:msg];
 
         [self setConstraint];
     }
@@ -76,30 +60,16 @@
 }
 
 
-- (void)setConstraint
+
+#pragma mark dismiss
+- (void)dismiss
 {
-    [self removeAllAutoLayout];
-
-    [self.iconImageView addConstraint:NSLayoutAttributeTop equalTo:self offset:PADDING];
-    [self.iconImageView addConstraint:NSLayoutAttributeCenterX equalTo:self offset:0];
-
-    [self.msgLabel addConstraint:NSLayoutAttributeTop equalTo:self.iconImageView fromConstraint:NSLayoutAttributeBottom offset:PADDING/2];
-    [self.msgLabel addConstraint:NSLayoutAttributeLeft equalTo:self offset:PADDING/2];
-    [self.msgLabel addConstraint:NSLayoutAttributeRight equalTo:self offset:-PADDING/2];
-
-    [self addConstraint:NSLayoutAttributeWidth greatOrLess:NSLayoutRelationGreaterThanOrEqual value:kVWCONTENTMINWIDTH];
-    [self addConstraint:NSLayoutAttributeWidth greatOrLess:NSLayoutRelationLessThanOrEqual value:kVWCONTENTMAXWIDTH];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.msgLabel attribute:NSLayoutAttributeBottom multiplier:1.0 constant:PADDING]];
-    [self layoutIfNeeded];
-}
-
-- (void)didMoveToSuperview
-{
-    if (self.superview)
-    {
-        [self addConstraint:NSLayoutAttributeCenterX equalTo:self.superview offset:0];
-        [self addConstraint:NSLayoutAttributeCenterY equalTo:self.superview offset:0];
-    }
+    __weak VWMsgContentView *weakself = self;
+    [UIView animateWithDuration:0.25 animations:^{
+        [weakself setAlpha:0];
+    } completion:^(BOOL finished) {
+        [weakself removeFromSuperview];
+    }];
 }
 
 - (void)setMsg:(NSString *)msg type:(VWMsgType)type
@@ -128,8 +98,15 @@
             break;
         }
     }
-    [self.iconImageView setImage:[UIImage imageNamed:pathString]];
-    [self.msgLabel setText:msg];
+    [(UIImageView *)self.topView setImage:[UIImage imageNamed:pathString]];
+    [self.mainLabel setText:msg];
     [self setConstraint];
+    
+    if (self.timer)
+    {
+        [self.timer invalidate];
+        self.timer = [NSTimer timerWithTimeInterval:kVWMESDELAYTIME target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
+        [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
+    }
 }
 @end

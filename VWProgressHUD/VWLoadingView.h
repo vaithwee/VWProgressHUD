@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VWBaseContentView.h"
 
-@interface VWLoadingView : UIView
+@interface VWLoadingView : VWBaseContentView
 - (instancetype)initWithTip:(NSString *)tip sub:(NSString *)sub;
 - (void)setTip:(NSString *)tip sub:(NSString *)sub;
 @end

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "VWProgressHUD"
-s.version      = "0.0.0.5"
+s.version      = "0.0.0.8"
 s.summary      = "A esay progress hud to use"
 s.description  = <<-DESC
 A VMProgressHUD

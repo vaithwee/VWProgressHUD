@@ -7,22 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0573F871437A18ACF669492B3BC1C42F /* VWMsgContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FD31CC6C2951B9B8BCC449B328F07D79 /* VWMsgContentView.m */; };
-		15BEB015BF3A4BD4622215BA1ECAEEAF /* VWProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = D69D33443B1C818AF18F40FA004F8531 /* VWProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		28F456CA24A7B955DE9BADA9CAB57CF5 /* VWProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 902382D50453BD2DED300AEA2F30CC90 /* VWProgressHUD-dummy.m */; };
-		34BF93F9851DA5D9EC2E6DF5AA04DB60 /* VWProgressHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B7CFA8C5494CFCF530F0037D61AB556 /* VWProgressHUDManager.m */; };
-		35FE48CB99F9C3AA8AC96E49632D1E97 /* VWConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 350E8E92AD40B054DDE6134D91CC04A0 /* VWConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3E6DE2E35EACE6DB8FE559C486825E0D /* VWLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = BBBF6B75098E0C68E9ABD79484EFAA85 /* VWLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0ABF5292DC359ED3C1B519066C9DD115 /* UIView+VWAutolayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C683719ECC9111F116710D66705005 /* UIView+VWAutolayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		41DCCB6D8EAC2ACE62144A1770DB6B7A /* VWProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 99F3BED12C2C9E0EEC768FBBF7D9984A /* VWProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		434715973D1A267E5C45B43AF57CD3A4 /* VWBaseContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7928D0357141A2A6B9216BDA375F06F6 /* VWBaseContentView.m */; };
+		53A0B38E134CC780045DEBE9927DD578 /* VWMsgContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 91B16BAA7B9D4A109E2C204495CF910B /* VWMsgContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D241AC386D2CA187E548CA405D6EEDA /* VWProgressHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D7AA7B359A691A2226179C004561E16 /* VWProgressHUDManager.m */; };
+		5EB600989B958C2C3808DBFCF12DD290 /* UIView+VWAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 6987F427D4EC0EFDEE1EC4DD0267CA8D /* UIView+VWAutolayout.m */; };
 		6639E3D05136A82640A53B191EF7E5DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		67A41BD6A7BFBE468989F340D71B7F2A /* VWConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 88C80968E060C2BD146117B4CC04C5AA /* VWConfig.m */; };
+		83C25B8AB774C0F4CC4ADD819033D071 /* VWConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C7CF48AE9EAB5EC2EF2C1600E316114 /* VWConfig.m */; };
+		83F6E748DFADBE8418D71C5B3C84953C /* VWProgressHUDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D8587760F8A5E0CCAE25742456B0782 /* VWProgressHUDManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FF1B3A62B95852D2E7F0F425AE900C7 /* Pods-VWProgressHUDDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A1EF1D9F97F2953FBA2BFD9612AE42C /* Pods-VWProgressHUDDemo-dummy.m */; };
 		916DBC0E96EF0F92BD76AD4B51CE595B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
-		97408530AC9FF28693699A9B4A4400DD /* VWMsgContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4D5795FF4B0EF26ECF3F11048CAB8D11 /* VWMsgContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C5F802B17D6415D4A8C1A55C581CA99 /* VWLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DC0EB42E651FC68A7729661EF78DC06 /* VWLoadingView.m */; };
+		98261E68571DF02E693A2495D3E0E075 /* VWLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = B09C1DDDF7221B99F57B59BC9772BB1A /* VWLoadingView.m */; };
 		A4C97E14AAA431A0BEBFAA2C3E30DC8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
-		B816C5F533222FDE58E4721D9EB76047 /* VWProgressHUDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 457AE274DCD82BEF6A8CD1718047D275 /* VWProgressHUDManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C861EAA6C65DDDE9A3D213BBAE230A3F /* UIView+VWAutolayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FB9454F39AFD6EE97AB9B16C9579C61 /* UIView+VWAutolayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F7CD4A034CC5E5C476ACC15AD01C0630 /* UIView+VWAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D694A8F2957124210FC8F4D93F9F682 /* UIView+VWAutolayout.m */; };
+		CB245D4019E1066A375A00D573EF0C90 /* VWConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 7215ED8D981C4A4B1670E603F6066412 /* VWConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD79216218B3211CAFBE75E7D52E48E9 /* VWBaseContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0109B0F9E89E7887D3F333A2DC52C1E5 /* VWBaseContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E08C4DB3737FD7CD3D400196825083C7 /* VWLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 5D91E087CC1984B093EB4EA7592AAFC9 /* VWLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F40F007A09586844C804E4FC9F0EAFB4 /* VWProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C8FB9A61BC347D99BDF39392895BDE6 /* VWProgressHUD-dummy.m */; };
+		FB9967490B655AB06EDE29D0A5251EB1 /* VWMsgContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = FC1EB0CBDB50D811C3D5A683F4848250 /* VWMsgContentView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,32 +38,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0109B0F9E89E7887D3F333A2DC52C1E5 /* VWBaseContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWBaseContentView.h; sourceTree = "<group>"; };
+		04C683719ECC9111F116710D66705005 /* UIView+VWAutolayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+VWAutolayout.h"; sourceTree = "<group>"; };
+		0C8FB9A61BC347D99BDF39392895BDE6 /* VWProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VWProgressHUD-dummy.m"; sourceTree = "<group>"; };
 		11AC61D7900A2F669113C698E8E4BCC6 /* Pods-VWProgressHUDDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VWProgressHUDDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		350E8E92AD40B054DDE6134D91CC04A0 /* VWConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWConfig.h; sourceTree = "<group>"; };
+		29C05EF714D0BB081EF4983751BFCD47 /* VWProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = VWProgressHUD.bundle; sourceTree = "<group>"; };
+		2C7CF48AE9EAB5EC2EF2C1600E316114 /* VWConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWConfig.m; sourceTree = "<group>"; };
 		36EBCEBBA3709405A573C4CBCFEE8A62 /* libVWProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVWProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A1EF1D9F97F2953FBA2BFD9612AE42C /* Pods-VWProgressHUDDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VWProgressHUDDemo-dummy.m"; sourceTree = "<group>"; };
-		3B75B545441AAA4F4F7D736C2A78C24A /* VWProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VWProgressHUD.xcconfig; sourceTree = "<group>"; };
-		457AE274DCD82BEF6A8CD1718047D275 /* VWProgressHUDManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWProgressHUDManager.h; sourceTree = "<group>"; };
-		4D5795FF4B0EF26ECF3F11048CAB8D11 /* VWMsgContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWMsgContentView.h; sourceTree = "<group>"; };
-		5F0C76195F542899675AA04463B06581 /* VWProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VWProgressHUD-prefix.pch"; sourceTree = "<group>"; };
-		6B7CFA8C5494CFCF530F0037D61AB556 /* VWProgressHUDManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWProgressHUDManager.m; sourceTree = "<group>"; };
-		6DC0EB42E651FC68A7729661EF78DC06 /* VWLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWLoadingView.m; sourceTree = "<group>"; };
-		6FB9454F39AFD6EE97AB9B16C9579C61 /* UIView+VWAutolayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+VWAutolayout.h"; sourceTree = "<group>"; };
-		88C80968E060C2BD146117B4CC04C5AA /* VWConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWConfig.m; sourceTree = "<group>"; };
+		3FC5F85A4AD6415F3C984E8DEE5D6610 /* VWProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VWProgressHUD.xcconfig; sourceTree = "<group>"; };
+		5C07FF179658803EA7D40DFB312B3FAE /* VWProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VWProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		5D91E087CC1984B093EB4EA7592AAFC9 /* VWLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWLoadingView.h; sourceTree = "<group>"; };
+		6987F427D4EC0EFDEE1EC4DD0267CA8D /* UIView+VWAutolayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+VWAutolayout.m"; sourceTree = "<group>"; };
+		6D7AA7B359A691A2226179C004561E16 /* VWProgressHUDManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWProgressHUDManager.m; sourceTree = "<group>"; };
+		7215ED8D981C4A4B1670E603F6066412 /* VWConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWConfig.h; sourceTree = "<group>"; };
+		7928D0357141A2A6B9216BDA375F06F6 /* VWBaseContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWBaseContentView.m; sourceTree = "<group>"; };
+		7D8587760F8A5E0CCAE25742456B0782 /* VWProgressHUDManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWProgressHUDManager.h; sourceTree = "<group>"; };
 		89D59AC29A79408AC956F3595A4632A0 /* Pods-VWProgressHUDDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VWProgressHUDDemo-acknowledgements.plist"; sourceTree = "<group>"; };
 		8B3523CE4711F2630F02A14D57106C19 /* libPods-VWProgressHUDDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VWProgressHUDDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D694A8F2957124210FC8F4D93F9F682 /* UIView+VWAutolayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+VWAutolayout.m"; sourceTree = "<group>"; };
-		902382D50453BD2DED300AEA2F30CC90 /* VWProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VWProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		91B16BAA7B9D4A109E2C204495CF910B /* VWMsgContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWMsgContentView.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		99F3BED12C2C9E0EEC768FBBF7D9984A /* VWProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWProgressHUD.h; sourceTree = "<group>"; };
 		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		AA4858A1EC98D2E1620848F02AD7473E /* Pods-VWProgressHUDDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VWProgressHUDDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		B09C1DDDF7221B99F57B59BC9772BB1A /* VWLoadingView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWLoadingView.m; sourceTree = "<group>"; };
 		B24A0E79130A196288A7069B6248C03B /* Pods-VWProgressHUDDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VWProgressHUDDemo.release.xcconfig"; sourceTree = "<group>"; };
-		BBBF6B75098E0C68E9ABD79484EFAA85 /* VWLoadingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWLoadingView.h; sourceTree = "<group>"; };
 		C97E75086E033674D444D381680CA3CF /* Pods-VWProgressHUDDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VWProgressHUDDemo-frameworks.sh"; sourceTree = "<group>"; };
-		D69D33443B1C818AF18F40FA004F8531 /* VWProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWProgressHUD.h; sourceTree = "<group>"; };
 		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		EF45BFD7B73E9BAE54E5FF4762954CEA /* VWProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = VWProgressHUD.bundle; sourceTree = "<group>"; };
-		FD31CC6C2951B9B8BCC449B328F07D79 /* VWMsgContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWMsgContentView.m; sourceTree = "<group>"; };
+		FC1EB0CBDB50D811C3D5A683F4848250 /* VWMsgContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWMsgContentView.m; sourceTree = "<group>"; };
 		FD4A1E1E3006D578E03DC9444B59993C /* Pods-VWProgressHUDDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VWProgressHUDDemo-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,17 +90,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0442951DA2A40035D5E8789CA2819058 /* VWProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				FF8173E8B09F0A5EA1275E9314CA2FA6 /* Resources */,
-				E40C85B6561C4FBFFA50B2CE7E0623FB /* Support Files */,
-				D7C7E29CDF5C03204426B6594D1BA277 /* VWProgressHUD */,
-			);
-			name = VWProgressHUD;
-			path = ../..;
-			sourceTree = "<group>";
-		};
 		1F210BB2CA52570CD218F7E8AFEA8AF8 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -105,10 +98,30 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		2211203F88D90D65CFA8EF81582E4BE6 /* VWProgressHUD */ = {
+		246FF6D419E7CA1FBC8F3B4C797A2F0B /* VWProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				EF45BFD7B73E9BAE54E5FF4762954CEA /* VWProgressHUD.bundle */,
+				04C683719ECC9111F116710D66705005 /* UIView+VWAutolayout.h */,
+				6987F427D4EC0EFDEE1EC4DD0267CA8D /* UIView+VWAutolayout.m */,
+				0109B0F9E89E7887D3F333A2DC52C1E5 /* VWBaseContentView.h */,
+				7928D0357141A2A6B9216BDA375F06F6 /* VWBaseContentView.m */,
+				7215ED8D981C4A4B1670E603F6066412 /* VWConfig.h */,
+				2C7CF48AE9EAB5EC2EF2C1600E316114 /* VWConfig.m */,
+				5D91E087CC1984B093EB4EA7592AAFC9 /* VWLoadingView.h */,
+				B09C1DDDF7221B99F57B59BC9772BB1A /* VWLoadingView.m */,
+				91B16BAA7B9D4A109E2C204495CF910B /* VWMsgContentView.h */,
+				FC1EB0CBDB50D811C3D5A683F4848250 /* VWMsgContentView.m */,
+				99F3BED12C2C9E0EEC768FBBF7D9984A /* VWProgressHUD.h */,
+				7D8587760F8A5E0CCAE25742456B0782 /* VWProgressHUDManager.h */,
+				6D7AA7B359A691A2226179C004561E16 /* VWProgressHUDManager.m */,
+			);
+			path = VWProgressHUD;
+			sourceTree = "<group>";
+		};
+		36D0332D93D36884BC5C66D393633E51 /* VWProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				29C05EF714D0BB081EF4983751BFCD47 /* VWProgressHUD.bundle */,
 			);
 			path = VWProgressHUD;
 			sourceTree = "<group>";
@@ -130,10 +143,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		4C868FDFAAEE21251A02CA2FA043C5A2 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FC5F85A4AD6415F3C984E8DEE5D6610 /* VWProgressHUD.xcconfig */,
+				0C8FB9A61BC347D99BDF39392895BDE6 /* VWProgressHUD-dummy.m */,
+				5C07FF179658803EA7D40DFB312B3FAE /* VWProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "VWProgressHUDDemo/Pods/Target Support Files/VWProgressHUD";
+			sourceTree = "<group>";
+		};
+		5B789C416402FC4D1F64102AE9947315 /* VWProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				E5D96E3AA7657F32434F7E9D9387150F /* Resources */,
+				4C868FDFAAEE21251A02CA2FA043C5A2 /* Support Files */,
+				246FF6D419E7CA1FBC8F3B4C797A2F0B /* VWProgressHUD */,
+			);
+			name = VWProgressHUD;
+			path = ../..;
+			sourceTree = "<group>";
+		};
 		63258E0D86215211F307D0649F975A66 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0442951DA2A40035D5E8789CA2819058 /* VWProgressHUD */,
+				5B789C416402FC4D1F64102AE9947315 /* VWProgressHUD */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -164,33 +199,12 @@
 			);
 			sourceTree = "<group>";
 		};
-		D7C7E29CDF5C03204426B6594D1BA277 /* VWProgressHUD */ = {
+		E5D96E3AA7657F32434F7E9D9387150F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				6FB9454F39AFD6EE97AB9B16C9579C61 /* UIView+VWAutolayout.h */,
-				8D694A8F2957124210FC8F4D93F9F682 /* UIView+VWAutolayout.m */,
-				350E8E92AD40B054DDE6134D91CC04A0 /* VWConfig.h */,
-				88C80968E060C2BD146117B4CC04C5AA /* VWConfig.m */,
-				BBBF6B75098E0C68E9ABD79484EFAA85 /* VWLoadingView.h */,
-				6DC0EB42E651FC68A7729661EF78DC06 /* VWLoadingView.m */,
-				4D5795FF4B0EF26ECF3F11048CAB8D11 /* VWMsgContentView.h */,
-				FD31CC6C2951B9B8BCC449B328F07D79 /* VWMsgContentView.m */,
-				D69D33443B1C818AF18F40FA004F8531 /* VWProgressHUD.h */,
-				457AE274DCD82BEF6A8CD1718047D275 /* VWProgressHUDManager.h */,
-				6B7CFA8C5494CFCF530F0037D61AB556 /* VWProgressHUDManager.m */,
+				36D0332D93D36884BC5C66D393633E51 /* VWProgressHUD */,
 			);
-			path = VWProgressHUD;
-			sourceTree = "<group>";
-		};
-		E40C85B6561C4FBFFA50B2CE7E0623FB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3B75B545441AAA4F4F7D736C2A78C24A /* VWProgressHUD.xcconfig */,
-				902382D50453BD2DED300AEA2F30CC90 /* VWProgressHUD-dummy.m */,
-				5F0C76195F542899675AA04463B06581 /* VWProgressHUD-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "VWProgressHUDDemo/Pods/Target Support Files/VWProgressHUD";
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
@@ -202,27 +216,20 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		FF8173E8B09F0A5EA1275E9314CA2FA6 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				2211203F88D90D65CFA8EF81582E4BE6 /* VWProgressHUD */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D0EE52E659BA2B59A6A3BC6CE27C7166 /* Headers */ = {
+		016FF8CF540FE3AAC95DFCA0AD8FBFE7 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C861EAA6C65DDDE9A3D213BBAE230A3F /* UIView+VWAutolayout.h in Headers */,
-				35FE48CB99F9C3AA8AC96E49632D1E97 /* VWConfig.h in Headers */,
-				3E6DE2E35EACE6DB8FE559C486825E0D /* VWLoadingView.h in Headers */,
-				97408530AC9FF28693699A9B4A4400DD /* VWMsgContentView.h in Headers */,
-				15BEB015BF3A4BD4622215BA1ECAEEAF /* VWProgressHUD.h in Headers */,
-				B816C5F533222FDE58E4721D9EB76047 /* VWProgressHUDManager.h in Headers */,
+				0ABF5292DC359ED3C1B519066C9DD115 /* UIView+VWAutolayout.h in Headers */,
+				DD79216218B3211CAFBE75E7D52E48E9 /* VWBaseContentView.h in Headers */,
+				CB245D4019E1066A375A00D573EF0C90 /* VWConfig.h in Headers */,
+				E08C4DB3737FD7CD3D400196825083C7 /* VWLoadingView.h in Headers */,
+				53A0B38E134CC780045DEBE9927DD578 /* VWMsgContentView.h in Headers */,
+				41DCCB6D8EAC2ACE62144A1770DB6B7A /* VWProgressHUD.h in Headers */,
+				83F6E748DFADBE8418D71C5B3C84953C /* VWProgressHUDManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +257,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7A9FE072573BFE70F79E9EF9945FA9B /* Build configuration list for PBXNativeTarget "VWProgressHUD" */;
 			buildPhases = (
-				74CE53444BB0C88CF4931A47223DB53D /* Sources */,
+				4E5255CCF0EBC2D383CFB39D5AB590BC /* Sources */,
 				DE8023A8C43529032058D6D3DA8D7810 /* Frameworks */,
-				D0EE52E659BA2B59A6A3BC6CE27C7166 /* Headers */,
+				016FF8CF540FE3AAC95DFCA0AD8FBFE7 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -299,16 +306,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		74CE53444BB0C88CF4931A47223DB53D /* Sources */ = {
+		4E5255CCF0EBC2D383CFB39D5AB590BC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7CD4A034CC5E5C476ACC15AD01C0630 /* UIView+VWAutolayout.m in Sources */,
-				67A41BD6A7BFBE468989F340D71B7F2A /* VWConfig.m in Sources */,
-				9C5F802B17D6415D4A8C1A55C581CA99 /* VWLoadingView.m in Sources */,
-				0573F871437A18ACF669492B3BC1C42F /* VWMsgContentView.m in Sources */,
-				28F456CA24A7B955DE9BADA9CAB57CF5 /* VWProgressHUD-dummy.m in Sources */,
-				34BF93F9851DA5D9EC2E6DF5AA04DB60 /* VWProgressHUDManager.m in Sources */,
+				5EB600989B958C2C3808DBFCF12DD290 /* UIView+VWAutolayout.m in Sources */,
+				434715973D1A267E5C45B43AF57CD3A4 /* VWBaseContentView.m in Sources */,
+				83C25B8AB774C0F4CC4ADD819033D071 /* VWConfig.m in Sources */,
+				98261E68571DF02E693A2495D3E0E075 /* VWLoadingView.m in Sources */,
+				FB9967490B655AB06EDE29D0A5251EB1 /* VWMsgContentView.m in Sources */,
+				F40F007A09586844C804E4FC9F0EAFB4 /* VWProgressHUD-dummy.m in Sources */,
+				5D241AC386D2CA187E548CA405D6EEDA /* VWProgressHUDManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +334,7 @@
 /* Begin XCBuildConfiguration section */
 		161DAF9EEB45BD5FD6C0E495F667747E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B75B545441AAA4F4F7D736C2A78C24A /* VWProgressHUD.xcconfig */;
+			baseConfigurationReference = 3FC5F85A4AD6415F3C984E8DEE5D6610 /* VWProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -347,7 +355,7 @@
 		};
 		2813AE4E5CD38381016C4EFD95CA5B8F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B75B545441AAA4F4F7D736C2A78C24A /* VWProgressHUD.xcconfig */;
+			baseConfigurationReference = 3FC5F85A4AD6415F3C984E8DEE5D6610 /* VWProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

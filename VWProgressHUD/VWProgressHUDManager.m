@@ -182,24 +182,13 @@ static VWProgressHUD *_shareInstance;
     if (self.msgContentView)
     {
         [self.msgContentView setMsg:msg type:type];
-        [UIView animateWithDuration:10  animations:^{
-            [self.msgContentView layoutIfNeeded];
-        }];
-        return;;
+        return;
     }
 
     VWMsgContentView *msgView = [[VWMsgContentView alloc] initWithMsg:msg type:type];
     [self.window addSubview:msgView];
     self.msgContentView = msgView;
 
-    [UIView animateWithDuration:10  animations:^{
-        [msgView setAlpha:LOADINGALPHA];
-    }];
-
-    [UIView animateWithDuration:0.25 delay:kVWMESDELAYTIME options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        [msgView setAlpha:0];
-    } completion:^(BOOL finished) {
-        [msgView removeFromSuperview];
-    }];
 }
+
 @end

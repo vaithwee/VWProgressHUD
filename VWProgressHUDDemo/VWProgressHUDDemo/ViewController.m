@@ -56,6 +56,7 @@
 - (void)showLoadingWithTipAndSub
 {
     [[VWProgressHUD shareInstance] showLoadingWithTip:@"Hello World" sub:@"This is a post method\n1/99"];
+    [self performSelector:@selector(showMore) withObject:nil afterDelay:5];
 }
 
 - (void)showMore
@@ -65,7 +66,7 @@
 
 - (void)showMsg
 {
-    [[VWProgressHUD shareInstance] showMsg:@"Hello, This's default msg.And This will auto  dismiss "];
+    [[VWProgressHUD shareInstance] showMsg:@""];
 }
 
 
