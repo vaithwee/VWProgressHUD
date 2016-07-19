@@ -19,6 +19,9 @@ extern CGFloat const MAXTEXTWIDTH;
 extern CGFloat const DEFAULTTIPFONT;
 extern CGFloat const DEFAULTSUBFONT;
 extern CGFloat const DELAYTIME;
+extern CGFloat const kVWCONTENTMINWIDTH;
+extern CGFloat const kVWCONTENTMAXWIDTH;
+extern CGFloat const kVWMESDELAYTIME;
 
 
 

@@ -23,4 +23,10 @@
 - (void)showLoading;
 - (void)showLoadingWithTip:(NSString *)tip;
 - (void)showLoadingWithTip:(NSString *)tip sub:(NSString *)sub;
+
+#pragma mark msg
+- (void)showMsg:(NSString *)msg;
+- (void)showDoneMsg:(NSString *)msg;
+- (void)showFailMsg:(NSString *)msg;
+- (void)showWarningMsg:(NSString *)msg;
 @end

@@ -25,9 +25,12 @@
     {
         /*默认设置*/
         [self setBackgroundColor:HEXCOLOR(DMINANTCOLOR)];
-        [self.layer setCornerRadius:5.f];
         [self setAlpha:LOADINGALPHA];
-        
+        [self.layer setCornerRadius:5.f];
+        [self.layer setShadowOffset:CGSizeMake(0, 0)];
+        [self.layer setShadowOpacity:0.2f];
+
+
         /*创建loading*/
         UIActivityIndicatorView *loadingView = [UIActivityIndicatorView new];
         [loadingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];

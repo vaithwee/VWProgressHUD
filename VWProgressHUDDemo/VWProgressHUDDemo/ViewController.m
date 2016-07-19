@@ -18,24 +18,34 @@
 
 @implementation ViewController
 
+- (void)injected
+{
+    [self viewDidLoad];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     [self setTitle:@"VMProgressHUD Demo"];
     NSArray *loading = @[
                          [ProgressHUD progressHUDWithName:@"Simple Loading" sel:@selector(show)],
                          [ProgressHUD progressHUDWithName:@"Loading With Tip" sel:@selector(showWithTip)],
                          [ProgressHUD progressHUDWithName:@"Loading With Tip And Sub" sel:@selector(showLoadingWithTipAndSub)],
+
                          ];
-    self.data = @[loading];
+    NSArray *message = @[
+            [ProgressHUD progressHUDWithName:@"Show Default Type  Message" sel:@selector(showMsg)],
+            [ProgressHUD progressHUDWithName:@"Show Done Message" sel:@selector(showDoneMsg)],
+            [ProgressHUD progressHUDWithName:@"Show Fail Message" sel:@selector(showFailMsg)],
+            [ProgressHUD progressHUDWithName:@"Show Warning Message" sel:@selector(showWarningMsg)]
+    ];
+    self.data = @[loading,message];
 }
 
 #pragma mark progress hud method
 - (void)show
 {
     [[VWProgressHUD shareInstance] showLoading];
-    [self performSelector:@selector(showMore) withObject:nil afterDelay:5];
 }
 
 - (void)showWithTip
@@ -46,13 +56,34 @@
 - (void)showLoadingWithTipAndSub
 {
     [[VWProgressHUD shareInstance] showLoadingWithTip:@"Hello World" sub:@"This is a post method\n1/99"];
-    [self performSelector:@selector(show) withObject:nil afterDelay:5];
 }
 
 - (void)showMore
 {
     [[VWProgressHUD shareInstance] showLoadingWithTip:@"Hello World,Hello World,Hello World" sub:@"Life is too short to waste. Dreams are fulfilled only through action, not through endless planning to take action."];
 }
+
+- (void)showMsg
+{
+    [[VWProgressHUD shareInstance] showMsg:@"Hello, This's default msg.And This will auto  dismiss "];
+}
+
+
+- (void)showDoneMsg
+{
+    [[VWProgressHUD shareInstance] showDoneMsg:@"Hello, This's done msg"];
+}
+
+- (void)showFailMsg
+{
+    [[VWProgressHUD shareInstance] showFailMsg:@"Hello, This's fail msg"];
+}
+
+- (void)showWarningMsg
+{
+    [[VWProgressHUD shareInstance] showWarningMsg:@"Hello, This's warning msg"];
+}
+
 
 #pragma mark - TableView Data Source
 #pragma mark section number

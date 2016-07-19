@@ -19,3 +19,4 @@ FOUNDATION_EXPORT const unsigned char VWProgressHUDVersionString[];
 #import <VWProgressHUD/VWProgressHUDManager.h>
 #import <VWProgressHUD/VWConfig.h>
 #import <VWProgressHUD/VWLoadingView.h>
+#import <VWProgressHUD/VWMsgContentView.h>

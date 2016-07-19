@@ -10,7 +10,7 @@
 #import "VWConfig.h"
 #import "VWLoadingView.h"
 #import <UIKit/UIKit.h>
-#import <VWLoadingView.h>
+#import <VWMsgContentView.h>
 
 static VWProgressHUD *_shareInstance;
 
@@ -21,6 +21,7 @@ static VWProgressHUD *_shareInstance;
 @property (assign, nonatomic) NSInteger loadingCount;
 @property (strong, nonatomic) NSTimer *timer;
 @property (weak, nonatomic) VWLoadingView *loadingView;
+@property (weak, nonatomic) VWMsgContentView *msgContentView;
 @end
 
 @implementation VWProgressHUD
@@ -154,5 +155,51 @@ static VWProgressHUD *_shareInstance;
     
     self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)showMsg:(NSString *)msg
+{
+    return [self showMsg:msg type:VWMsgTypeDefault];
+}
+
+- (void)showDoneMsg:(NSString *)msg
+{
+    return [self showMsg:msg type:VWMsgTypeDone];
+}
+
+- (void)showFailMsg:(NSString *)msg
+{
+    return [self showMsg:msg type:VWMsgTypeFail];
+}
+
+- (void)showWarningMsg:(NSString *)msg
+{
+    return [self showMsg:msg type:VWMsgTypeWarning];
+}
+
+- (void)showMsg:(NSString *)msg type:(VWMsgType)type
+{
+    if (self.msgContentView)
+    {
+        [self.msgContentView setMsg:msg type:type];
+        [UIView animateWithDuration:10  animations:^{
+            [self.msgContentView layoutIfNeeded];
+        }];
+        return;;
+    }
+
+    VWMsgContentView *msgView = [[VWMsgContentView alloc] initWithMsg:msg type:type];
+    [self.window addSubview:msgView];
+    self.msgContentView = msgView;
+
+    [UIView animateWithDuration:10  animations:^{
+        [msgView setAlpha:LOADINGALPHA];
+    }];
+
+    [UIView animateWithDuration:0.25 delay:kVWMESDELAYTIME options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        [msgView setAlpha:0];
+    } completion:^(BOOL finished) {
+        [msgView removeFromSuperview];
+    }];
 }
 @end

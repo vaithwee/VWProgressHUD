@@ -1,6 +1,6 @@
 {
   "name": "VWProgressHUD",
-  "version": "0.0.0.3",
+  "version": "0.0.0.5",
   "summary": "A esay progress hud to use",
   "description": "A VMProgressHUD",
   "homepage": "http://www.vaith.xyz",
@@ -14,6 +14,7 @@
   "source": {
     "git": "https://github.com/vaithwee"
   },
+  "resources": "VWProgressHUD/*.bundle",
   "source_files": "VWProgressHUD/**/*.{h,m}",
   "requires_arc": true,
   "ios": {
