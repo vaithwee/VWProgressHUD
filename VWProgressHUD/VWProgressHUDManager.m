@@ -179,6 +179,13 @@ static VWProgressHUD *_shareInstance;
 
 - (void)showMsg:(NSString *)msg type:(VWMsgType)type
 {
+    if (self.loadingView)
+    {
+        [self.loadingView removeFromSuperview];
+        [self.timer invalidate];
+        self.timer = nil;
+    }
+    
     if (self.msgContentView)
     {
         [self.msgContentView setMsg:msg type:type];

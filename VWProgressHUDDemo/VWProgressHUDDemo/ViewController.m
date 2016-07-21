@@ -62,6 +62,7 @@
 - (void)showMore
 {
     [[VWProgressHUD shareInstance] showLoadingWithTip:@"Hello World,Hello World,Hello World" sub:@"Life is too short to waste. Dreams are fulfilled only through action, not through endless planning to take action."];
+     [self performSelector:@selector(showWarningMsg) withObject:nil afterDelay:5];
 }
 
 - (void)showMsg
