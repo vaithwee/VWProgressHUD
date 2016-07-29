@@ -24,19 +24,16 @@
 		4E995334E9B77E93080E6C17 /* VWConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9957BB1E838A020F42CEC8 /* VWConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4E9954C7A27F9034866AAC73 /* VWConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9953A34507FD67FF2622B8 /* VWConfig.m */; };
 		CC24AEDF1D3DAE8A00FEDF23 /* VWProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CC24AEDE1D3DAE8A00FEDF23 /* VWProgressHUD.bundle */; };
-		CC24AEE21D3DAEAC00FEDF23 /* VWMsgContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC24AEE01D3DAEAC00FEDF23 /* VWMsgContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC24AEE31D3DAEAC00FEDF23 /* VWMsgContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC24AEE11D3DAEAC00FEDF23 /* VWMsgContentView.m */; };
-		CC24AEE81D3E008C00FEDF23 /* VWBaseContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC24AEE61D3E008C00FEDF23 /* VWBaseContentView.h */; };
-		CC24AEE91D3E008C00FEDF23 /* VWBaseContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC24AEE71D3E008C00FEDF23 /* VWBaseContentView.m */; };
-		CC42C6A21D38CC2E00D9B80F /* VWProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = CC42C6A11D38CC2E00D9B80F /* VWProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC42C6CE1D38CCD500D9B80F /* VWProgressHUDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = CC42C6CC1D38CCD500D9B80F /* VWProgressHUDManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CC42C6CF1D38CCD500D9B80F /* VWProgressHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC42C6CD1D38CCD500D9B80F /* VWProgressHUDManager.m */; };
 		CC42C6D81D38D7AA00D9B80F /* VWProgressHUD.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CC42C6D71D38D7AA00D9B80F /* VWProgressHUD.podspec */; };
 		CC6555D61D4AE679003E3ADA /* VWEnum.h in Sources */ = {isa = PBXBuildFile; fileRef = CC6555D51D4AE679003E3ADA /* VWEnum.h */; };
 		CC6555D91D4AE79A003E3ADA /* VWBaseContentView+VWLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = CC6555D71D4AE79A003E3ADA /* VWBaseContentView+VWLoading.h */; };
 		CC6555DA1D4AE79A003E3ADA /* VWBaseContentView+VWLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6555D81D4AE79A003E3ADA /* VWBaseContentView+VWLoading.m */; };
-		CC7F0C191D3CAB370045FC0D /* VWLoadingView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7F0C171D3CAB370045FC0D /* VWLoadingView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CC7F0C1A1D3CAB370045FC0D /* VWLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7F0C181D3CAB370045FC0D /* VWLoadingView.m */; };
+		CC6555DD1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = CC6555DB1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.h */; };
+		CC6555DE1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6555DC1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.m */; };
+		CC6555E11D4AEAB6003E3ADA /* VWBaseContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = CC6555DF1D4AEAB6003E3ADA /* VWBaseContentView.h */; };
+		CC6555E21D4AEAB6003E3ADA /* VWBaseContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6555E01D4AEAB6003E3ADA /* VWBaseContentView.m */; };
 		CC7F0C1D1D3CB2FF0045FC0D /* UIView+VWAutolayout.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7F0C1B1D3CB2FF0045FC0D /* UIView+VWAutolayout.h */; };
 		CC7F0C1E1D3CB2FF0045FC0D /* UIView+VWAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = CC7F0C1C1D3CB2FF0045FC0D /* UIView+VWAutolayout.m */; };
 /* End PBXBuildFile section */
@@ -45,10 +42,6 @@
 		4E9953A34507FD67FF2622B8 /* VWConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWConfig.m; sourceTree = "<group>"; };
 		4E9957BB1E838A020F42CEC8 /* VWConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWConfig.h; sourceTree = "<group>"; };
 		CC24AEDE1D3DAE8A00FEDF23 /* VWProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = VWProgressHUD.bundle; sourceTree = "<group>"; };
-		CC24AEE01D3DAEAC00FEDF23 /* VWMsgContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWMsgContentView.h; sourceTree = "<group>"; };
-		CC24AEE11D3DAEAC00FEDF23 /* VWMsgContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWMsgContentView.m; sourceTree = "<group>"; };
-		CC24AEE61D3E008C00FEDF23 /* VWBaseContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWBaseContentView.h; sourceTree = "<group>"; };
-		CC24AEE71D3E008C00FEDF23 /* VWBaseContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWBaseContentView.m; sourceTree = "<group>"; };
 		CC42C69E1D38CC2E00D9B80F /* VWProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VWProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC42C6A11D38CC2E00D9B80F /* VWProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VWProgressHUD.h; sourceTree = "<group>"; };
 		CC42C6A31D38CC2E00D9B80F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +51,10 @@
 		CC6555D51D4AE679003E3ADA /* VWEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWEnum.h; sourceTree = "<group>"; };
 		CC6555D71D4AE79A003E3ADA /* VWBaseContentView+VWLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VWBaseContentView+VWLoading.h"; sourceTree = "<group>"; };
 		CC6555D81D4AE79A003E3ADA /* VWBaseContentView+VWLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VWBaseContentView+VWLoading.m"; sourceTree = "<group>"; };
-		CC7F0C171D3CAB370045FC0D /* VWLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWLoadingView.h; sourceTree = "<group>"; };
-		CC7F0C181D3CAB370045FC0D /* VWLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWLoadingView.m; sourceTree = "<group>"; };
+		CC6555DB1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VWBaseContentView+VWMessage.h"; sourceTree = "<group>"; };
+		CC6555DC1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VWBaseContentView+VWMessage.m"; sourceTree = "<group>"; };
+		CC6555DF1D4AEAB6003E3ADA /* VWBaseContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWBaseContentView.h; sourceTree = "<group>"; };
+		CC6555E01D4AEAB6003E3ADA /* VWBaseContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWBaseContentView.m; sourceTree = "<group>"; };
 		CC7F0C1B1D3CB2FF0045FC0D /* UIView+VWAutolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VWAutolayout.h"; sourceTree = "<group>"; };
 		CC7F0C1C1D3CB2FF0045FC0D /* UIView+VWAutolayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+VWAutolayout.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,24 +89,22 @@
 		CC42C6A01D38CC2E00D9B80F /* VWProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				CC6555D51D4AE679003E3ADA /* VWEnum.h */,
 				CC7F0C1F1D3CB4650045FC0D /* Config */,
 				CC7F0C1B1D3CB2FF0045FC0D /* UIView+VWAutolayout.h */,
 				CC7F0C1C1D3CB2FF0045FC0D /* UIView+VWAutolayout.m */,
-				CC24AEE61D3E008C00FEDF23 /* VWBaseContentView.h */,
-				CC24AEE71D3E008C00FEDF23 /* VWBaseContentView.m */,
+				CC6555DF1D4AEAB6003E3ADA /* VWBaseContentView.h */,
+				CC6555E01D4AEAB6003E3ADA /* VWBaseContentView.m */,
+				CC6555D71D4AE79A003E3ADA /* VWBaseContentView+VWLoading.h */,
+				CC6555D81D4AE79A003E3ADA /* VWBaseContentView+VWLoading.m */,
+				CC6555DB1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.h */,
+				CC6555DC1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.m */,
 				4E9957BB1E838A020F42CEC8 /* VWConfig.h */,
 				4E9953A34507FD67FF2622B8 /* VWConfig.m */,
-				CC7F0C171D3CAB370045FC0D /* VWLoadingView.h */,
-				CC7F0C181D3CAB370045FC0D /* VWLoadingView.m */,
-				CC24AEE01D3DAEAC00FEDF23 /* VWMsgContentView.h */,
-				CC24AEE11D3DAEAC00FEDF23 /* VWMsgContentView.m */,
+				CC6555D51D4AE679003E3ADA /* VWEnum.h */,
 				CC24AEDE1D3DAE8A00FEDF23 /* VWProgressHUD.bundle */,
 				CC42C6A11D38CC2E00D9B80F /* VWProgressHUD.h */,
 				CC42C6CC1D38CCD500D9B80F /* VWProgressHUDManager.h */,
 				CC42C6CD1D38CCD500D9B80F /* VWProgressHUDManager.m */,
-				CC6555D71D4AE79A003E3ADA /* VWBaseContentView+VWLoading.h */,
-				CC6555D81D4AE79A003E3ADA /* VWBaseContentView+VWLoading.m */,
 			);
 			path = VWProgressHUD;
 			sourceTree = "<group>";
@@ -119,8 +112,8 @@
 		CC7F0C1F1D3CB4650045FC0D /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				CC42C6D71D38D7AA00D9B80F /* VWProgressHUD.podspec */,
 				CC42C6A31D38CC2E00D9B80F /* Info.plist */,
+				CC42C6D71D38D7AA00D9B80F /* VWProgressHUD.podspec */,
 			);
 			name = Config;
 			sourceTree = "<group>";
@@ -132,13 +125,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CC24AEE81D3E008C00FEDF23 /* VWBaseContentView.h in Headers */,
 				CC42C6CE1D38CCD500D9B80F /* VWProgressHUDManager.h in Headers */,
-				CC24AEE21D3DAEAC00FEDF23 /* VWMsgContentView.h in Headers */,
-				CC7F0C191D3CAB370045FC0D /* VWLoadingView.h in Headers */,
+				CC6555E11D4AEAB6003E3ADA /* VWBaseContentView.h in Headers */,
 				4E995334E9B77E93080E6C17 /* VWConfig.h in Headers */,
 				CC7F0C1D1D3CB2FF0045FC0D /* UIView+VWAutolayout.h in Headers */,
-				CC42C6A21D38CC2E00D9B80F /* VWProgressHUD.h in Headers */,
+				CC6555DD1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.h in Headers */,
 				CC6555D91D4AE79A003E3ADA /* VWBaseContentView+VWLoading.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,10 +227,9 @@
 				CC7F0C1E1D3CB2FF0045FC0D /* UIView+VWAutolayout.m in Sources */,
 				CC42C6CF1D38CCD500D9B80F /* VWProgressHUDManager.m in Sources */,
 				CC6555D61D4AE679003E3ADA /* VWEnum.h in Sources */,
-				CC7F0C1A1D3CAB370045FC0D /* VWLoadingView.m in Sources */,
+				CC6555DE1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.m in Sources */,
+				CC6555E21D4AEAB6003E3ADA /* VWBaseContentView.m in Sources */,
 				CC6555DA1D4AE79A003E3ADA /* VWBaseContentView+VWLoading.m in Sources */,
-				CC24AEE31D3DAEAC00FEDF23 /* VWMsgContentView.m in Sources */,
-				CC24AEE91D3E008C00FEDF23 /* VWBaseContentView.m in Sources */,
 				4E9954C7A27F9034866AAC73 /* VWConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

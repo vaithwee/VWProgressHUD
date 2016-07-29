@@ -10,6 +10,7 @@
 #import "VWEnum.h"
 
 @interface VWBaseContentView (VWLoading)
-- (instancetype)initWithMsg:(NSString *)msg type:(VWMsgType)type;
-- (void)setMsg:(NSString *)msg type:(VWMsgType)type;
+- (instancetype)initWithTip:(NSString *)tip sub:(NSString *)sub;
+- (void)setTip:(NSString *)tip sub:(NSString *)sub;
+- (void)toBeLoadingWithTip:(NSString *)tip sub:(NSString *)sub;
 @end

@@ -11,7 +11,6 @@
 #import "VWConfig.h"
 
 @interface VWBaseContentView()
-@property (strong, nonatomic) NSTimer *timer;
 @end
 
 @implementation VWBaseContentView
@@ -116,14 +115,18 @@
         [UIView animateWithDuration:0.25 animations:^{
             [self setAlpha:LOADINGALPHA];
         }];
-        
-        if (self.type == VWContentViewTypeMessage)
-        {
-            self.timer = [NSTimer timerWithTimeInterval:kVWMESDELAYTIME target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
-            [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
-            [self layoutIfNeeded];
-        }
     }
+}
+
+#pragma mark dismiss
+- (void)dismiss
+{
+    __weak VWBaseContentView *weakself = self;
+    [UIView animateWithDuration:0.25 animations:^{
+        [weakself setAlpha:0];
+    } completion:^(BOOL finished) {
+        [weakself removeFromSuperview];
+    }];
 }
 
 @end

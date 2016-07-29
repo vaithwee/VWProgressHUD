@@ -7,11 +7,12 @@
 //
 
 #import "VWBaseContentView+VWLoading.h"
+#import "VWConfig.h"
 
 @implementation VWBaseContentView (VWLoading)
 - (instancetype)initWithTip:(NSString *)tip sub:(NSString *)sub;
 {
-    if (self = [super init])
+    if (self = [self init])
     {
         
         [self setType:VWContentViewTypeLoading];
@@ -34,6 +35,9 @@
         [self.subLabel setText:sub];
         [self setConstraint];
         
+        self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        
     }
     return self;
 }
@@ -43,5 +47,33 @@
     [self.mainLabel setText:tip];
     [self.subLabel setText:sub];
     [self resetConstraint];
+    [self.timer invalidate];
+    self.timer = nil;
+    self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+}
+
+- (void)toBeLoadingWithTip:(NSString *)tip sub:(NSString *)sub
+{
+    if (VWContentViewTypeLoading != self.type)
+    {
+        [self setType:VWContentViewTypeLoading];
+        
+        [self.topView removeFromSuperview];
+        
+        /*创建loading*/
+        UIActivityIndicatorView *loadingView = [UIActivityIndicatorView new];
+        [loadingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        [loadingView setColor:HEXCOLOR(LOADINGCOLOR)];
+        [loadingView setHidesWhenStopped:YES];
+        [self addSubview:loadingView];
+        [loadingView startAnimating];
+        self.topView = loadingView;
+        
+        [self.timer invalidate];
+        self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    }
+    
 }
 @end

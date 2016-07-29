@@ -8,20 +8,18 @@
 
 #import "VWProgressHUDManager.h"
 #import "VWConfig.h"
-#import "VWLoadingView.h"
 #import <UIKit/UIKit.h>
-#import <VWMsgContentView.h>
+#import "VWBaseContentView.h"
+#import "VWBaseContentView+VWMessage.h"
+#import "VWBaseContentView+VWLoading.h"
 
 static VWProgressHUD *_shareInstance;
 
 @interface VWProgressHUD ()
 @property (strong, nonatomic) UIWindow *window;
-@property (weak, nonatomic) UIView *currentView;
 @property (weak, nonatomic) UIView *firstResponder;
 @property (assign, nonatomic) NSInteger loadingCount;
-@property (strong, nonatomic) NSTimer *timer;
-@property (weak, nonatomic) VWLoadingView *loadingView;
-@property (weak, nonatomic) VWMsgContentView *msgContentView;
+@property (weak, nonatomic) VWBaseContentView *currentView;
 @end
 
 @implementation VWProgressHUD
@@ -72,9 +70,7 @@ static VWProgressHUD *_shareInstance;
 
 - (void)statusBarOrientationChange:(NSNotification *)notification {
     /*change current view center*/
-    if (self.currentView) {
-        [self.currentView setCenter:CGPointMake([UIScreen mainScreen].bounds.size.width / 2, [UIScreen mainScreen].bounds.size.height / 2)];
-    }
+
     NSLog(@"screen has change");
 }
 
@@ -109,14 +105,8 @@ static VWProgressHUD *_shareInstance;
 #pragma mark dismiss
 - (void)dismiss
 {
-    [UIView animateWithDuration:0.25 animations:^{
-        [self.loadingView setAlpha:0];
-    } completion:^(BOOL finished) {
-        [self.window setUserInteractionEnabled:NO];
-        [self.loadingView removeFromSuperview];
-        [self.timer invalidate];
-        self.timer = nil;
-    }];
+    [self.window setUserInteractionEnabled:NO];
+    [self.currentView dismiss];
 }
 
 #pragma mark show loading;
@@ -133,29 +123,22 @@ static VWProgressHUD *_shareInstance;
 
 - (void)showLoadingWithTip:(NSString *)tip sub:(NSString *)sub
 {
-    if (self.msgContentView)
+    [self.window setUserInteractionEnabled:YES];
+    if (self.currentView && VWContentViewTypeLoading == self.currentView.type)
     {
-        [self.msgContentView removeFromSuperview];
-        [self setMsgContentView:nil];
-    }
-    
-    if (self.loadingView)
+        [self.currentView setTip:tip sub:sub];
+        return;
+    }else if (self.currentView && VWContentViewTypeMessage == self.currentView.type)
     {
-        [self.loadingView setTip:tip sub:sub];
-        [self.timer invalidate];
-        self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
-        [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+        [self.currentView toBeLoadingWithTip:tip sub:sub];
         return;
     }
-    
-    [self.window setUserInteractionEnabled:YES];
-    
-    VWLoadingView  *view = [[VWLoadingView alloc] initWithTip:tip sub:sub];
+
+    VWBaseContentView  *view = [[VWBaseContentView alloc] initWithTip:tip sub:sub];
     [self.window addSubview:view];
-    self.loadingView = view;
+    self.currentView = view;
     
-    self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
-    [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+
 }
 
 - (void)showMsg:(NSString *)msg
@@ -180,23 +163,19 @@ static VWProgressHUD *_shareInstance;
 
 - (void)showMsg:(NSString *)msg type:(VWMsgType)type
 {
-    if (self.loadingView)
+    [self.window setUserInteractionEnabled:NO];
+    if (self.currentView && self.currentView.type == VWContentViewTypeLoading)
     {
-        [self.loadingView removeFromSuperview];
-        [self.timer invalidate];
-        self.timer = nil;   
-    }
-    
-    if (self.msgContentView)
-    {
-        [self.msgContentView setMsg:msg type:type];
+        [self.currentView toBeMessageWithMsg:msg type:type];
+        return;
+    } else if (self.currentView && self.currentView.type == VWContentViewTypeMessage) {
+        [self.currentView setMsg:msg type:type];
         return;
     }
 
-    [self.window setUserInteractionEnabled:NO];
-    VWMsgContentView *msgView = [[VWMsgContentView alloc] initWithMsg:msg type:type];
+    VWBaseContentView *msgView = [[VWBaseContentView alloc] initWithMsg:msg type:type];
     [self.window addSubview:msgView];
-    self.msgContentView = msgView;
+    self.currentView = msgView;
 
 }
 

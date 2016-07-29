@@ -14,6 +14,8 @@
 @property (weak, nonatomic) UIView *topView;
 @property (weak, nonatomic) UILabel *mainLabel;
 @property (weak, nonatomic) UILabel *subLabel;
+@property (strong, nonatomic) NSTimer *timer;
 - (void)setConstraint;
 - (void)resetConstraint;
+- (void)dismiss;
 @end

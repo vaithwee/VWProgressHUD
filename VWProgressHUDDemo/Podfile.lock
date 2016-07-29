@@ -1,5 +1,5 @@
 PODS:
-  - VWProgressHUD (0.0.0.8)
+  - VWProgressHUD (0.0.0.11)
 
 DEPENDENCIES:
   - VWProgressHUD (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  VWProgressHUD: 936e8053a52a8020b41174e3d289777c68801cac
+  VWProgressHUD: d9848c3f4e3974deedad8ca04bde706958231180
 
 PODFILE CHECKSUM: 31b7b8a7921c7fec482b583aafb662bd073fe92b
 
