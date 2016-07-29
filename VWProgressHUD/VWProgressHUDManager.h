@@ -9,7 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface VWProgressHUD : NSObject
-+ (void)log;
 
 #pragma mark config
 + (void)configure;

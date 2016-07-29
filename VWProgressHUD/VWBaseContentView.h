@@ -7,12 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
-typedef NS_ENUM(NSInteger, VWContentViewType)
-{
-    VWContentViewTypeLoading,
-    VWContentViewTypeMessage
-};
+#import "VWEnum.h"
 
 @interface VWBaseContentView : UIView
 @property (assign, nonatomic) VWContentViewType type;

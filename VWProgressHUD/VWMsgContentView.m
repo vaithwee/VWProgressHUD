@@ -102,6 +102,10 @@
     [self.mainLabel setText:msg];
     [self setConstraint];
     
+    [UIView animateWithDuration:0.25 animations:^{
+        [self layoutIfNeeded];
+    }];
+    
     if (self.timer)
     {
         [self.timer invalidate];

@@ -25,10 +25,6 @@ static VWProgressHUD *_shareInstance;
 @end
 
 @implementation VWProgressHUD
-+ (void)log {
-    NSLog(@"test log");
-}
-
 #pragma mark create instance
 
 + (instancetype)shareInstance {
@@ -137,6 +133,11 @@ static VWProgressHUD *_shareInstance;
 
 - (void)showLoadingWithTip:(NSString *)tip sub:(NSString *)sub
 {
+    if (self.msgContentView)
+    {
+        [self.msgContentView removeFromSuperview];
+        [self setMsgContentView:nil];
+    }
     
     if (self.loadingView)
     {
@@ -183,7 +184,7 @@ static VWProgressHUD *_shareInstance;
     {
         [self.loadingView removeFromSuperview];
         [self.timer invalidate];
-        self.timer = nil;
+        self.timer = nil;   
     }
     
     if (self.msgContentView)
@@ -192,6 +193,7 @@ static VWProgressHUD *_shareInstance;
         return;
     }
 
+    [self.window setUserInteractionEnabled:NO];
     VWMsgContentView *msgView = [[VWMsgContentView alloc] initWithMsg:msg type:type];
     [self.window addSubview:msgView];
     self.msgContentView = msgView;

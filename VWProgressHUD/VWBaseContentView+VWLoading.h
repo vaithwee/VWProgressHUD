@@ -1,17 +1,15 @@
 //
-//  VWMsgContentView.h
+//  VWBaseContentView+VWLoading.h
 //  VWProgressHUD
 //
-//  Created by Vaith on 16/7/19.
+//  Created by Vaith on 16/7/29.
 //  Copyright © 2016年 Vaith. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-#import "VWBaseContentView.h"
+#import <VWProgressHUD/VWProgressHUD.h>
 #import "VWEnum.h"
 
-
-@interface VWMsgContentView : VWBaseContentView
+@interface VWBaseContentView (VWLoading)
 - (instancetype)initWithMsg:(NSString *)msg type:(VWMsgType)type;
 - (void)setMsg:(NSString *)msg type:(VWMsgType)type;
 @end
