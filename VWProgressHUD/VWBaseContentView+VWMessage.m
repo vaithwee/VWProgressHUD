@@ -40,7 +40,8 @@
             }
         }
         UIImageView *iconImageView = [UIImageView new];
-        [iconImageView setImage:[UIImage imageNamed:pathString]];
+        [iconImageView setImage:[[UIImage imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+        [iconImageView setTintColor:HEXCOLOR(kVWImageColor)];
         [self addSubview:iconImageView];
         self.topView = iconImageView;
         
@@ -80,7 +81,7 @@
             break;
         }
     }
-    [(UIImageView *)self.topView setImage:[UIImage imageNamed:pathString]];
+    [(UIImageView *)self.topView setImage:[[UIImage imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     [self.mainLabel setText:msg];
     [self setConstraint];
     
@@ -127,7 +128,8 @@
             }
         }
         UIImageView *iconImageView = [UIImageView new];
-        [iconImageView setImage:[UIImage imageNamed:pathString]];
+        [iconImageView setImage:[[UIImage imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+        [iconImageView setTintColor:HEXCOLOR(kVWImageColor)];
         [self addSubview:iconImageView];
         self.topView = iconImageView;
         [self.mainLabel setText:msg];

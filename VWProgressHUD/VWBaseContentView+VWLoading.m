@@ -20,7 +20,7 @@
         /*创建loading*/
         UIActivityIndicatorView *loadingView = [UIActivityIndicatorView new];
         [loadingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        [loadingView setColor:HEXCOLOR(LOADINGCOLOR)];
+        [loadingView setColor:HEXCOLOR(kVWLoadingColor)];
         [loadingView setHidesWhenStopped:YES];
         [self addSubview:loadingView];
         [loadingView startAnimating];
@@ -64,7 +64,7 @@
         /*创建loading*/
         UIActivityIndicatorView *loadingView = [UIActivityIndicatorView new];
         [loadingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        [loadingView setColor:HEXCOLOR(LOADINGCOLOR)];
+        [loadingView setColor:HEXCOLOR(kVWLoadingColor)];
         [loadingView setHidesWhenStopped:YES];
         [self addSubview:loadingView];
         [loadingView startAnimating];

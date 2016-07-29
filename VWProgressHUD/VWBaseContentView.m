@@ -19,7 +19,7 @@
 {
     if (self = [super init])
     {
-        [self setBackgroundColor:HEXCOLOR(DMINANTCOLOR)];
+        [self setBackgroundColor:HEXCOLOR(kVWDminantColor)];
         [self.layer setCornerRadius:5.f];
         [self.layer setShadowOffset:CGSizeMake(0, 0)];
         [self.layer setShadowOpacity:0.2f];
@@ -28,7 +28,7 @@
         UILabel *mainLabel = [UILabel new];
         [mainLabel setTextAlignment:NSTextAlignmentCenter];
         [mainLabel setLineBreakMode:NSLineBreakByCharWrapping];
-        [mainLabel setTextColor:HEXCOLOR(TEXTCOLOR)];
+        [mainLabel setTextColor:HEXCOLOR(kVWTextColor)];
         [mainLabel setFont:[UIFont systemFontOfSize:DEFAULTTIPFONT]];
         [self addSubview:mainLabel];
         [mainLabel setPreferredMaxLayoutWidth:MAXTEXTWIDTH];
@@ -38,7 +38,7 @@
         UILabel *subLabel = [UILabel new];
         [subLabel setLineBreakMode:NSLineBreakByCharWrapping];
         [subLabel setTextAlignment:NSTextAlignmentCenter];
-        [subLabel setTextColor:HEXCOLOR(TEXTCOLOR)];
+        [subLabel setTextColor:HEXCOLOR(kVWTextColor)];
         [subLabel setFont:[UIFont systemFontOfSize:DEFAULTSUBFONT]];
         [self addSubview:subLabel];
         [subLabel setPreferredMaxLayoutWidth:MAXTEXTWIDTH];

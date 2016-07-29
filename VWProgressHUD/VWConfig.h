@@ -7,12 +7,12 @@
 
 #define HEXCOLOR(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
-extern NSInteger const DMINANTCOLOR;
-extern NSInteger const LOADINGCOLOR;
-extern NSInteger const TEXTCOLOR;
+extern NSInteger const kVWDminantColor;
+extern NSInteger const kVWLoadingColor;
+extern NSInteger const kVWTextColor;
+extern NSInteger const kVWImageColor;
 
 
-extern CGFloat const LOADINGWD;
 extern CGFloat const LOADINGALPHA;
 extern CGFloat const PADDING;
 extern CGFloat const MAXTEXTWIDTH;

@@ -5,11 +5,12 @@
 
 #import "VWConfig.h"
 
-NSInteger const DMINANTCOLOR = 0xffffff;
-NSInteger const LOADINGCOLOR = 0x000000;
-NSInteger const TEXTCOLOR = 0x535353;
+NSInteger const kVWDminantColor = 0x000000;
+NSInteger const kVWLoadingColor = 0xffffff;
+NSInteger const kVWTextColor = 0xffffff;
+NSInteger const kVWImageColor = 0xffffff;
 
-CGFloat const LOADINGWD = 100.f;
+
 CGFloat const LOADINGALPHA = 0.95f;
 CGFloat const PADDING = 10.f;
 CGFloat const MAXTEXTWIDTH = 150.f;
