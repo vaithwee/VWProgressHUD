@@ -134,6 +134,7 @@
         [self.subLabel setText:nil];
         [self setConstraint];
         
+        [self.topView layoutIfNeeded];
         [UIView animateWithDuration:0.25 animations:^{
             [self layoutIfNeeded];
         }];

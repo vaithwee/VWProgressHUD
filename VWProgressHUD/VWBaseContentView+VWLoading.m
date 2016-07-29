@@ -69,6 +69,13 @@
         [self addSubview:loadingView];
         [loadingView startAnimating];
         self.topView = loadingView;
+        [self.mainLabel setText:tip];
+        [self.subLabel setText:sub];
+        [self setConstraint];
+        [self.topView layoutIfNeeded];
+        [UIView animateWithDuration:0.25 animations:^{
+            [self layoutIfNeeded];
+        }];
         
         [self.timer invalidate];
         self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];

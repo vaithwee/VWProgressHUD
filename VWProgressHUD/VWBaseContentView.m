@@ -101,7 +101,7 @@
     {
         [self addConstraint:[NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:lastView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:PADDING]];
     }
-
+    
 }
 
 - (void)didMoveToSuperview
@@ -110,8 +110,8 @@
     {
         [self addConstraint:NSLayoutAttributeCenterX equalTo:self.superview offset:0];
         [self addConstraint:NSLayoutAttributeCenterY equalTo:self.superview offset:0];
-
-
+        
+        
         [UIView animateWithDuration:0.25 animations:^{
             [self setAlpha:LOADINGALPHA];
         }];

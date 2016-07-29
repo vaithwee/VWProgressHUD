@@ -79,11 +79,13 @@
 - (void)showFailMsg
 {
     [[VWProgressHUD shareInstance] showFailMsg:@"Hello, This's fail msg"];
+    [self performSelector:@selector(showMore) withObject:nil afterDelay:1.5];
 }
 
 - (void)showWarningMsg
 {
     [[VWProgressHUD shareInstance] showWarningMsg:@"Hello, This's warning msg"];
+    
 }
 
 
