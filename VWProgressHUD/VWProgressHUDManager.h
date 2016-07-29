@@ -12,10 +12,8 @@
 
 #pragma mark config
 + (void)configure;
-
 #pragma mark create instance
 + (instancetype)shareInstance;
-
 - (void)dismiss;
 
 #pragma mark show loading;

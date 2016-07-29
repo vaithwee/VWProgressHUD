@@ -51,7 +51,7 @@
 - (void)resetConstraint
 {
     [self setConstraint];
-    [UIView animateWithDuration:0.25 animations:^{
+    [UIView animateWithDuration:kVWDefaultAnimationTime animations:^{
         [self layoutIfNeeded];
     }];
 }
@@ -68,7 +68,7 @@
         }
         else
         {
-            [self.topView addConstraint:NSLayoutAttributeTop equalTo:self offset:kVWPadding];
+            [self.topView addConstraint:NSLayoutAttributeTop equalTo:self offset:self.type==VWContentViewTypeLoading?kVWPadding*2:kVWPadding];
         }
         [self.topView addConstraint:NSLayoutAttributeCenterX equalTo:self offset:0];
         
@@ -112,7 +112,7 @@
         [self addConstraint:NSLayoutAttributeCenterY equalTo:self.superview offset:0];
         
         
-        [UIView animateWithDuration:0.25 animations:^{
+        [UIView animateWithDuration:kVWDefaultAnimationTime animations:^{
             [self setAlpha:kVWDefaultAlpha];
         }];
     }
@@ -122,10 +122,11 @@
 - (void)dismiss
 {
     __weak VWBaseContentView *weakself = self;
-    [UIView animateWithDuration:0.25 animations:^{
+    [UIView animateWithDuration:kVWDefaultAnimationTime animations:^{
         [weakself setAlpha:0];
     } completion:^(BOOL finished) {
         [weakself removeFromSuperview];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kVWDismissNotification object:nil];
     }];
 }
 

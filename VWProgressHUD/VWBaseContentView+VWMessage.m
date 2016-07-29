@@ -49,7 +49,7 @@
         
         [self setConstraint];
         [self.timer invalidate];
-        self.timer = [NSTimer timerWithTimeInterval:kVWMessageDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+        self.timer = [NSTimer timerWithTimeInterval:kVWMessageDelayTime target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
     }
     return self;
@@ -85,13 +85,13 @@
     [self.mainLabel setText:msg];
     [self setConstraint];
     
-    [UIView animateWithDuration:0.25 animations:^{
+    [UIView animateWithDuration:kVWDefaultAnimationTime animations:^{
         [self layoutIfNeeded];
     }];
     
     
     [self.timer invalidate];
-    self.timer = [NSTimer timerWithTimeInterval:kVWMessageDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+    self.timer = [NSTimer timerWithTimeInterval:kVWMessageDelayTime target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
     
 }
@@ -137,13 +137,13 @@
         [self setConstraint];
         
         [self.topView layoutIfNeeded];
-        [UIView animateWithDuration:0.25 animations:^{
+        [UIView animateWithDuration:kVWDefaultAnimationTime animations:^{
             [self layoutIfNeeded];
         }];
         
         
         [self.timer invalidate];
-        self.timer = [NSTimer timerWithTimeInterval:kVWMessageDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+        self.timer = [NSTimer timerWithTimeInterval:kVWMessageDelayTime target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
         
     }

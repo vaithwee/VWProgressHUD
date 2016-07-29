@@ -55,6 +55,7 @@ static VWProgressHUD *_shareInstance;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarOrientationChange:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardWillHideNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismiss) name:kVWDismissNotification object:nil];
         
     }
     return self;
@@ -106,7 +107,6 @@ static VWProgressHUD *_shareInstance;
 - (void)dismiss
 {
     [self.window setUserInteractionEnabled:NO];
-    [self.currentView dismiss];
 }
 
 #pragma mark show loading;

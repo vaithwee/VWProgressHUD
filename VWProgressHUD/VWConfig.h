@@ -24,12 +24,15 @@ extern CGFloat const kVWMessageDelayTime;
 extern CGFloat const kVWContentMinWidth;
 extern CGFloat const kVWContentMaxWidth;
 
+extern CGFloat const kVWDefaultAnimationTime;
+
 
 
 
 extern BOOL const isShowkVWDefaultLoadingTip;
 
 extern NSString const * kVWDefaultLoadingTip;
+extern NSString const *kVWDismissNotification;
 
 @interface VWConfig : NSObject
 @end

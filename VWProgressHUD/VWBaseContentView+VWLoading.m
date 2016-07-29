@@ -35,7 +35,7 @@
         [self.subLabel setText:sub];
         [self setConstraint];
         
-        self.timer = [NSTimer timerWithTimeInterval:kVWLoadingDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+        self.timer = [NSTimer timerWithTimeInterval:kVWLoadingDelayTime target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
         [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
         
     }
@@ -49,7 +49,7 @@
     [self resetConstraint];
     [self.timer invalidate];
     self.timer = nil;
-    self.timer = [NSTimer timerWithTimeInterval:kVWLoadingDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+    self.timer = [NSTimer timerWithTimeInterval:kVWLoadingDelayTime target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
@@ -73,12 +73,12 @@
         [self.subLabel setText:sub];
         [self setConstraint];
         [self.topView layoutIfNeeded];
-        [UIView animateWithDuration:0.25 animations:^{
+        [UIView animateWithDuration:kVWDefaultAnimationTime animations:^{
             [self layoutIfNeeded];
         }];
         
         [self.timer invalidate];
-        self.timer = [NSTimer timerWithTimeInterval:kVWLoadingDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+        self.timer = [NSTimer timerWithTimeInterval:kVWLoadingDelayTime target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
         [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
     

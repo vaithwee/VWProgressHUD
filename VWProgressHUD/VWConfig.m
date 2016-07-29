@@ -19,10 +19,14 @@ CGFloat const kVWDefaultSubFontSize = 12.f;
 CGFloat const kVWLoadingDelayTime = 10.f;
 CGFloat const kVWContentMinWidth = 80.f;
 CGFloat const kVWContentMaxWidth = 150.f;
-CGFloat const kVWMessageDelayTime = 3.F;
+CGFloat const kVWMessageDelayTime = 3.f;
+CGFloat const kVWDefaultAnimationTime = 0.25f;
+
+
 BOOL const isShowkVWDefaultLoadingTip = NO;
 
 NSString const * kVWDefaultLoadingTip = @"Loading...";
+NSString const *kVWDismissNotification = @"kVWDismissNotification";
 
 @implementation VWConfig {
 
