@@ -41,7 +41,7 @@
         }
         UIImageView *iconImageView = [UIImageView new];
         [iconImageView setImage:[[UIImage imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
-        [iconImageView setTintColor:HEXCOLOR(kVWImageColor)];
+        [iconImageView setTintColor:VWHEXCOLOR(kVWImageColor)];
         [self addSubview:iconImageView];
         self.topView = iconImageView;
         
@@ -49,7 +49,7 @@
         
         [self setConstraint];
         [self.timer invalidate];
-        self.timer = [NSTimer timerWithTimeInterval:kVWMESDELAYTIME target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+        self.timer = [NSTimer timerWithTimeInterval:kVWMessageDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
     }
     return self;
@@ -91,7 +91,7 @@
     
     
     [self.timer invalidate];
-    self.timer = [NSTimer timerWithTimeInterval:kVWMESDELAYTIME target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+    self.timer = [NSTimer timerWithTimeInterval:kVWMessageDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
     [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
     
 }
@@ -129,7 +129,7 @@
         }
         UIImageView *iconImageView = [UIImageView new];
         [iconImageView setImage:[[UIImage imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
-        [iconImageView setTintColor:HEXCOLOR(kVWImageColor)];
+        [iconImageView setTintColor:VWHEXCOLOR(kVWImageColor)];
         [self addSubview:iconImageView];
         self.topView = iconImageView;
         [self.mainLabel setText:msg];
@@ -143,7 +143,7 @@
         
         
         [self.timer invalidate];
-        self.timer = [NSTimer timerWithTimeInterval:kVWMESDELAYTIME target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+        self.timer = [NSTimer timerWithTimeInterval:kVWMessageDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
         
     }

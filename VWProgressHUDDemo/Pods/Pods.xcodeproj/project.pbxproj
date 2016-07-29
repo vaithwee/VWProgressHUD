@@ -39,8 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0D57037E87AA6D56F0B48892EEF12254 /* VWBaseContentView+VWMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VWBaseContentView+VWMessage.m"; sourceTree = "<group>"; };
-		0FF7164E41966DE0599E74FC16A0A447 /* VWBaseContentView+VWLoading.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VWBaseContentView+VWLoading.m"; sourceTree = "<group>"; };
+		0D57037E87AA6D56F0B48892EEF12254 /* VWBaseContentView+VWMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "VWBaseContentView+VWMessage.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		0FF7164E41966DE0599E74FC16A0A447 /* VWBaseContentView+VWLoading.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "VWBaseContentView+VWLoading.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		11AC61D7900A2F669113C698E8E4BCC6 /* Pods-VWProgressHUDDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VWProgressHUDDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
 		140F8D772B7E74EB0DBD690FBA1CA6C6 /* VWBaseContentView+VWMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VWBaseContentView+VWMessage.h"; sourceTree = "<group>"; };
 		36EBCEBBA3709405A573C4CBCFEE8A62 /* libVWProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVWProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,14 +59,14 @@
 		AA4858A1EC98D2E1620848F02AD7473E /* Pods-VWProgressHUDDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VWProgressHUDDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		ADFC5A12413CE9A96365221C9350D3B8 /* UIView+VWAutolayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+VWAutolayout.m"; sourceTree = "<group>"; };
 		B24A0E79130A196288A7069B6248C03B /* Pods-VWProgressHUDDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VWProgressHUDDemo.release.xcconfig"; sourceTree = "<group>"; };
-		C4F809F2C0B42C48480C43790891F5DD /* VWConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWConfig.m; sourceTree = "<group>"; };
+		C4F809F2C0B42C48480C43790891F5DD /* VWConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = VWConfig.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		C97E75086E033674D444D381680CA3CF /* Pods-VWProgressHUDDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VWProgressHUDDemo-frameworks.sh"; sourceTree = "<group>"; };
 		DEA2350A26BCDBCDAC51E8959A34B9E1 /* VWProgressHUDManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWProgressHUDManager.m; sourceTree = "<group>"; };
 		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		E901864F1201747197729C515ED874D5 /* VWBaseContentView+VWLoading.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VWBaseContentView+VWLoading.h"; sourceTree = "<group>"; };
 		E9990F96C694C2B456DB8E3929441572 /* UIView+VWAutolayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+VWAutolayout.h"; sourceTree = "<group>"; };
 		EE08985DE879CFE48D6A37466E6DE6F0 /* VWProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWProgressHUD.h; sourceTree = "<group>"; };
-		F73E42D3C82F09AADF6CCC192C3CF261 /* VWConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWConfig.h; sourceTree = "<group>"; };
+		F73E42D3C82F09AADF6CCC192C3CF261 /* VWConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = VWConfig.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		FD4A1E1E3006D578E03DC9444B59993C /* Pods-VWProgressHUDDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VWProgressHUDDemo-resources.sh"; sourceTree = "<group>"; };
 		FFE10EC2DF0238790F88E183FBD7C257 /* VWProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = VWProgressHUD.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */

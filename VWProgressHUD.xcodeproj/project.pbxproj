@@ -39,8 +39,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4E9953A34507FD67FF2622B8 /* VWConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWConfig.m; sourceTree = "<group>"; };
-		4E9957BB1E838A020F42CEC8 /* VWConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWConfig.h; sourceTree = "<group>"; };
+		4E9953A34507FD67FF2622B8 /* VWConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = VWConfig.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		4E9957BB1E838A020F42CEC8 /* VWConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = VWConfig.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		CC24AEDE1D3DAE8A00FEDF23 /* VWProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = VWProgressHUD.bundle; sourceTree = "<group>"; };
 		CC42C69E1D38CC2E00D9B80F /* VWProgressHUD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VWProgressHUD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC42C6A11D38CC2E00D9B80F /* VWProgressHUD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VWProgressHUD.h; sourceTree = "<group>"; };
@@ -50,9 +50,9 @@
 		CC42C6D71D38D7AA00D9B80F /* VWProgressHUD.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = VWProgressHUD.podspec; sourceTree = SOURCE_ROOT; };
 		CC6555D51D4AE679003E3ADA /* VWEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWEnum.h; sourceTree = "<group>"; };
 		CC6555D71D4AE79A003E3ADA /* VWBaseContentView+VWLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VWBaseContentView+VWLoading.h"; sourceTree = "<group>"; };
-		CC6555D81D4AE79A003E3ADA /* VWBaseContentView+VWLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VWBaseContentView+VWLoading.m"; sourceTree = "<group>"; };
+		CC6555D81D4AE79A003E3ADA /* VWBaseContentView+VWLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "VWBaseContentView+VWLoading.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CC6555DB1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "VWBaseContentView+VWMessage.h"; sourceTree = "<group>"; };
-		CC6555DC1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "VWBaseContentView+VWMessage.m"; sourceTree = "<group>"; };
+		CC6555DC1D4AE9A5003E3ADA /* VWBaseContentView+VWMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = "VWBaseContentView+VWMessage.m"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		CC6555DF1D4AEAB6003E3ADA /* VWBaseContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VWBaseContentView.h; sourceTree = "<group>"; };
 		CC6555E01D4AEAB6003E3ADA /* VWBaseContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VWBaseContentView.m; sourceTree = "<group>"; };
 		CC7F0C1B1D3CB2FF0045FC0D /* UIView+VWAutolayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+VWAutolayout.h"; sourceTree = "<group>"; };

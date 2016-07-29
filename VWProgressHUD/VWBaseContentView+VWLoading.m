@@ -20,22 +20,22 @@
         /*创建loading*/
         UIActivityIndicatorView *loadingView = [UIActivityIndicatorView new];
         [loadingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        [loadingView setColor:HEXCOLOR(kVWLoadingColor)];
+        [loadingView setColor:VWHEXCOLOR(kVWLoadingColor)];
         [loadingView setHidesWhenStopped:YES];
         [self addSubview:loadingView];
         [loadingView startAnimating];
         self.topView = loadingView;
         
-        if (ISSHOWDEFAULTTIP && (!tip || [tip isEqualToString:@""]))
+        if (isShowkVWDefaultLoadingTip && (!tip || [tip isEqualToString:@""]))
         {
-            tip = DEFAULTTIP;
+            tip = kVWDefaultLoadingTip;
         }
         
         [self.mainLabel setText:tip];
         [self.subLabel setText:sub];
         [self setConstraint];
         
-        self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+        self.timer = [NSTimer timerWithTimeInterval:kVWLoadingDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
         [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
         
     }
@@ -49,7 +49,7 @@
     [self resetConstraint];
     [self.timer invalidate];
     self.timer = nil;
-    self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+    self.timer = [NSTimer timerWithTimeInterval:kVWLoadingDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
 }
 
@@ -64,7 +64,7 @@
         /*创建loading*/
         UIActivityIndicatorView *loadingView = [UIActivityIndicatorView new];
         [loadingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        [loadingView setColor:HEXCOLOR(kVWLoadingColor)];
+        [loadingView setColor:VWHEXCOLOR(kVWLoadingColor)];
         [loadingView setHidesWhenStopped:YES];
         [self addSubview:loadingView];
         [loadingView startAnimating];
@@ -78,7 +78,7 @@
         }];
         
         [self.timer invalidate];
-        self.timer = [NSTimer timerWithTimeInterval:DELAYTIME target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
+        self.timer = [NSTimer timerWithTimeInterval:kVWLoadingDelayTime target:[VWProgressHUD shareInstance] selector:@selector(dismiss) userInfo:nil repeats:NO];
         [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     }
     
