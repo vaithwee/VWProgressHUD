@@ -107,6 +107,10 @@ static VWProgressHUD *_shareInstance;
 - (void)dismiss
 {
     [self.window setUserInteractionEnabled:NO];
+    if (self.currentView)
+    {
+        [self.currentView dismiss];
+    }
 }
 
 #pragma mark show loading;
