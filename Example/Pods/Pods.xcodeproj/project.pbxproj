@@ -1,0 +1,663 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CB1C46E608EF8D45A0E83B0077C01AF /* VWBaseContentView+VWLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B9A7BA045E4504397A5804D575EDFC /* VWBaseContentView+VWLoading.m */; };
+		1010B2F73F8F772545FB4344B00DD8CC /* Pods-VWProgressHUD_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F403C4EBDBD35E9E5FD8561087DEC47 /* Pods-VWProgressHUD_Example-dummy.m */; };
+		1218473A114BCF55FA522A31AA97C2D5 /* VWProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B68AC6F147A80F7BF48CDF06FF531639 /* VWProgressHUD-dummy.m */; };
+		131665A9A9322C3FB36A5E4A904BC549 /* VWBaseContentView+VWLoading.h in Headers */ = {isa = PBXBuildFile; fileRef = 80C9C3C0E9B8D783CA52B5E77AC47A1D /* VWBaseContentView+VWLoading.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		16C68A51AA5CEB3C6E5A5F324AA86677 /* Pods-VWProgressHUD_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 194B89FF79364C3FD87E03A89CB85319 /* Pods-VWProgressHUD_Tests-dummy.m */; };
+		1C18BE21A4A8739381EB625D4411D65B /* VWEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = 31605AA24E1B3E0AE509EB302B741DE3 /* VWEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27DC03213BC29523CDDE9DF8C356178F /* UIView+VWAutolayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 116026B99CA06FF9A31A5749539D1A2E /* UIView+VWAutolayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2F4BB465E531C72E2CB7CAAB109146E7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		396E1D9BA2A69BA630E95D4CA0B1F8EE /* VWBaseContentView.h in Headers */ = {isa = PBXBuildFile; fileRef = CDB972F3532E178AF419BD02E1930584 /* VWBaseContentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		680F0B8E9EE5C3BDC8590929525AF2B4 /* VWConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EBD15AB6C31338FF28192337F5CD68D /* VWConfig.m */; };
+		75787CBDF1576C57E721F7A7835CE6BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		82995D033ED611BAF66FBA662392BB10 /* VWConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F0A1F007D056D8A1E037537E13F205 /* VWConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87B2E1AFDBDE1F5218B31EA3910EE340 /* VWBaseContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = A86E44FB7F26E2B552DA8C2C851D7555 /* VWBaseContentView.m */; };
+		8BACC6C9549CC1D667BEC4CBB5420F6B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */; };
+		9B398E60AB0F8E62CAF8A1A646259A66 /* VWProgressHUDManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 364845174C6B3FDD9AA02B38EEE4CCF9 /* VWProgressHUDManager.m */; };
+		A18E72A59FCDE44B920BC8D8E33BB6D4 /* VWProgressHUDManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DA6F4180FE463470430CEF27308A6BFA /* VWProgressHUDManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF9917486D301880A49988BF8B814E38 /* VWProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = EBA3E0060AD10E097F3CCE3677FD5706 /* VWProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D9DB55964D04367A34EE0091B5A1955E /* UIView+VWAutolayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 52E800BB38E326AE7A38968D0154F360 /* UIView+VWAutolayout.m */; };
+		DCCB52817FD517293CF1A9C0FED5F36C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */; };
+		E58A63A9CB477D4FA08AB35C4AD20CAC /* VWBaseContentView+VWMessage.h in Headers */ = {isa = PBXBuildFile; fileRef = 179AC74513108D9C1776B712D1B42E4F /* VWBaseContentView+VWMessage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0881846260B9F0FEAF88D687C431A2A /* VWBaseContentView+VWMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B5B22AA76CC0F090160C6AAD1901946 /* VWBaseContentView+VWMessage.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		870E531D026FDC386A7E159990B8602F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB3A07CD933799A39F53BA6CAC5C421A;
+			remoteInfo = VWProgressHUD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06164B752866F6E0065EAE039415A2D3 /* Pods-VWProgressHUD_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VWProgressHUD_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		116026B99CA06FF9A31A5749539D1A2E /* UIView+VWAutolayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIView+VWAutolayout.h"; sourceTree = "<group>"; };
+		179AC74513108D9C1776B712D1B42E4F /* VWBaseContentView+VWMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VWBaseContentView+VWMessage.h"; sourceTree = "<group>"; };
+		194B89FF79364C3FD87E03A89CB85319 /* Pods-VWProgressHUD_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VWProgressHUD_Tests-dummy.m"; sourceTree = "<group>"; };
+		1EBD15AB6C31338FF28192337F5CD68D /* VWConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWConfig.m; sourceTree = "<group>"; };
+		1F403C4EBDBD35E9E5FD8561087DEC47 /* Pods-VWProgressHUD_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VWProgressHUD_Example-dummy.m"; sourceTree = "<group>"; };
+		218C2C58590094AA92B8B3A2EC1D2635 /* VWProgressHUD.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; path = VWProgressHUD.bundle; sourceTree = "<group>"; };
+		31605AA24E1B3E0AE509EB302B741DE3 /* VWEnum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWEnum.h; sourceTree = "<group>"; };
+		364845174C6B3FDD9AA02B38EEE4CCF9 /* VWProgressHUDManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWProgressHUDManager.m; sourceTree = "<group>"; };
+		3B2070B8658375B2CB1793EB2E302AF2 /* Pods-VWProgressHUD_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VWProgressHUD_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3BC2D668682594A58579400EFA4FCFD8 /* Pods-VWProgressHUD_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VWProgressHUD_Example-resources.sh"; sourceTree = "<group>"; };
+		415926D8106FF43453F073ADBD555A84 /* VWProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VWProgressHUD-prefix.pch"; sourceTree = "<group>"; };
+		4794BEDE67C1BF75CB50A32D1BD37606 /* Pods-VWProgressHUD_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VWProgressHUD_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		52E800BB38E326AE7A38968D0154F360 /* UIView+VWAutolayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIView+VWAutolayout.m"; sourceTree = "<group>"; };
+		571B4D52DC522740D8636E47203F3D82 /* Pods-VWProgressHUD_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VWProgressHUD_Example-frameworks.sh"; sourceTree = "<group>"; };
+		5B5B22AA76CC0F090160C6AAD1901946 /* VWBaseContentView+VWMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VWBaseContentView+VWMessage.m"; sourceTree = "<group>"; };
+		66B9A7BA045E4504397A5804D575EDFC /* VWBaseContentView+VWLoading.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VWBaseContentView+VWLoading.m"; sourceTree = "<group>"; };
+		80C9C3C0E9B8D783CA52B5E77AC47A1D /* VWBaseContentView+VWLoading.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "VWBaseContentView+VWLoading.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9498EE6775DF11899A39FAF574A610F8 /* Pods-VWProgressHUD_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-VWProgressHUD_Tests-resources.sh"; sourceTree = "<group>"; };
+		94F14082BAC2339F5945001D8E5419D5 /* Pods-VWProgressHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VWProgressHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		95BC7ADFB51BB96BF007D27934E7D982 /* Pods-VWProgressHUD_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VWProgressHUD_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A86E44FB7F26E2B552DA8C2C851D7555 /* VWBaseContentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = VWBaseContentView.m; sourceTree = "<group>"; };
+		A91E94F1F4A1EE0B62F844549A0B5B6C /* VWProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = VWProgressHUD.xcconfig; sourceTree = "<group>"; };
+		A9775BE8679A4988899862E040F82AC6 /* libPods-VWProgressHUD_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VWProgressHUD_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD5ABAF5605C6B9EC9D53D9D893595DA /* Pods-VWProgressHUD_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VWProgressHUD_Example.release.xcconfig"; sourceTree = "<group>"; };
+		ADEE73195D01D91F72EE75710EBB681D /* libVWProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libVWProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1F0A1F007D056D8A1E037537E13F205 /* VWConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWConfig.h; sourceTree = "<group>"; };
+		B68AC6F147A80F7BF48CDF06FF531639 /* VWProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "VWProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		CDB972F3532E178AF419BD02E1930584 /* VWBaseContentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWBaseContentView.h; sourceTree = "<group>"; };
+		DA6F4180FE463470430CEF27308A6BFA /* VWProgressHUDManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWProgressHUDManager.h; sourceTree = "<group>"; };
+		DC485326676F59D3D56ED44B081F1AB8 /* Pods-VWProgressHUD_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VWProgressHUD_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		E5E482F23B18B3D04C2DF689F0FE1A2A /* Pods-VWProgressHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VWProgressHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EBA3E0060AD10E097F3CCE3677FD5706 /* VWProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = VWProgressHUD.h; sourceTree = "<group>"; };
+		ED61FF7166C00F339C8E8F5DE626D64D /* Pods-VWProgressHUD_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VWProgressHUD_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		F79BBB8A5228D1507F8C806A0AC6C122 /* libPods-VWProgressHUD_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VWProgressHUD_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2A5BA1104D53C64A106A291E65B8DF6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75787CBDF1576C57E721F7A7835CE6BD /* Foundation.framework in Frameworks */,
+				DCCB52817FD517293CF1A9C0FED5F36C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FB01110B4AE4C4174CF93D8409D1F16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F4BB465E531C72E2CB7CAAB109146E7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A7CD8C46FC13B43F5C10FF6E360D351 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8BACC6C9549CC1D667BEC4CBB5420F6B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BDE6F2DAD41673F3269D682CE83AB0C /* VWProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				F07035E5798540DE1F96694DD0D21B92 /* Assets */,
+			);
+			path = VWProgressHUD;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		63258E0D86215211F307D0649F975A66 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA57A6558EAEBAAC485FA34A4D0332CF /* VWProgressHUD */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		7AA0A417A1AD8F6738EACC680F38B5B1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A91E94F1F4A1EE0B62F844549A0B5B6C /* VWProgressHUD.xcconfig */,
+				B68AC6F147A80F7BF48CDF06FF531639 /* VWProgressHUD-dummy.m */,
+				415926D8106FF43453F073ADBD555A84 /* VWProgressHUD-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/VWProgressHUD";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				63258E0D86215211F307D0649F975A66 /* Development Pods */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				F8822D7903133A2E859C9B8BF1F16793 /* Products */,
+				9F1A567C92E263325A2ABAC50B1A95ED /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		939039F4CB3BA5D295E14987CEAEDCC3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2BDE6F2DAD41673F3269D682CE83AB0C /* VWProgressHUD */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		9F1A567C92E263325A2ABAC50B1A95ED /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CB9EEE2D398E31E6358EB26436DCEBBB /* Pods-VWProgressHUD_Example */,
+				AA11BBE48A77F0C5470648D6BB0B241C /* Pods-VWProgressHUD_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		AA11BBE48A77F0C5470648D6BB0B241C /* Pods-VWProgressHUD_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4794BEDE67C1BF75CB50A32D1BD37606 /* Pods-VWProgressHUD_Tests-acknowledgements.markdown */,
+				ED61FF7166C00F339C8E8F5DE626D64D /* Pods-VWProgressHUD_Tests-acknowledgements.plist */,
+				194B89FF79364C3FD87E03A89CB85319 /* Pods-VWProgressHUD_Tests-dummy.m */,
+				06164B752866F6E0065EAE039415A2D3 /* Pods-VWProgressHUD_Tests-frameworks.sh */,
+				9498EE6775DF11899A39FAF574A610F8 /* Pods-VWProgressHUD_Tests-resources.sh */,
+				95BC7ADFB51BB96BF007D27934E7D982 /* Pods-VWProgressHUD_Tests.debug.xcconfig */,
+				E5E482F23B18B3D04C2DF689F0FE1A2A /* Pods-VWProgressHUD_Tests.release.xcconfig */,
+			);
+			name = "Pods-VWProgressHUD_Tests";
+			path = "Target Support Files/Pods-VWProgressHUD_Tests";
+			sourceTree = "<group>";
+		};
+		B229A18AD964961437E367D584F3C922 /* VWProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BFEDB17BC0F27CCB855209B5EACFAF3D /* Classes */,
+			);
+			path = VWProgressHUD;
+			sourceTree = "<group>";
+		};
+		BA57A6558EAEBAAC485FA34A4D0332CF /* VWProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				939039F4CB3BA5D295E14987CEAEDCC3 /* Resources */,
+				7AA0A417A1AD8F6738EACC680F38B5B1 /* Support Files */,
+				B229A18AD964961437E367D584F3C922 /* VWProgressHUD */,
+			);
+			name = VWProgressHUD;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		BFEDB17BC0F27CCB855209B5EACFAF3D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				116026B99CA06FF9A31A5749539D1A2E /* UIView+VWAutolayout.h */,
+				52E800BB38E326AE7A38968D0154F360 /* UIView+VWAutolayout.m */,
+				CDB972F3532E178AF419BD02E1930584 /* VWBaseContentView.h */,
+				A86E44FB7F26E2B552DA8C2C851D7555 /* VWBaseContentView.m */,
+				80C9C3C0E9B8D783CA52B5E77AC47A1D /* VWBaseContentView+VWLoading.h */,
+				66B9A7BA045E4504397A5804D575EDFC /* VWBaseContentView+VWLoading.m */,
+				179AC74513108D9C1776B712D1B42E4F /* VWBaseContentView+VWMessage.h */,
+				5B5B22AA76CC0F090160C6AAD1901946 /* VWBaseContentView+VWMessage.m */,
+				B1F0A1F007D056D8A1E037537E13F205 /* VWConfig.h */,
+				1EBD15AB6C31338FF28192337F5CD68D /* VWConfig.m */,
+				31605AA24E1B3E0AE509EB302B741DE3 /* VWEnum.h */,
+				EBA3E0060AD10E097F3CCE3677FD5706 /* VWProgressHUD.h */,
+				DA6F4180FE463470430CEF27308A6BFA /* VWProgressHUDManager.h */,
+				364845174C6B3FDD9AA02B38EEE4CCF9 /* VWProgressHUDManager.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CB9EEE2D398E31E6358EB26436DCEBBB /* Pods-VWProgressHUD_Example */ = {
+			isa = PBXGroup;
+			children = (
+				3B2070B8658375B2CB1793EB2E302AF2 /* Pods-VWProgressHUD_Example-acknowledgements.markdown */,
+				DC485326676F59D3D56ED44B081F1AB8 /* Pods-VWProgressHUD_Example-acknowledgements.plist */,
+				1F403C4EBDBD35E9E5FD8561087DEC47 /* Pods-VWProgressHUD_Example-dummy.m */,
+				571B4D52DC522740D8636E47203F3D82 /* Pods-VWProgressHUD_Example-frameworks.sh */,
+				3BC2D668682594A58579400EFA4FCFD8 /* Pods-VWProgressHUD_Example-resources.sh */,
+				94F14082BAC2339F5945001D8E5419D5 /* Pods-VWProgressHUD_Example.debug.xcconfig */,
+				AD5ABAF5605C6B9EC9D53D9D893595DA /* Pods-VWProgressHUD_Example.release.xcconfig */,
+			);
+			name = "Pods-VWProgressHUD_Example";
+			path = "Target Support Files/Pods-VWProgressHUD_Example";
+			sourceTree = "<group>";
+		};
+		F07035E5798540DE1F96694DD0D21B92 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				218C2C58590094AA92B8B3A2EC1D2635 /* VWProgressHUD.bundle */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F302CD3B306AF1ED96B9AF31FCDBC26C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A2A6FF208CEC4C2861F1E9D42D651453 /* Foundation.framework */,
+				E86668F20F252C440D1015B816BE59C5 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F8822D7903133A2E859C9B8BF1F16793 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9775BE8679A4988899862E040F82AC6 /* libPods-VWProgressHUD_Example.a */,
+				F79BBB8A5228D1507F8C806A0AC6C122 /* libPods-VWProgressHUD_Tests.a */,
+				ADEE73195D01D91F72EE75710EBB681D /* libVWProgressHUD.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0FE23858A0C18B44A81C6997416C64EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				27DC03213BC29523CDDE9DF8C356178F /* UIView+VWAutolayout.h in Headers */,
+				131665A9A9322C3FB36A5E4A904BC549 /* VWBaseContentView+VWLoading.h in Headers */,
+				E58A63A9CB477D4FA08AB35C4AD20CAC /* VWBaseContentView+VWMessage.h in Headers */,
+				396E1D9BA2A69BA630E95D4CA0B1F8EE /* VWBaseContentView.h in Headers */,
+				82995D033ED611BAF66FBA662392BB10 /* VWConfig.h in Headers */,
+				1C18BE21A4A8739381EB625D4411D65B /* VWEnum.h in Headers */,
+				BF9917486D301880A49988BF8B814E38 /* VWProgressHUD.h in Headers */,
+				A18E72A59FCDE44B920BC8D8E33BB6D4 /* VWProgressHUDManager.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		92793530D4AD9CBFA68982D4F65579F1 /* Pods-VWProgressHUD_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 030C61B9DB07129F584169CB055D5630 /* Build configuration list for PBXNativeTarget "Pods-VWProgressHUD_Example" */;
+			buildPhases = (
+				6259BDA71DDAB8EE5B7C92F4EB62D901 /* Sources */,
+				3A7CD8C46FC13B43F5C10FF6E360D351 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0D0CDCECC2F0F3C765A90C73960CAF70 /* PBXTargetDependency */,
+			);
+			name = "Pods-VWProgressHUD_Example";
+			productName = "Pods-VWProgressHUD_Example";
+			productReference = A9775BE8679A4988899862E040F82AC6 /* libPods-VWProgressHUD_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		BEC6431616AD557CA15DC601C8AB0E92 /* Pods-VWProgressHUD_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A72BE815AC62FB81E2EBB393CB43388 /* Build configuration list for PBXNativeTarget "Pods-VWProgressHUD_Tests" */;
+			buildPhases = (
+				681A0AB784CA28DA9BBEB768806A6105 /* Sources */,
+				2FB01110B4AE4C4174CF93D8409D1F16 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-VWProgressHUD_Tests";
+			productName = "Pods-VWProgressHUD_Tests";
+			productReference = F79BBB8A5228D1507F8C806A0AC6C122 /* libPods-VWProgressHUD_Tests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CB3A07CD933799A39F53BA6CAC5C421A /* VWProgressHUD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 055FC6E6D32FA81332025C3B67003ED3 /* Build configuration list for PBXNativeTarget "VWProgressHUD" */;
+			buildPhases = (
+				62B451F3B00452AA981248319F4AF9A4 /* Sources */,
+				2A5BA1104D53C64A106A291E65B8DF6F /* Frameworks */,
+				0FE23858A0C18B44A81C6997416C64EC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VWProgressHUD;
+			productName = VWProgressHUD;
+			productReference = ADEE73195D01D91F72EE75710EBB681D /* libVWProgressHUD.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = F8822D7903133A2E859C9B8BF1F16793 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				92793530D4AD9CBFA68982D4F65579F1 /* Pods-VWProgressHUD_Example */,
+				BEC6431616AD557CA15DC601C8AB0E92 /* Pods-VWProgressHUD_Tests */,
+				CB3A07CD933799A39F53BA6CAC5C421A /* VWProgressHUD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6259BDA71DDAB8EE5B7C92F4EB62D901 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1010B2F73F8F772545FB4344B00DD8CC /* Pods-VWProgressHUD_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		62B451F3B00452AA981248319F4AF9A4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D9DB55964D04367A34EE0091B5A1955E /* UIView+VWAutolayout.m in Sources */,
+				0CB1C46E608EF8D45A0E83B0077C01AF /* VWBaseContentView+VWLoading.m in Sources */,
+				F0881846260B9F0FEAF88D687C431A2A /* VWBaseContentView+VWMessage.m in Sources */,
+				87B2E1AFDBDE1F5218B31EA3910EE340 /* VWBaseContentView.m in Sources */,
+				680F0B8E9EE5C3BDC8590929525AF2B4 /* VWConfig.m in Sources */,
+				1218473A114BCF55FA522A31AA97C2D5 /* VWProgressHUD-dummy.m in Sources */,
+				9B398E60AB0F8E62CAF8A1A646259A66 /* VWProgressHUDManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		681A0AB784CA28DA9BBEB768806A6105 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				16C68A51AA5CEB3C6E5A5F324AA86677 /* Pods-VWProgressHUD_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D0CDCECC2F0F3C765A90C73960CAF70 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = VWProgressHUD;
+			target = CB3A07CD933799A39F53BA6CAC5C421A /* VWProgressHUD */;
+			targetProxy = 870E531D026FDC386A7E159990B8602F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19D06823B945AE1AEB2472BEC95B8BEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD5ABAF5605C6B9EC9D53D9D893595DA /* Pods-VWProgressHUD_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		1BF91E18C3450611E53FA33914885F8E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95BC7ADFB51BB96BF007D27934E7D982 /* Pods-VWProgressHUD_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		576A72948EAC3E0A837260F58BC4E14C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A91E94F1F4A1EE0B62F844549A0B5B6C /* VWProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VWProgressHUD/VWProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		96FB694852BC82286D8C185F578F6805 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A91E94F1F4A1EE0B62F844549A0B5B6C /* VWProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/VWProgressHUD/VWProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		BB6B8E578102CB821675D80002A39FC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94F14082BAC2339F5945001D8E5419D5 /* Pods-VWProgressHUD_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		C7DF7210682C3955264F8226F2073E2E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5E482F23B18B3D04C2DF689F0FE1A2A /* Pods-VWProgressHUD_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		030C61B9DB07129F584169CB055D5630 /* Build configuration list for PBXNativeTarget "Pods-VWProgressHUD_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB6B8E578102CB821675D80002A39FC8 /* Debug */,
+				19D06823B945AE1AEB2472BEC95B8BEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		055FC6E6D32FA81332025C3B67003ED3 /* Build configuration list for PBXNativeTarget "VWProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				576A72948EAC3E0A837260F58BC4E14C /* Debug */,
+				96FB694852BC82286D8C185F578F6805 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3E3D092A3FF7311A98E44BBA36FFD12 /* Debug */,
+				0ACDCBCB0B6796575F46FFA2F5410C6B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A72BE815AC62FB81E2EBB393CB43388 /* Build configuration list for PBXNativeTarget "Pods-VWProgressHUD_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1BF91E18C3450611E53FA33914885F8E /* Debug */,
+				C7DF7210682C3955264F8226F2073E2E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

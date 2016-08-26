@@ -1,2 +1,0 @@
-/Users/Vaith/Library/Developer/Xcode/DerivedData/VWProgressHUDDemo-dzsrkmktmrdgimdvzvkqeqrabjxd/Build/Products/Debug-iphonesimulator/VWProgressHUDDemo.app
-iPhone Developer

@@ -1,32 +1,32 @@
-#VWProgressHUD
-
- by `Vaith`
-
-喜欢的同学给个`Star`哦！
+# VWProgressHUD
 
 
----
 
-#### 效果截图
+[![CI Status](http://img.shields.io/travis/Vaith/VWProgressHUD.svg?style=flat)](https://travis-ci.org/Vaith/VWProgressHUD)
+[![Version](https://img.shields.io/cocoapods/v/VWProgressHUD.svg?style=flat)](http://cocoapods.org/pods/VWProgressHUD)
+[![License](https://img.shields.io/cocoapods/l/VWProgressHUD.svg?style=flat)](http://cocoapods.org/pods/VWProgressHUD)
+[![Platform](https://img.shields.io/cocoapods/p/VWProgressHUD.svg?style=flat)](http://cocoapods.org/pods/VWProgressHUD)
+
+## Star
+If you like this, give me a star!
+
+## Screenshots
 ![enter image description here](https://raw.githubusercontent.com/vaithwee/VWProgressHUD/master/Screenshots/screenshot.gif)
 
-#### 简单使用
-
-如果需要在显示事关闭键盘，请先在`AppDelegate`中初始化配置
-```objectivec
+## Use
+If you want to close keyborad when hud show, add `config` to appdelegate
+```objc
 [VWProgressHUD configure];
 ```
-
-简单实用，具体可以看`VWProgressHUDManager`提供的接口
-```objectivec
+Easy to use
+```objc
 [[VWProgressHUD shareInstance] showLoading];
 [[VWProgressHUD shareInstance] showLoadingWithTip:@"Hello World"];
 [[VWProgressHUD shareInstance] showDoneMsg:@"Hello, This's done msg"];
 ```
 
-
-#### 可以修改配置
-如果不满意我的风格或者想要修改可以去`VWConfig`中修改
+## Config
+If you need change style, you just need edit config
 ```objectivec
 NSInteger const kVWDminantColor = 0x000000;//主色调
 NSInteger const kVWLoadingColor = 0xffffff;//loading颜色
@@ -52,8 +52,23 @@ NSString const * kVWDefaultLoadingTip = @"Loading...";//默认loading文字
 NSString const *kVWDismissNotification = @"kVWDismissNotification";
 ```
 
-#### Cocoapods 
-暂时还没有放到主库，可以先用以下导入
-```bash
-pod 'VWProgressHUD', :git => 'https://github.com/vaithwee/VWProgressHUD.git'
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## Installation
+
+VWProgressHUD is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod "VWProgressHUD"
 ```
+
+## Author
+
+Vaith, vaithwee@yeah.net
+
+## License
+
+VWProgressHUD is available under the MIT license. See the LICENSE file for more info.

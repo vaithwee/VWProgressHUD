@@ -1,0 +1,11 @@
+#use_frameworks!
+
+target 'VWProgressHUD_Example' do
+  pod 'VWProgressHUD', :path => '../'
+
+  target 'VWProgressHUD_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
