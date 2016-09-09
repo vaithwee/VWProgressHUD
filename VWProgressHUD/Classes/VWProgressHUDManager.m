@@ -110,6 +110,7 @@ static VWProgressHUD *_shareInstance;
     if (self.currentView)
     {
         [self.currentView dismiss];
+        self.currentView = nil;
     }
 }
 
