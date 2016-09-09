@@ -31,8 +31,8 @@ extern CGFloat const kVWDefaultAnimationTime;
 
 extern BOOL const isShowkVWDefaultLoadingTip;
 
-extern NSString const * kVWDefaultLoadingTip;
-extern NSString const *kVWDismissNotification;
+extern NSString * const kVWDefaultLoadingTip;
+extern NSString * const kVWDismissNotification;
 
 @interface VWConfig : NSObject
 @end

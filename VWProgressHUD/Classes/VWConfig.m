@@ -25,8 +25,8 @@ CGFloat const kVWDefaultAnimationTime = 0.15f;
 
 BOOL const isShowkVWDefaultLoadingTip = NO;
 
-NSString const * kVWDefaultLoadingTip = @"Loading...";
-NSString const *kVWDismissNotification = @"kVWDismissNotification";
+NSString * const kVWDefaultLoadingTip = @"Loading...";
+NSString * const kVWDismissNotification = @"kVWDismissNotification";
 
 @implementation VWConfig {
 
