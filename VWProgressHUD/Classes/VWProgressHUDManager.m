@@ -20,6 +20,7 @@ static VWProgressHUD *_shareInstance;
 @property (weak, nonatomic) UIView *firstResponder;
 @property (assign, nonatomic) NSInteger loadingCount;
 @property (weak, nonatomic) VWBaseContentView *currentView;
+@property (assign, nonatomic) NSInteger count;
 @end
 
 @implementation VWProgressHUD
@@ -56,6 +57,8 @@ static VWProgressHUD *_shareInstance;
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasShown:) name:UIKeyboardDidShowNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWasHidden:) name:UIKeyboardWillHideNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismiss) name:kVWDismissNotification object:nil];
+        
+        [self setCount:0];
         
     }
     return self;
@@ -106,9 +109,16 @@ static VWProgressHUD *_shareInstance;
 #pragma mark dismiss
 - (void)dismiss
 {
+    if (VWContentViewTypeLoading == self.currentView.type && self.count - 1 >0) {
+        self.count -= 1;
+        NSLog(@"not dismiss, current count is %@", @(self.count));
+        return;
+    }
+    
     [self.window setUserInteractionEnabled:NO];
     if (self.currentView)
     {
+        [self setCount:0];
         [self.currentView dismiss];
         self.currentView = nil;
     }
@@ -128,6 +138,7 @@ static VWProgressHUD *_shareInstance;
 
 - (void)showLoadingWithTip:(NSString *)tip sub:(NSString *)sub
 {
+    self.count += 1;
     [self.window setUserInteractionEnabled:YES];
     if (self.currentView && VWContentViewTypeLoading == self.currentView.type)
     {
@@ -168,6 +179,7 @@ static VWProgressHUD *_shareInstance;
 
 - (void)showMsg:(NSString *)msg type:(VWMsgType)type
 {
+    self.count = 0;
     [self.window setUserInteractionEnabled:NO];
     if (self.currentView && self.currentView.type == VWContentViewTypeLoading)
     {

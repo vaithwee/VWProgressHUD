@@ -31,6 +31,7 @@
                          [ProgressHUD progressHUDWithName:@"Simple Loading" sel:@selector(show)],
                          [ProgressHUD progressHUDWithName:@"Loading With Tip" sel:@selector(showWithTip)],
                          [ProgressHUD progressHUDWithName:@"Loading With Tip And Sub" sel:@selector(showLoadingWithTipAndSub)],
+                         [ProgressHUD progressHUDWithName:@"Muti Loading" sel:@selector(showMutiLoading)],
 
                          ];
     NSArray *message = @[
@@ -57,6 +58,22 @@
 {
     [[VWProgressHUD shareInstance] showLoadingWithTip:@"Hello World" sub:@"This is a post method\n1/99"];
     [self performSelector:@selector(showMore) withObject:nil afterDelay:5];
+}
+
+- (void)showMutiLoading
+{
+    [self performSelector:@selector(show) withObject:nil afterDelay:0];
+    [self performSelector:@selector(show) withObject:nil afterDelay:5];
+    [self performSelector:@selector(show) withObject:nil afterDelay:10];
+    [self performSelector:@selector(dismissloading) withObject:nil afterDelay:15];
+    [self performSelector:@selector(dismissloading) withObject:nil afterDelay:20];
+    [self performSelector:@selector(dismissloading) withObject:nil afterDelay:25];
+    
+}
+
+- (void)dismissloading
+{
+    [[VWProgressHUD shareInstance] dismiss];
 }
 
 - (void)showMore
