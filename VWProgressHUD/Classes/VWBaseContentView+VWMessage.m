@@ -40,7 +40,12 @@
             }
         }
         UIImageView *iconImageView = [UIImageView new];
-        [iconImageView setImage:[[UIImage imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+        UIImage *image = [UIImage imageNamed:pathString];
+        if (!image)
+        {
+            image = [UIImage imageNamed:pathString inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+        }
+        [iconImageView setImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         [iconImageView setTintColor:VWHEXCOLOR(kVWImageColor)];
         [self addSubview:iconImageView];
         self.topView = iconImageView;
