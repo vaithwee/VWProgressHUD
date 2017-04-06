@@ -40,12 +40,8 @@
             }
         }
         UIImageView *iconImageView = [UIImageView new];
-        UIImage *image = [UIImage imageNamed:pathString];
-        if (!image)
-        {
-            image = [UIImage imageNamed:pathString inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
-        }
-        [iconImageView setImage:[image imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+
+        [iconImageView setImage:[[self imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         [iconImageView setTintColor:VWHEXCOLOR(kVWImageColor)];
         [self addSubview:iconImageView];
         self.topView = iconImageView;
@@ -58,6 +54,16 @@
         [[NSRunLoop mainRunLoop] addTimer:self.timer forMode:NSDefaultRunLoopMode];
     }
     return self;
+}
+
+- (UIImage *)imageNamed:(NSString *)name
+{
+    UIImage *image = [UIImage imageNamed:name];
+    if (!image)
+    {
+        image = [UIImage imageNamed:name inBundle:[NSBundle bundleForClass:[self class]] compatibleWithTraitCollection:nil];
+    }
+    return image;
 }
 
 - (void)setMsg:(NSString *)msg type:(VWMsgType)type
@@ -86,7 +92,7 @@
             break;
         }
     }
-    [(UIImageView *)self.topView setImage:[[UIImage imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+    [(UIImageView *)self.topView setImage:[[self imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
     [self.mainLabel setText:msg];
     [self setConstraint];
     
@@ -133,7 +139,7 @@
             }
         }
         UIImageView *iconImageView = [UIImageView new];
-        [iconImageView setImage:[[UIImage imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
+        [iconImageView setImage:[[self imageNamed:pathString] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]];
         [iconImageView setTintColor:VWHEXCOLOR(kVWImageColor)];
         [self addSubview:iconImageView];
         self.topView = iconImageView;
