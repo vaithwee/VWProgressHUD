@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface VWProgressHUD : NSObject
-
+@property (strong, nonatomic) NSArray *loadingAnimationImages;
 #pragma mark config
 + (void)configure;
 #pragma mark create instance

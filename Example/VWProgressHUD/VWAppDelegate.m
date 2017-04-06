@@ -7,11 +7,13 @@
 //
 
 #import "VWAppDelegate.h"
+#import <VWProgressHUD.h>
 
 @implementation VWAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [[VWProgressHUD shareInstance] setLoadingAnimationImages:@[@"normal_anim1",@"normal_anim2",@"normal_anim3",@"normal_anim4",@"normal_anim5"]];
     // Override point for customization after application launch.
     return YES;
 }

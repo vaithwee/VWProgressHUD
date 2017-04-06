@@ -18,12 +18,8 @@
         [self setType:VWContentViewTypeLoading];
         
         /*创建loading*/
-        UIActivityIndicatorView *loadingView = [UIActivityIndicatorView new];
-        [loadingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        [loadingView setColor:VWHEXCOLOR(kVWLoadingColor)];
-        [loadingView setHidesWhenStopped:YES];
+        UIView *loadingView = [self loadingView];
         [self addSubview:loadingView];
-        [loadingView startAnimating];
         self.topView = loadingView;
         
         if (isShowkVWDefaultLoadingTip && (!tip || [tip isEqualToString:@""]))
@@ -62,12 +58,9 @@
         [self.topView removeFromSuperview];
         
         /*创建loading*/
-        UIActivityIndicatorView *loadingView = [UIActivityIndicatorView new];
-        [loadingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        [loadingView setColor:VWHEXCOLOR(kVWLoadingColor)];
-        [loadingView setHidesWhenStopped:YES];
+        UIView *loadingView = [self loadingView];
         [self addSubview:loadingView];
-        [loadingView startAnimating];
+        
         self.topView = loadingView;
         [self.mainLabel setText:tip];
         [self.subLabel setText:sub];
@@ -80,6 +73,43 @@
         [self.timer invalidate];
         self.timer = [NSTimer timerWithTimeInterval:kVWLoadingDelayTime target:self selector:@selector(dismiss) userInfo:nil repeats:NO];
         [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
+    }
+    
+}
+
+- (NSArray *)loadImages
+{
+    
+    NSArray *images = [VWProgressHUD shareInstance].loadingAnimationImages;
+    NSMutableArray *imagesM = [[NSMutableArray alloc] init];
+    for (int i = 1; i < images.count; i++)
+    {
+        NSString *imageName = [NSString stringWithFormat:images[i]];
+        UIImage *image = [UIImage imageNamed:imageName];
+        [imagesM addObject:image];
+    }
+    return imagesM;
+}
+
+- (UIView *)loadingView
+{
+    if ([VWProgressHUD shareInstance].loadingAnimationImages.count > 0)
+    {
+        UIImageView *aniImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+        [aniImageView setAnimationImages:[self loadImages]];
+        [aniImageView setAnimationDuration:1];
+        [aniImageView setAnimationRepeatCount:99999];
+        [aniImageView startAnimating];
+        return aniImageView;
+    }
+    else
+    {
+        UIActivityIndicatorView *loadingView = [UIActivityIndicatorView new];
+        [loadingView setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhiteLarge];
+        [loadingView setColor:VWHEXCOLOR(kVWLoadingColor)];
+        [loadingView setHidesWhenStopped:YES];
+        [loadingView startAnimating];
+        return loadingView;
     }
     
 }
