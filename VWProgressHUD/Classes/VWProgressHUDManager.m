@@ -24,7 +24,7 @@ static VWProgressHUD *_shareInstance;
 @property (assign, nonatomic) NSInteger loadingCount;
 @property (weak, nonatomic) VWBaseContentView *currentView;
 @property (assign, nonatomic) NSInteger count;
-@property (assign, nonatomic) Complete complete;
+@property (strong, nonatomic) Complete complete;
 @end
 
 @implementation VWProgressHUD
