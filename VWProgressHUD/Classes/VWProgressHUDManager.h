@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "VWEnum.h"
 
 @interface VWProgressHUD : NSObject
 @property (strong, nonatomic) NSArray *loadingAnimationImages;
@@ -26,4 +27,5 @@
 - (void)showDoneMsg:(NSString *)msg;
 - (void)showFailMsg:(NSString *)msg;
 - (void)showWarningMsg:(NSString *)msg;
+- (void)showMsg:(NSString *)msg type:(VWMsgType)type complete:(void(^)())complete;
 @end

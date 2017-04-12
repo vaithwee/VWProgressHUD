@@ -13,6 +13,9 @@
 #import "VWBaseContentView+VWMessage.h"
 #import "VWBaseContentView+VWLoading.h"
 
+typedef void(^Complete)(void);
+
+
 static VWProgressHUD *_shareInstance;
 
 @interface VWProgressHUD ()
@@ -21,6 +24,7 @@ static VWProgressHUD *_shareInstance;
 @property (assign, nonatomic) NSInteger loadingCount;
 @property (weak, nonatomic) VWBaseContentView *currentView;
 @property (assign, nonatomic) NSInteger count;
+@property (assign, nonatomic) Complete complete;
 @end
 
 @implementation VWProgressHUD
@@ -121,6 +125,11 @@ static VWProgressHUD *_shareInstance;
         [self setCount:0];
         [self.currentView dismiss];
         self.currentView = nil;
+        if (self.complete)
+        {
+            self.complete();
+            self.complete = nil;
+        }
     }
 }
 
@@ -179,6 +188,12 @@ static VWProgressHUD *_shareInstance;
 
 - (void)showMsg:(NSString *)msg type:(VWMsgType)type
 {
+    return [self showMsg:msg type:type complete:nil];
+}
+
+- (void)showMsg:(NSString *)msg type:(VWMsgType)type complete:(void (^)())complete
+{
+    self.complete = complete;
     self.count = 0;
     [self.window setUserInteractionEnabled:NO];
     if (self.currentView && self.currentView.type == VWContentViewTypeLoading)
@@ -189,11 +204,10 @@ static VWProgressHUD *_shareInstance;
         [self.currentView setMsg:msg type:type];
         return;
     }
-
+    
     VWBaseContentView *msgView = [[VWBaseContentView alloc] initWithMsg:msg type:type];
     [self.window addSubview:msgView];
     self.currentView = msgView;
-
 }
 
 @end
