@@ -15,5 +15,6 @@
 - (void)addConstraint:(NSLayoutAttribute)attribute equalTo:(UIView *)to multiplier:(CGFloat)multiplier;
 - (void)addConstraint:(NSLayoutAttribute)attribute equalTo:(UIView *)to fromConstraint:(NSLayoutAttribute)fromAttribute offset:(CGFloat)offset;
 - (void)removeAutoLayout:(NSLayoutConstraint *)constraint;
+
 - (void)removeAllAutoLayout;
 @end
